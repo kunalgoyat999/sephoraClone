@@ -31,9 +31,10 @@ html * {
   border: 1px solid rgb(200, 197, 197);
   border-radius: 5px;
   padding: 0 15px;
+  padding-left: 22px;
 }
 #cerditcard > h3 {
-  font-size: 17px;
+  font-size: 14px;
 }
 #icon {
   display: flex;
@@ -53,7 +54,7 @@ html * {
 }
 #icon > #h4 {
   width: 70%;
-  font-size: 17px;
+  font-size: 15px;
 }
 #icon > #h4 > h4 {
   font-weight: 100;
@@ -77,8 +78,9 @@ html * {
   color: grey;
 }
 #cerditcard > h5 {
-  color: grey;
-  font-size: 13px;
+  color: rgb(102, 101, 101);
+  font-size: 12px;
+  font-weight: 100;
   margin: 14px 0;
 }
 #displayProduct {
@@ -86,9 +88,11 @@ html * {
   border-radius: 5px;
   background-color: #f6f6f8;
   padding: 0 10px;
+  padding-bottom: 10px;
 }
 #displayProduct > #header1 > h3 {
-  margin: 10px 0;
+  margin: 15px 0;
+  font-size: 17px;
 }
 #displayCartProduct {
   /* height: 200px; */
@@ -126,7 +130,7 @@ html * {
     margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 100;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 #box {
@@ -147,12 +151,13 @@ html * {
   align-items: center;
 }
 #box>#div1>.first , #box>#div2>.first {
+  font-size: 15px;
   margin-top: 10px;
  margin-bottom: -10px;
 }
 #box>#div1>.second , #box>#div2>.second {
- font-size: 15px;
- margin-bottom: 10px;
+ font-size: 13px;
+ margin-bottom: 13px;
 }
 
 #cartItem {
@@ -188,7 +193,8 @@ html * {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin-bottom: -10px;
+  margin-top: 10px;
+  margin-bottom: -8px;
 }
 #main-container>.image-div {
   width: 20%;
@@ -207,12 +213,15 @@ html * {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: -5px;
   cursor: pointer;
 }
 .company-name-price>.brandname:hover{
   text-decoration: underline;
+}
+.desp-div>.p1 {
+  font-size: 14px;
 }
 .desp-div>.p1:hover {
   text-decoration: underline;
@@ -222,11 +231,11 @@ html * {
   flex-direction: column;
 }
 #main-container .desp-div>p {
-  margin-top: -12px;
+  margin-top: -10px;
 }
 .desp-div>p~p {
   color: grey;
-  font-size: 14px;
+  font-size: 12px;
 }
 .desp-div>#p{
   color: black;
@@ -251,7 +260,8 @@ html * {
   height: 35px;
   width: 45px;
   border-radius: 5px;
-  padding-left: 8px;
+  padding-left: 6px;
+  /* padding-right: -8px; */
   font-size: 15px;
 }
 
@@ -266,7 +276,7 @@ html * {
   color: rgb(174, 172, 172);
 }
 .remove-div>a {
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(67, 67, 250);
   cursor: pointer;
 }
@@ -290,14 +300,58 @@ html * {
 
 
 #displayProduct > #header2 > h3 {
-  margin: 10px 0;
+  margin: 15px 0;
+  font-size: 17px;
 }
 #displayCheapProduct {
-  height: 200px;
-  /* border: 1px solid; */
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
   background-color: white;
-  margin-bottom: 10px;
+  padding: 15px;
+}
+#displayCheapProduct>#main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+#displayCheapProduct>#main-container>.image-div {
+  width: 20%;
+}
+#displayCheapProduct>#main-container>.image-div>img {
+  width: 100%;
+}
+#displayCheapProduct>#main-container>.detail-div {
+  width: 80%;
+  display:  flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: -14px;
+}
+#displayCheapProduct .hr1 {
+  border: 1px solid rgb(245, 241, 241);
+}
+#displayCheapProduct #btn-div2{
+  display: flex;
+  justify-content: right;
+  margin-top: -25px;
+}
+#btn-div2>#addbtn {
+  width: 70px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-weight: 600;
+  background-color: white;
+}
+#btn-div2>#addbtn:hover {
+  border: 2px solid grey;
+  color: grey ;
 }
 #bestsellar {
   display: flex;
@@ -365,14 +419,14 @@ html * {
 }
 .font {
   font-weight: 100;
-  font-size: 15px;
+  font-size: 14px;
 }
 #red {
   margin-top: -10px;
 }
 #red > h3 {
   /* color: #cf112c ; */
-  font-size: 20px;
+  font-size: 17px;
 }
 #payment #ship {
   width: 95%;
@@ -419,7 +473,7 @@ hr {
   width: 100%;
 }
 #payment > h5 {
-  font-size: small;
+  font-size: 12px;
   color: grey;
   font-weight: 300;
   margin-top: 10px;
@@ -445,7 +499,7 @@ hr {
 #promo > #input > input {
   height: 40px;
   padding-left: 10px;
-  font-size: 12px;
+  font-size: 14px;
   border: 1px solid rgb(200, 197, 197);
   width: 65%;
 }
@@ -461,4 +515,23 @@ hr {
 #input > button:hover {
   background-color: rgb(100, 99, 99);
   border: none;
+}
+
+#cardshown {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 10px;
+}
+#assistance {
+  border: 1px solid rgb(200, 197, 197);
+}
+#cardshown>div {
+  width: 10%;
+  /* width: 15px; */
+  height: 20px;
+  border: 1px solid rgb(200, 197, 197);
+}
+#cardshown>div>img {
+  width: 100%;
 }
