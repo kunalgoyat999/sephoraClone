@@ -1,10 +1,13 @@
-import {navbar} from "./Component/navbar.js";
+import {navbar, footer} from "./Component/navbar.js";
 
 let navbarContainer =document.getElementById("nav");
 
 // console.log("navbar===",navbar)
 
 navbarContainer.innerHTML = navbar();
+
+let footercontainer = document.getElementById("footer");
+footercontainer.innerHTML = footer();
 
 
 let carContainer =[ ...document.querySelectorAll(".slider__container")];
