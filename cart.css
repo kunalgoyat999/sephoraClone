@@ -467,9 +467,9 @@ html * {
 #paypal > img {
   width: 30%;
 }
-hr {
+#payment hr {
   margin-top: 20px;
-  border: 1px solid rgb(200, 197, 197);
+  border: 1px solid rgb(245, 241, 241);
   width: 100%;
 }
 #payment > h5 {
@@ -517,7 +517,7 @@ hr {
   border: none;
 }
 
-#cardshown {
+#assistance>#cardshown {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -525,13 +525,35 @@ hr {
 }
 #assistance {
   border: 1px solid rgb(200, 197, 197);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#assistance>h3 ,#assistance>p {
+  margin-bottom: -2px;
+}
+#assistance>h3 {
+  font-size: 17px;
+}
+#assistance #telephone {
+  font-size: 14px;
+  margin-bottom: -15px;
+}
+#telephone>.num{
+  margin-bottom: -10px;
+}
+#assistance>p {
+  font-size: 14px;
 }
 #cardshown>div {
-  width: 10%;
-  /* width: 15px; */
-  height: 20px;
+  width: 11%;
+  height: 18px;
   border: 1px solid rgb(200, 197, 197);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
 }
 #cardshown>div>img {
   width: 100%;
+  height: 100%;
 }
