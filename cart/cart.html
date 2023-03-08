@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basket | Sephora</title>
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <div id="cartdiv">
+      <div><h2>My Basket</h2></div>
+      <div id="ordercarddiv">
+        <div id="orderleftdiv">
+          <div id="cerditcard">
+            <h3>The Sephora Credit Card Program</h3>
+            <div id="icon">
+              <div id="i"><i class="fa-solid fa-credit-card"></i></div>
+              <div id="h4">
+                <h4>
+                  Save 25% on this order when you open and use either Sephora
+                  Credit Card today*
+                </h4>
+              </div>
+              <div id="btn"><button>SEE DETAILS</button></div>
+            </div>
+            <h5>*Subject to credit approval. Exclusions apply.</h5>
+          </div>
+          <div id="displayProduct">
+            <div id="header1">
+              <h3>Get It Shipped (<span id="cartitem">0</span>)</h3>
+            </div>
+            <div id="displayCartProduct">
+              <div class="icon">
+                <div class="i"><i class="fa-solid fa-truck"></i></div>
+                <div class="line">
+                  <p>
+                    Beauty Insiders enjoy <b>FREE standard shipping</b> on all
+                    orders.
+                  </p>
+                  <p>Free returns on all purchases.*</p>
+                </div>
+              </div>
+              <div id="box">
+                <div id="div1">
+                  <p class="first">
+                    Get <b>2 </b>free sample(s) with every order
+                  </p>
+                  <p class="second"><b>SELECT YOUR SAMPLE(S)</b></p>
+                </div>
+                <div id="div2">
+                  <p class="first">
+                    You now have <b>0</b> Beauty Insider points
+                  </p>
+                  <p class="second"><b>REDEEM YOUR REWARDS</b></p>
+                </div>
+              </div>
+              <div id="cartItem"></div>
+            </div>
+            <div id="header2">
+              <h3>Add These for Under $15</h3>
+            </div>
+            <div id="displayCheapProduct"></div>
+          </div>
+          <div id="bestsellar">
+            <div id="header3"><h1>Bestsellers</h1></div>
+            <div id="best"></div>
+          </div>
+          <div id="yourloves">
+            <div id="header4">
+              <h1>Your Loves</h1>
+              <a href="">View Loves > </a>
+            </div>
+            <div id="loves"></div>
+          </div>
+        </div>
+        <div id="orderrightdiv">
+          <div id="payment">
+            <div>
+              <h3 class="font">Merchandise Subtotal</h3>
+              <h3>$<span id="mrptotal">0</span></h3>
+            </div>
+            <div>
+              <h3 class="font">Shipping & Handling</h3>
+              <h3>TBD</h3>
+            </div>
+            <div>
+              <h3 class="font">Estimated Tax & Other Fees</h3>
+              <h3>TBD</h3>
+            </div>
+            <div>
+              <h3 class="font">Additional Discount</h3>
+              <h3>- $<span id="adddiscount">0</span></h3>
+            </div>
+            <hr />
+            <div id="red">
+              <h3>Estimated Total</h3>
+              <h3>$<span id="totalamt">0</span></h3>
+            </div>
+            <h5>Shipping & taxes calculated during checkout</h5>
+            <button id="ship" onclick='window.location.href = "checkout.html"'>
+              Checkout Shipped Items
+            </button>
+            <button id="paypal">
+              Pay with&nbsp;&nbsp;
+              <img
+                src="https://www.sephora.com/img/ufe/logo-paypal.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div id="promo">
+            <h5>View featured offers</h5>
+            <div id="input">
+              <input
+                type="password"
+                placeholder="Promo or Reward Code"
+                id="code"
+              />
+              <button id="apply">Apply</button>
+            </div>
+          </div>
+          <div id="assistance">
+            <h3>Need assistance?</h3>
+            <div id="telephone">
+              <p class="num">1-877-SEPHORA (1-877-737-4672)</p>
+              <p>TTY: 1-888-866-9845</p>
+            </div>
+            <p>Free return shipping or return in store</p>
+            <p>We accept</p>
+            <div id="cardshown">
+              <div>
+                <img src="https://www.sephora.com/img/ufe/payments/sephora.svg" alt="">
+              </div>
+              <div>
+                <img src="https://www.sephora.com/img/ufe/payments/visa.svg" alt="">
+              </div>
+              <div>
+                <img src="https://www.sephora.com/img/ufe/payments/masterCard.svg" alt="">
+              </div>
+              <div>
+                <img src="https://www.sephora.com/img/ufe/payments/americanExpress.svg" alt="">
+              </div>
+              <div>
+                <img src="https://www.sephora.com/img/ufe/payments/discover.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="cart.js"></script>
+</html>
+<script
+  src="https://kit.fontawesome.com/3244e8e1e6.js"
+  crossorigin="anonymous"
+></script>

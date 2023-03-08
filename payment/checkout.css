@@ -1,0 +1,186 @@
+html * {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#header-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 20px 0;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+#header-section > img {
+  width: 14.5%;
+}
+#cartdiv {
+  width: 66%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  /* height: 100vh; */
+  /* border: 1px solid; */
+  gap: 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#leftdiv {
+  width: 68%;
+  /* height: 80vh; */
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  padding-right: 25px;
+  gap: 15px;
+}
+#leftdiv > #checkout {
+  font-weight: 300;
+  margin-bottom: -4px;
+}
+#leftdiv hr {
+  width: 100%;
+  border: 1px solid black;
+}
+#leftdiv  #shipping {
+  font-size: 25px;
+  margin-top: -4px;
+}
+#address-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+#address-detail>p {
+  margin-top: -6px;
+  margin-bottom: -8px;
+}
+#error .errormess {
+  font-size: 13px;
+  color: red;
+}
+#address-detail > #name {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+#address-detail > #name input {
+  width: 45.5%;
+}
+#address-detail > #phone-number {
+  width: 45.5%;
+}
+#address-detail > #zip {
+  width: 22.75%;
+}
+#address-detail input {
+  height: 40px;
+  border: 1px solid rgb(200, 197, 197);
+  padding-left: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#address-detail > #savebtn {
+  width: 32%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+#address-detail > #savebtn:hover {
+  background-color: rgb(100, 99, 99);
+  border: none;
+}
+#leftdiv > #delivery {
+  font-size: 25px;
+  margin-top: -4px;
+  margin-bottom: 20px;
+}
+#leftdiv > .p1 {
+  font-weight: 600;
+}
+.p1,
+.p2 {
+  margin-top: -10px;
+  margin-bottom: -2px;
+  font-size: 14px;
+}
+.p2 {
+  margin-bottom: 15px;
+}
+#leftdiv > #payment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: -10px;
+}
+#payment > h1 {
+  font-size: 25px;
+  margin-top: -4px;
+}
+#logo-secure {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+  color: grey;
+}
+#credit-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+#credit-logo > #plus {
+  font-size: 25px;
+}
+#credit-logo > #card-i {
+  font-size: 35px;
+}
+#credit-logo > h3 {
+  font-size: 15px;
+}
+#credit-logo > h3:hover {
+  text-decoration: underline;
+}
+#savebtn2 {
+  width: 32%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+#review {
+  font-size: 25px;
+  margin-top: -5px;
+}
+#p3 {
+  margin-top: -15px;
+  margin-bottom: 50px;
+}
+
+#rightdiv {
+  width: 32%;
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  border: 1px solid;
+  gap: 15px;
+}

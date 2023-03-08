@@ -11,9 +11,32 @@ function itemCount(){
 
 itemCount();
 
+function disable() {
+  let button = document.getElementById("ship");
+  button.disabled = true;
+  button.style.backgroundColor = "rgb(200, 197, 197)";
+  button.style.color = "grey";
+
+  let button2 = document.getElementById("paypal");
+  button2.disabled = true;
+  button2.style.backgroundColor = "rgb(200, 197, 197)";
+  button2.style.color = "grey";
+  button2.style.border = "none";
+}
+
+function able() {
+  let button = document.getElementById("ship");
+  button.disabled = false;
+
+  let button2 = document.getElementById("paypal");
+  button2.disabled = false;
+}
+
 if (cart_data.length === 0) {
   let h3 = document.createElement("h3");
   h3.textContent = "Your Basket is currently empty.";
+
+  disable();
 
   let btn = document.createElement("button");
   btn.setAttribute("class", "gotoproduct");
@@ -23,6 +46,7 @@ if (cart_data.length === 0) {
   cartdata.append(h3, btn);
 } else {
   addproduct(cart_data);
+  able();
 }
 
 function addproduct(data) {
@@ -351,4 +375,5 @@ function addtoCartList(item, btn){
   btn.textContent = "Added";
   cart_data.push(item);
   localStorage.setItem("cart",JSON.stringify(cart_data));
+  addproduct(cart_data);
 }
