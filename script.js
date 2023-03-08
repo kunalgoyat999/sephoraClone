@@ -1,3 +1,12 @@
+import {navbar} from "./Component/navbar.js";
+
+let navbarContainer =document.getElementById("nav");
+
+// console.log("navbar===",navbar)
+
+navbarContainer.innerHTML = navbar();
+
+
 let carContainer =[ ...document.querySelectorAll(".slider__container")];
 let prevBtn =[...document.querySelectorAll(".prev")];
 let nextBtn =[...document.querySelectorAll(".next")];
