@@ -1,0 +1,154 @@
+#body {
+    margin-top: 40px;
+    padding-top: 50px;
+    background-color: black;
+    color: azure;
+    padding-bottom: 60px;
+    font-family: Brandon Text, Arial, sans-serif;
+}
+
+.btm {
+    color: azure;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: -20px;
+}
+
+.btm>div {
+    display: grid;
+    font-size: small;
+    line-height: 15px;
+
+}
+
+.btm>div i{
+    font-size: 22px;
+}
+
+.line {
+    background-color: grey;
+    width: 80%;
+    height: 0.5px;
+    margin-top: 50px;
+    margin-left: 10%;
+
+}
+
+#big {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+#big div h4{
+    font-size: 15px;
+}
+#big div p{
+    font-size: 12px;
+}
+.txt {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.txt>img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#news p{
+    margin-top: 200px;
+}
+
+#email {
+    /* margin-top: 5px; */
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#btn {
+    margin-top: 10px;
+    /* margin-left: 60px; */
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: black;
+    color: azure;
+    border-radius: 15px;
+    border: 2px solid white;
+}
+
+#newsflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* #newsflex{
+border: 1px solid white;
+width: 100%;
+} */
+
+#newsflex>h1 {
+    text-align: left;
+}
+
+#news>div {
+    margin-top: 8px;
+    display: flex;
+}
+
+#news>div>input {
+    width: 60%;
+    margin-right: 10px;
+}
+
+#pri {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+#pri>p {
+    font-size: 12px;
+    margin-left: 6px;
+
+}
+
+#last {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#last>div>p {
+    font-size: 13px;
+}
+
+.social {
+    height: 30px;
+    width: 30px;
+}
+
+#soc {
+    margin-left: 40%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.one>p {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.one>h4 {
+    margin-top: 20px;
+}
