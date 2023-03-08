@@ -10,8 +10,12 @@
       rel="stylesheet"
     /> -->
     <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="../Header/top-nav.css">
   </head>
   <body>
+    <nav id="nav">
+
+    </nav>
     <div id="cartdiv">
       <div><h2>My Basket</h2></div>
       <div id="ordercarddiv">
@@ -102,7 +106,7 @@
               <h3>$<span id="totalamt">0</span></h3>
             </div>
             <h5>Shipping & taxes calculated during checkout</h5>
-            <button id="ship" onclick='window.location.href = "checkout.html"'>
+            <button id="ship" onclick='window.location.href = "../payment/checkout.html"'>
               Checkout Shipped Items
             </button>
             <button id="paypal">
@@ -154,7 +158,7 @@
       </div>
     </div>
   </body>
-  <script src="cart.js"></script>
+  <script type="module" src="cart.js"></script>
 </html>
 <script
   src="https://kit.fontawesome.com/3244e8e1e6.js"

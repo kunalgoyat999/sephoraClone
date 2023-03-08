@@ -167,6 +167,34 @@ body {
   margin-top: 20px;
   margin-bottom: 12px;
 }
+
+#main--div {
+  display: flex;
+  flex-direction: column;
+}
+
+#credit-logo #desp-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -10px;
+}
+#desp-logo>#desp-div {
+  width: 35%;
+}
+#desp-div>h3 {
+  font-size: 18px;
+}
+#desp-logo>#logo-div {
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+#logo-div>div>img {
+  width: 100%;
+}
+
 #review {
   font-size: 25px;
   margin-top: -5px;

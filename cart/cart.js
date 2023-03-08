@@ -1,8 +1,13 @@
+import { navbar, footer } from "../Component/navbar.js";
+
+let navContainer = document.getElementById("nav");
+navContainer.innerHTML = navbar();
+
 let cart_data = JSON.parse(localStorage.getItem("cart")) || [];
 
 var cartdata = document.getElementById("cartItem");
 
-function itemCount(){
+function itemCount() {
   var item = cart_data.reduce(function (acc, curr) {
     return acc + Number(curr.quantity);
   }, 0);
@@ -27,27 +32,37 @@ function disable() {
 function able() {
   let button = document.getElementById("ship");
   button.disabled = false;
+  button.style.backgroundColor = "rgb(207,17,44)";
+  button.style.color = "white";
+  
 
   let button2 = document.getElementById("paypal");
   button2.disabled = false;
+  button2.style.backgroundColor = "white";
+  button2.style.color = "black";
+  button2.style.border = "2px solid black";
 }
 
-if (cart_data.length === 0) {
-  let h3 = document.createElement("h3");
-  h3.textContent = "Your Basket is currently empty.";
+function check(cart_data) {
+  if (cart_data.length === 0) {
+    let h3 = document.createElement("h3");
+    h3.textContent = "Your Basket is currently empty.";
 
-  disable();
+    disable();
 
-  let btn = document.createElement("button");
-  btn.setAttribute("class", "gotoproduct");
-  btn.textContent = "Shop New Arrivals";
-  btn.setAttribute("onclick", "window.location.href = 'categories.html'");
+    let btn = document.createElement("button");
+    btn.setAttribute("class", "gotoproduct");
+    btn.textContent = "Shop New Arrivals";
+    btn.setAttribute("onclick", "window.location.href = '../category/category.html'");
 
-  cartdata.append(h3, btn);
-} else {
-  addproduct(cart_data);
-  able();
+    cartdata.append(h3, btn);
+  } else {
+    able();
+    addproduct(cart_data);
+  }
 }
+
+check(cart_data);
 
 function addproduct(data) {
   cartdata.innerHTML = "";
@@ -200,6 +215,7 @@ function deleteFun(index) {
   addproduct(cart_data);
   calcTotal();
   itemCount();
+  check(cart_data);
   localStorage.setItem("promo-code", "masai30");
   document.getElementById("adddiscount").innerText = "0";
 
@@ -247,7 +263,7 @@ function checkcode() {
     // console.log(num);
     var remain = (num * 30) / 100;
     document.getElementById("adddiscount").textContent = remain.toFixed(2);
-    
+
     var NUM = Number(num - remain).toFixed(2);
     // document.getElementById("total-amt").textContent = NUM;
     document.getElementById("totalamt").innerText = NUM;
@@ -294,15 +310,15 @@ var products = [
     image:
       "https://www.sephora.com/productimages/sku/s1370766-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97",
     popularity: 1,
-  }
-]
+  },
+];
 
 addUnderRange(products);
 
-function addUnderRange(data){
-  data.map(function(el, index){
+function addUnderRange(data) {
+  data.map(function (el, index) {
     showUnderRange(el, index);
-  })
+  });
 }
 
 function showUnderRange(el, index) {
@@ -350,14 +366,14 @@ function showUnderRange(el, index) {
   despdiv.append(desp, id, size);
 
   let btnDiv = document.createElement("div");
-  btnDiv.setAttribute("id","btn-div2");
+  btnDiv.setAttribute("id", "btn-div2");
 
   let btn = document.createElement("button");
-  btn.setAttribute("id","addbtn");
+  btn.setAttribute("id", "addbtn");
   btn.textContent = "Add";
-  btn.addEventListener("click", function(){
+  btn.addEventListener("click", function () {
     addtoCartList(el, btn);
-  })
+  });
 
   btnDiv.append(btn);
 
@@ -371,9 +387,9 @@ function showUnderRange(el, index) {
   document.getElementById("displayCheapProduct").append(mainDiv, hr);
 }
 
-function addtoCartList(item, btn){
+function addtoCartList(item, btn) {
   btn.textContent = "Added";
   cart_data.push(item);
-  localStorage.setItem("cart",JSON.stringify(cart_data));
-  addproduct(cart_data);
+  localStorage.setItem("cart", JSON.stringify(cart_data));
+  check(cart_data)
 }

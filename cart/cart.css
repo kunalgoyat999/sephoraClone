@@ -2,6 +2,11 @@ html * {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+#nav{
+  margin: 0 -8px;
+  margin-top: -8px;
+}
+
 
 #cartdiv {
   width: 66%;
@@ -10,7 +15,7 @@ html * {
   flex-direction: column;
   height: 100vh;
   /* border: 1px solid; */
-  padding: 5px;
+  /* padding: 5px; */
   margin-top: 10px;
 }
 #ordercarddiv {
@@ -149,6 +154,7 @@ html * {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
 }
 #box>#div1>.first , #box>#div2>.first {
   font-size: 15px;
