@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Category Page</title>
     <link href="./category.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/bd6b389e1a.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <div id="container">
       <div id="category-leftdiv">
@@ -18,40 +23,81 @@
         <div id="dropContainer">
           <div id="container-head" class="containerhead">
             <h4>Rating</h4>
-            <i class="fa-solid fa-caret-down"></i>
+            <i class="fa-solid fa-caret-down" class="down"></i>
+            <i class="fa-solid fa-caret-up" style="display: none;" class="up"></i>
           </div>
-          <div id="container-body" class="containerbody" value="rating">
-            <p>saas</p>
+          <div id="container-body" class="containerbody stars" value="rating">
+  
+            <input type="radio" name="fav_language" value="4" class="ratingbtn"/>
+            <label 
+              ><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i></label
+            ><br />
+            <input type="radio" name="fav_language" value="3" class="ratingbtn" />
+            <label
+              ><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i></label
+            ><br />
+            <input type="radio" name="fav_language" value="2" class="ratingbtn" />
+            <label
+              ><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i></label
+            ><br />
+            <input type="radio" name="fav_language" value="1" class="ratingbtn" />
+            <label
+              ><i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i></label
+            ><br />
           </div>
         </div>
         <div id="dropContainer">
           <div id="dropContainer">
             <div id="container-head" class="containerhead">
               <h4>Price Range</h4>
-              <i class="fa-solid fa-caret-down"></i>
+              <i class="fa-solid fa-caret-down" class="down"></i>
+              <i class="fa-solid fa-caret-up" style="display: none;" class="up"></i>
             </div>
-            <div id="container-body" class="containerbody" value="price">
-              <p>Under $25</p>
+            <div id="container-body" class="containerbody price" value="price">
+                <input type="radio" name="fav_language" value="25" class="radbutton">
+                <label for="html">Under $25</label><br />
+                <input type="radio" name="fav_language"  value="50" class="radbutton">
+                <label for="css">$25 to $50</label><br />
+                <input type="radio" name="fav_language" value="100" class="radbutton">
+                <label>$50 to $100</label><br />
+                <input type="radio" name="fav_language" value="101" class="radbutton">
+                <label>$100 and above</label><br />              
             </div>
           </div>
         </div>
       </div>
       <div id="category-rightdiv">
         <div id="top">
-          <p id="count">Results</p>
+          <p id="count"></p>
           <!-- <a href="#">Sort By: <span>Relevance</span></a>
           <ul class="dropdown">
             <li></li>
           </ul> -->
-          <select id="sort">
+          <select id="sort" >
             <option>Sort By: <span>Relevance</span></option>
-            <option>Low To High</option>
-            <option>High To Low</option>
+            <option value="lth">Low To High</option>
+            <option value="htl">High To Low</option>
           </select>
           <!-- <p id="sort"></p> -->
         </div>
         <div id="bottom">
-          <div id="prod-box">
+          <!-- <div id="prod-box">
             <div class="image-container">
               <i class="fa-regular fa-heart" id="heart-overlay"></i>
               <img
@@ -74,6 +120,7 @@
             </div>
             <h5>SEPHORA COLLECTION</h5>
             <p>The Hydrating Kit</p>
+            
             <h4>$16.00</h4>
           </div>
 
@@ -102,7 +149,7 @@
             <p>The Hydrating Kit</p>
             <h4>$16.00</h4>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </body>

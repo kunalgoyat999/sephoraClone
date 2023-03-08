@@ -1,12 +1,18 @@
-#container {
-  display: flex;
-  width: 80%;
-  margin: auto;
-  justify-content: left;
+*{
+  font-family: Helvetica, Arial,  sans-serif;
 }
 
+#container {
+  display: flex;
+  width: 68%;
+  margin: auto;
+  /* justify-content: space-around; */
+}
+
+/* Left Container */
 #category-leftdiv {
-  width: 13%;
+  width: 15.5%;
+  margin-right: 3%;
 }
 
 #dropContainer #container-head{
@@ -20,28 +26,74 @@
   display: none;
 }
 
-#category-rightdiv #bottom {
-  display: flex;
-  margin-left: 2%;
+#container-body:hover{
+  display: none;
 }
 
+#container-body input[type=radio]{
+  width: 20%;
+  transform: scale(1.8);
+  margin-bottom: 25px;
+}
+
+#container-body input[type=radio]:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.price label:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#container-body img{
+  width: 65px;
+}
+/* Right Container */
+
+#category-rightdiv {
+  width: 81.5%;
+  /* margin-right: -15%; */
+}
+
+/* Top Right Container */
 #category-rightdiv #top {
   display: flex;
   justify-content: space-between;
-  margin-right: -15%;
+  /* margin-right: -15%; */
 }
 
-select {
+#category-rightdiv select {
   border: none;
   background: transparent;
 }
 
-select option {
+#category-rightdiv select option {
   border: none;
+}
+#heart-overlay {
+  /* position: absolute; */
+  margin-left: 100%;
+
+  text-align: right;
+  /* border-radius: 50%; */
+}
+
+#count{
+  color: gray;
+  font-size: 14px;
+}
+/* Bottom Right Container */
+#category-rightdiv #bottom {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 40px;
+  /* margin-left: 2%; */
 }
 
 #prod-box {
-  padding: 2% 2%;
+  width: 100%;
+  padding: 6% 0%;
 }
 
 #prod-box h5 {
@@ -84,11 +136,7 @@ select option {
   padding-bottom: 10px;
 }
 
-#heart-overlay {
-  position: absolute;
-  left: 90%;
-  border-radius: 50%;
-}
+
 
 .image-container:hover .overlay {
   opacity: 1;
