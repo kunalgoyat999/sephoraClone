@@ -1,0 +1,148 @@
+*{
+  font-family: Helvetica, Arial,  sans-serif;
+}
+
+#container {
+  display: flex;
+  width: 68%;
+  margin: auto;
+  /* justify-content: space-around; */
+}
+
+/* Left Container */
+#category-leftdiv {
+  width: 15.5%;
+  margin-right: 3%;
+}
+
+#dropContainer #container-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#container-body{
+  display: none;
+}
+
+#container-body:hover{
+  display: none;
+}
+
+#container-body input[type=radio]{
+  width: 20%;
+  transform: scale(1.8);
+  margin-bottom: 25px;
+}
+
+#container-body input[type=radio]:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.price label:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#container-body img{
+  width: 65px;
+}
+/* Right Container */
+
+#category-rightdiv {
+  width: 81.5%;
+  /* margin-right: -15%; */
+}
+
+/* Top Right Container */
+#category-rightdiv #top {
+  display: flex;
+  justify-content: space-between;
+  /* margin-right: -15%; */
+}
+
+#category-rightdiv select {
+  border: none;
+  background: transparent;
+}
+
+#category-rightdiv select option {
+  border: none;
+}
+#heart-overlay {
+  /* position: absolute; */
+  margin-left: 100%;
+
+  text-align: right;
+  /* border-radius: 50%; */
+}
+
+#count{
+  color: gray;
+  font-size: 14px;
+}
+/* Bottom Right Container */
+#category-rightdiv #bottom {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 40px;
+  /* margin-left: 2%; */
+}
+
+#prod-box {
+  width: 100%;
+  padding: 6% 0%;
+}
+
+#prod-box h5 {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+#prod-box p {
+  font-size: 14px;
+  margin: 6px 0px;
+}
+#prod-box h4 {
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 83%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Set the opacity to 0.5 to create a semi-transparent black overlay */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay:hover {
+  background-color: rgba(58, 58, 58, 0.5);
+  opacity: 0.5;
+}
