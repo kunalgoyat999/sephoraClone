@@ -1,6 +1,6 @@
 
 // Get Data
-let url = "http://localhost:3000/eyePrimer";
+let url = "https://pickled-cheerful-somersault.glitch.me/eyePrimer";
 
 async function getData(url) {
   try {
@@ -103,7 +103,7 @@ function displayData(data) {
     // let h6 = document.createElement("h6");
     // h6.textContent = ele.color + "Colors"
     let h4 = document.createElement("h4");
-    h4.textContent = ele.cost;
+    h4.textContent = "$ "+ele.cost;
 
     prodBox.append(imgContainer, h5, p, h4);
     document.getElementById("bottom").append(prodBox);
