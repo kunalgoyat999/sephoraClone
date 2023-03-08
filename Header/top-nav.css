@@ -1,8 +1,8 @@
 * {
-    margin: 0;
-    font-family: "helvetica neue", helvetica, arial, sans-serif;
+    font-family: helvetica, arial, sans-serif;
+    /* margin: 0;
+    padding: 0; */
 }
-
 #signin>a {
     text-decoration: none;
     display: flex;
@@ -54,6 +54,9 @@
     margin-top: 25px;
     height: 50px;
     width: 100px;
+}
+#box {
+    margin-top: 0px;
 }
 
 div>input {

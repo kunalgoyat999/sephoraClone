@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Sephora</title>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <header id="header-section">
+      <img src="https://www.sephora.com/img/ufe/logo.svg" alt="Logo" />
+    </header>
+    <div id="cartdiv">
+      <div id="leftdiv">
+        <h1 id="checkout">Checkout</h1>
+        <hr />
+        <div id="error"><h1 id="shipping">Shipping Address</h1></div>
+        <div id="address-detail">
+          <div id="name">
+            <input type="text" placeholder="First Name*" id="first-name" />
+            <input type="text" placeholder="Last Name*" id="last-name" />
+          </div>
+          <input
+            type="text"
+            maxlength="10"
+            placeholder="Phone*"
+            id="phone-number"
+          />
+          <input
+            type="text"
+            placeholder="Street Address*"
+            id="street-address"
+          />
+          <input
+            type="text"
+            maxlength="6"
+            placeholder="ZIP/Postal Code*"
+            id="zip"
+          />
+          <button id="savebtn">Save and Continue</button>
+        </div>
+        <hr />
+        <h1 id="delivery">Delivery & Gift Options</h1>
+        <p class="p1">FREE - Standard Ground</p>
+        <p class="p2">Delivery By Mon, Mar 14</p>
+        <hr />
+        <div id="payment">
+          <h1>Payment Method</h1>
+          <div id="logo-secure">
+            <i class="fa-solid fa-lock"></i>
+            <p>Secure</p>
+          </div>
+        </div>
+        <div id="credit-logo">
+            <i class="fa-regular fa-plus" id="plus"></i>
+          <i class="fa-regular fa-credit-card" id="card-i"></i>
+          <h3 onclick="filldetail()">Add new credit or debit card</h3>
+        </div>
+        <button id="savebtn2">Save and Continue</button>
+        <hr>
+        <h1 id="review">Review and Place Order</h1>
+        <p id="p3">Please review your order information before placing your order.</p>
+      </div>
+      <div id="rightdiv"></div>
+    </div>
+  </body>
+  <script src="checkout.js"></script>
+</html>
+<script
+  src="https://kit.fontawesome.com/3244e8e1e6.js"
+  crossorigin="anonymous"
+></script>
