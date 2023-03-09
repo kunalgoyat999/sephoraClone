@@ -27,8 +27,8 @@ let label4 = document.getElementById("label4");
 label4.innerHTML = star1();
 
 // Get Data
-let category = "eyeSets";
-// let url = "https://pickled-cheerful-somersault.glitch.me/eyePrimer";
+let category = "eyePallete";
+// let url = "https://pickled-cheerful-somersault.glitch.me/${category}";
 let url = `http://localhost:3000/${category}`;
 
 async function getData(url) {
@@ -50,6 +50,35 @@ async function init(url) {
   }
 }
 init(url);
+
+
+let creatBtn = document.getElementById("container-head");
+creatBtn.addEventListener("click", async function(){
+    let res = await postData();
+    // console.log("sdjkjefkedkj")
+    // location.href = "./main.html";
+})
+
+async function postData(){
+    let body = {
+        quan:1
+    }
+    try{
+      console.log(url)
+        let res = await fetch(url,{
+            method:"PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body),
+        });
+        // let data = await res.json();
+        
+    } catch(error){
+        console.log(error);
+    }
+}
+
 
 // Sort Functionality
 document.getElementById("sort").addEventListener("click", function () {
@@ -101,7 +130,6 @@ function displayData(data) {
   count.textContent = data.length + " Results";
   document.getElementById("bottom").textContent = "";
   data.forEach((ele) => {
-    console.log(ele.rating);
     let prodBox = document.createElement("div");
     prodBox.setAttribute("id", "prod-box");
 
