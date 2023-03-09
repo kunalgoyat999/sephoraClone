@@ -1,12 +1,11 @@
-*{
-  font-family: Helvetica, Arial,  sans-serif;
+* {
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 #container {
   display: flex;
   width: 68%;
   margin: auto;
-  /* justify-content: space-around; */
 }
 
 /* Left Container */
@@ -15,52 +14,84 @@
   margin-right: 3%;
 }
 
-#dropContainer #container-head{
+#dropContainer #container-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
 
-#container-body{
+#container-body {
+  display: none;
+  margin-bottom: 0px;
+}
+
+#container-body:hover {
   display: none;
 }
 
-#container-body:hover{
-  display: none;
+#container-body input[type="radio"] {
+  width: 10%;
+  margin-top: -1px;
+  vertical-align: middle;
 }
 
-#container-body input[type=radio]{
-  width: 20%;
-  transform: scale(1.8);
-  margin-bottom: 25px;
-}
-
-#container-body input[type=radio]:hover{
+#container-body input[type="radio"]:hover {
   color: black;
   cursor: pointer;
 }
 
-.price label:hover{
+#container-body label {
+  display: inline-block;
+  margin-bottom: 15%;
+}
+
+#container-body1 input[type="radio"] {
+  width: 10%;
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+#container-body1 input[type="radio"]:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#container-body1 label {
+  display: inline-block;
+  margin-bottom: 15%;
+}
+
+#container-body1 {
+  display: none;
+  font-size: 12px;
+}
+
+.price label:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-#container-body img{
-  width: 65px;
-}
 /* Right Container */
-
 #category-rightdiv {
   width: 81.5%;
-  /* margin-right: -15%; */
+}
+
+/* Top Image */
+#topimg {
+  margin: 5% 0% 3% 0%;
+}
+
+#topimg p {
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  margin-bottom: 0px;
 }
 
 /* Top Right Container */
 #category-rightdiv #top {
   display: flex;
   justify-content: space-between;
-  /* margin-right: -15%; */
 }
 
 #category-rightdiv select {
@@ -71,24 +102,25 @@
 #category-rightdiv select option {
   border: none;
 }
-#heart-overlay {
-  /* position: absolute; */
-  margin-left: 100%;
 
+#heart-overlay {
+  margin-left: 100%;
   text-align: right;
-  /* border-radius: 50%; */
 }
 
-#count{
+#count {
   color: gray;
   font-size: 14px;
+}
+
+#sort {
+  font-weight: bolder;
 }
 /* Bottom Right Container */
 #category-rightdiv #bottom {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  /* margin-left: 2%; */
 }
 
 #prod-box {
@@ -120,12 +152,7 @@
   top: 83%;
   left: 0;
   width: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Set the opacity to 0.5 to create a semi-transparent black overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.5s ease;
   border-radius: 5px;
@@ -135,8 +162,6 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-
 
 .image-container:hover .overlay {
   opacity: 1;

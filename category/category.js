@@ -1,12 +1,40 @@
+import {
+  navbar,
+  footer,
+  star4,
+  star3,
+  star2,
+  star1,
+  star5,
+} from "../Component/navbar.js";
+
+let navbarContainer = document.getElementById("navbar");
+navbarContainer.innerHTML = navbar();
+
+let footercontainer = document.getElementById("footer");
+footercontainer.innerHTML = footer();
+
+let label1 = document.getElementById("label1");
+label1.innerHTML = star4();
+
+let label2 = document.getElementById("label2");
+label2.innerHTML = star3();
+
+let label3 = document.getElementById("label3");
+label3.innerHTML = star2();
+
+let label4 = document.getElementById("label4");
+label4.innerHTML = star1();
 
 // Get Data
-let url = "https://pickled-cheerful-somersault.glitch.me/eyePrimer";
+let category = "eyeLiner";
+// let url = "https://pickled-cheerful-somersault.glitch.me/eyePrimer";
+let url = `http://localhost:3000/${category}`;
 
 async function getData(url) {
   try {
     let res = await fetch(url);
     let data = await res.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.log(error);
@@ -14,7 +42,6 @@ async function getData(url) {
 }
 
 async function init(url) {
-  console.log(url)
   try {
     let data = await getData(url);
     displayData(data);
@@ -35,42 +62,42 @@ document.getElementById("sort").addEventListener("click", function () {
 });
 
 // Filter Data
-var radbtn = document.querySelectorAll(".radbutton");
-radbtn.forEach((ele)=>{
-  ele.addEventListener("click", function(){
-    if(ele.value==25){
-      init(`${url}/?cost_gte=0&cost_lte=25`)
-    } else if(ele.value==50){
-      init(`${url}/?cost_gte=26&cost_lte=50`)
-    } else if(ele.value==100){
-      init(`${url}/?cost_gte=51&cost_lte=100`)
+let radbtn = document.querySelectorAll(".radbutton");
+radbtn.forEach((ele) => {
+  ele.addEventListener("click", function () {
+    if (ele.value == 25) {
+      init(`${url}/?cost_gte=0&cost_lte=25`);
+    } else if (ele.value == 50) {
+      init(`${url}/?cost_gte=26&cost_lte=50`);
+    } else if (ele.value == 100) {
+      init(`${url}/?cost_gte=51&cost_lte=100`);
     } else {
-      init(`${url}/?cost_gte=100`)
+      init(`${url}/?cost_gte=100`);
     }
-  })
-})
+  });
+});
 
-var ratbtn = document.querySelectorAll(".ratingbtn");
-ratbtn.forEach((ele)=>{
-  ele.addEventListener("click", function(){
-    if(ele.value==1){
-      console.log(ele.value)
-      init(`${url}/?rating_gte=1&rating_lte=1.9`)
-    } else if(ele.value==3){
-      console.log(ele.value)
-      init(`${url}/?rating_gte=3&rating_lte=3.9`)
-    } else if(ele.value==2){
-      console.log(ele.value)
-      init(`${url}/?rating_gte=2&rating_lte=2.9`)
+let ratbtn = document.querySelectorAll(".ratingbtn");
+ratbtn.forEach((ele) => {
+  ele.addEventListener("click", function () {
+    let val = ele.value;
+    let valNum = Number(val);
+    if (valNum == 1) {
+      init(`${url}/?rating_gte=0&rating_lte=0.9`);
+    } else if (valNum == 2) {
+      init(`${url}/?rating_gte=1&rating_lte=1.9`);
+    } else if (valNum == 3) {
+      init(`${url}/?rating_gte=2&rating_lte=3.9`);
     } else {
-      console.log(ele.value)
-      init(`${url}/?rating_gte=4`)
+      init(`${url}/?rating_gte=4`);
     }
-  })
-})
+  });
+});
 
+let labelarr = [];
 // Display Data
 function displayData(data) {
+  document.getElementById("categoryName").textContent = category;
   let count = document.getElementById("count");
   count.textContent = data.length + " Results";
   document.getElementById("bottom").textContent = "";
@@ -100,13 +127,63 @@ function displayData(data) {
     h5.textContent = ele.brand;
     let p = document.createElement("p");
     p.textContent = ele.name;
-    // let h6 = document.createElement("h6");
-    // h6.textContent = ele.color + "Colors"
-    let h4 = document.createElement("h4");
-    h4.textContent = "$ "+ele.cost;
 
-    prodBox.append(imgContainer, h5, p, h4);
+    let ratingdiv = document.createElement("div");
+    let ratNum = Number(ele.rating);
+    if (ratNum < 1) {
+      ratingdiv.innerHTML = star1();
+    } else if (ratNum < 2 && ratNum >= 1) {
+      ratingdiv.innerHTML = star2();
+    } else if (ratNum < 3 && ratNum >= 2) {
+      ratingdiv.innerHTML = star3();
+    } else if (ratNum < 4 && ratNum >= 3) {
+      ratingdiv.innerHTML = star4();
+    } else {
+      ratingdiv.innerHTML = star5();
+    }
+
+    let h4 = document.createElement("h4");
+    h4.textContent = "$ " + ele.cost;
+
+    prodBox.append(imgContainer, h5, p, ratingdiv, h4);
     document.getElementById("bottom").append(prodBox);
+
+    // Left Container Brand Filter
+    let inputCheck;
+    let label;
+    let br;
+
+    if (!labelarr.includes(ele.brand)) {
+      labelarr.push(ele.brand);
+
+      inputCheck = document.createElement("input");
+      label = document.createElement("label");
+
+      inputCheck.setAttribute("type", "radio");
+      inputCheck.setAttribute("name", "fav_language");
+      inputCheck.setAttribute("class", "brandbuttn");
+
+      label.setAttribute("for", "html");
+      label.textContent = ele.brand;
+      br = document.createElement("br");
+      inputCheck.addEventListener("click", function () {
+        init(`${url}/?brand=${label.textContent}`);
+      });
+
+      console.log(labelarr);
+    }
+    if (inputCheck === undefined || label === undefined || br === undefined) {
+      inputCheck = document.createElement("p");
+      label = document.createElement("p");
+      br = document.createElement("p");
+    }
+
+    if (document.querySelector("#container-body1 p")) {
+      let ptag = document.querySelector("#container-body1 p");
+      ptag.remove();
+    }
+
+    document.getElementById("container-body1").append(inputCheck, label, br);
   });
 }
 
@@ -125,3 +202,12 @@ contHead.forEach((ele, index) => {
     });
   });
 });
+
+// let contHead1 = document.querySelector("#container-body1");
+// contHead1.addEventListener("click", function () {
+//   if (contHead1.style.display == "block") {
+//     contHead1.style.display = "none";
+//   } else {
+//     contHead1.style.display = "block";
+//   }
+// });
