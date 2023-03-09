@@ -1,6 +1,5 @@
- function navbar(){
-
-    return `
+function navbar() {
+  return `
     
     <div id="top_img">
     <p><strong>Take 50% off++</strong> Oh snap! Get major savings on your favorite beauty. Plus, free shipping on all orders <br> with code <strong> FREESHIP. Shop Now ▸</strong></p>
@@ -41,15 +40,11 @@
     
     
     
-    `
-
-    
-   
-
+    `;
 }
 
 function footer() {
-    return `
+  return `
     <div id="body">
         <div class="btm">
             <div> <img src="https://www.sephora.com/img/ufe/icons/find-store.svg" alt=""> <strong>Find a Store</strong>Choose Your Store</div>
@@ -161,11 +156,51 @@ function footer() {
             </div>
         </div>
     </div>
-    `
+    `;
 }
 
-export {navbar, footer} ;
+function star4() {
+  return `
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    `;
+}
 
+function star3() {
+  return `
+    <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+    `;
+}
 
+function star2() {
+  return `<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-regular fa-star"></i>
+<i class="fa-regular fa-star"></i>
+<i class="fa-regular fa-star"></i>`;
+}
 
- 
+function star1() {
+    return `<i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>`
+}
+
+function star5() {
+    return `<i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>`
+}
+
+export { navbar, footer, star4, star3, star2, star1, star5 };
