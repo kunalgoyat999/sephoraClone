@@ -377,3 +377,23 @@ body {
   font-weight: 100;
   margin: 14px 0;
 }
+
+#foot {
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  padding: 8px 0;
+}
+
+#foot>h3 {
+  font-weight: 100;
+  margin-bottom: -5px;
+}

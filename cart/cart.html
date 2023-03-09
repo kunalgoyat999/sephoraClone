@@ -5,17 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basket | Sephora</title>
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    /> -->
-    <link rel="stylesheet" href="../Header/top-nav.css">
+    <link rel="stylesheet" href="../Footer/footer.css">
     <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="../Header/top-nav.css" />
+    <link rel="stylesheet" href="../main.css">
   </head>
   <body>
-    <nav id="nav">
-
-    </nav>
+    <nav id="nav"></nav>
     <div id="cartdiv">
       <div><h2>My Basket</h2></div>
       <div id="ordercarddiv">
@@ -70,17 +66,25 @@
             </div>
             <div id="displayCheapProduct"></div>
           </div>
-          <div id="bestsellar">
-            <div id="header3"><h1>Bestsellers</h1></div>
-            <div id="best"></div>
-          </div>
-          <div id="yourloves">
-            <div id="header4">
-              <h1>Your Loves</h1>
-              <a href="">View Loves > </a>
+          <section id="chosen-for-you">
+            <div class="base-title">
+              <h2>Bestsellar</h2>
             </div>
-            <div id="loves"></div>
-          </div>
+
+            <!-- carousel -->
+
+            <section class="product__slider">
+              <div class="product-container">
+                <ul
+                  class="product__slider__container"
+                  data-multislide="true"
+                  data-step="6"
+                >
+                  <li class="product__slider__item area-hidden"></li>
+                </ul>
+              </div>
+            </section>
+          </section>
         </div>
         <div id="orderrightdiv">
           <div id="payment">
@@ -106,7 +110,10 @@
               <h3>$<span id="totalamt">0</span></h3>
             </div>
             <h5>Shipping & taxes calculated during checkout</h5>
-            <button id="ship" onclick='window.location.href = "../payment/checkout.html"'>
+            <button
+              id="ship"
+              onclick='window.location.href = "../payment/checkout.html"'
+            >
               Checkout Shipped Items
             </button>
             <button id="paypal">
@@ -120,11 +127,7 @@
           <div id="promo">
             <h5>View featured offers</h5>
             <div id="input">
-              <input
-                type="text"
-                placeholder="Promo or Reward Code"
-                id="code"
-              />
+              <input type="text" placeholder="Promo or Reward Code" id="code" />
               <button id="apply">Apply</button>
             </div>
           </div>
@@ -138,19 +141,34 @@
             <p>We accept</p>
             <div id="cardshown">
               <div>
-                <img src="https://www.sephora.com/img/ufe/payments/sephora.svg" alt="">
+                <img
+                  src="https://www.sephora.com/img/ufe/payments/sephora.svg"
+                  alt=""
+                />
               </div>
               <div>
-                <img src="https://www.sephora.com/img/ufe/payments/visa.svg" alt="">
+                <img
+                  src="https://www.sephora.com/img/ufe/payments/visa.svg"
+                  alt=""
+                />
               </div>
               <div>
-                <img src="https://www.sephora.com/img/ufe/payments/masterCard.svg" alt="">
+                <img
+                  src="https://www.sephora.com/img/ufe/payments/masterCard.svg"
+                  alt=""
+                />
               </div>
               <div>
-                <img src="https://www.sephora.com/img/ufe/payments/americanExpress.svg" alt="">
+                <img
+                  src="https://www.sephora.com/img/ufe/payments/americanExpress.svg"
+                  alt=""
+                />
               </div>
               <div>
-                <img src="https://www.sephora.com/img/ufe/payments/discover.svg" alt="">
+                <img
+                  src="https://www.sephora.com/img/ufe/payments/discover.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -159,6 +177,7 @@
     </div>
   </body>
   <script type="module" src="cart.js"></script>
+  <!-- <script type="module" src="../script.js"></script> -->
 </html>
 <script
   src="https://kit.fontawesome.com/3244e8e1e6.js"
