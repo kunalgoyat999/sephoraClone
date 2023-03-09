@@ -1,0 +1,959 @@
+{
+  "eyePallete": [
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2594398-main-zoom.jpg?imwidth=164",
+      "brand": "Kaja",
+      "name": "Eye Bento Bouncy Eyeshadow Trio",
+      "rating": 4,
+      "cost": 34
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2600732-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Destinations Eye Palette",
+      "rating": 2,
+      "cost": 123
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2036481-main-zoom.jpg?imwidth=164",
+      "brand": "Anastasia Beverly Hills",
+      "name": "Soft Glam Eyeshadow Palette",
+      "rating": 3,
+      "cost": 75
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2606614-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Color Shifter Mini Eyeshadow Palette",
+      "rating": 4,
+      "cost": 46
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2651859-main-zoom.jpg?imwidth=164",
+      "brand": "HUDA BEAUTY",
+      "name": "Matte Obsessions Eyeshadow Palette",
+      "rating": 1,
+      "cost": 80
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2191435-main-zoom.jpg?imwidth=164",
+      "brand": "Dior",
+      "name": "BACKSTAGE Eyeshadow Palette",
+      "rating": 3,
+      "cost": 38
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2650083-main-zoom.jpg?imwidth=164",
+      "brand": "Glossier",
+      "name": "Monochromes Essential Eyeshadow Trio Palette",
+      "rating": 1,
+      "cost": 150
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2617744-main-zoom.jpg?imwidth=164",
+      "brand": "HUDA BEAUTY",
+      "name": "Empowered Eyeshadow Palette",
+      "rating": 5,
+      "cost": 200
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2597649-main-zoom.jpg?imwidth=164",
+      "brand": "Natasha Denona",
+      "name": "My Dream Eyeshadow Palette",
+      "rating": 2,
+      "cost": 20
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2603819-main-zoom.jpg?imwidth=164",
+      "brand": "Danessa Myricks Beauty",
+      "name": "Lightwork Vol. IV: Transcendence Palette - Illuminating Eye & Face Pigments",
+      "rating": 4,
+      "cost": 69
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2378313-main-zoom.jpg?imwidth=164",
+      "brand": "Natasha Denona",
+      "name": "Glam Eyeshadow Palette",
+      "rating": 3,
+      "cost": 99
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2579704-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Wishing You Blockbuster Multi-Use Makeup Palette",
+      "rating": 4,
+      "cost": 36
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2464006-main-zoom.jpg?imwidth=164",
+      "brand": "PATRICK TA",
+      "name": "Major Dimension Eyeshadow Palette",
+      "rating": 4,
+      "cost": 119
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1775006-main-zoom.jpg?imwidth=164",
+      "brand": "tarte",
+      "name": "Tartelette™ In Bloom Clay Eyeshadow Palette",
+      "rating": 2,
+      "cost": 35
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1573336-main-zoom.jpg?imwidth=164",
+      "brand": "Urban Decay",
+      "name": "Naked3 Eyeshadow Palette",
+      "rating": 1,
+      "cost": 85
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2679728-main-zoom.jpg?imwidth=164",
+      "brand": "DOMINIQUE COSMETICS",
+      "name": "The Essential Eye Shadow Palette",
+      "rating": 4,
+      "cost": 89
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2380798-main-zoom.jpg?imwidth=164",
+      "brand": "ONE/SIZE by Patrick Starrr",
+      "name": "PATRICK STARRR Visionary Eyeshadow Palette",
+      "rating": 2,
+      "cost": 49
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2671634-main-zoom.jpg?imwidth=164",
+      "brand": "PAT McGRATH LABS",
+      "name": "The Love Collection MTHRSHP: Velvet Liaison",
+      "rating": 2,
+      "cost": 56
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2102572-main-zoom.jpg?imwidth=164",
+      "brand": "Charlotte Tilbury",
+      "name": "Luxury Eyeshadow Palette",
+      "rating": 4,
+      "cost": 43
+    }
+  ],
+  "mascara": [
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2474138-main-zoom.jpg?imwidth=164",
+      "brand": "Rare Beauty by Selena Gomez",
+      "name": "Perfect Strokes Universal Volumizing Mascara",
+      "rating": 4,
+      "cost": 54
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2600864-main-zoom.jpg?imwidth=164",
+      "brand": "Too Faced",
+      "name": "Better Than Sex Volumizing & Lengthening Mascara",
+      "rating": 3,
+      "cost": 75
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2542439-main-zoom.jpg?imwidth=164",
+      "brand": "Valentino",
+      "name": "Magnificent Smudgeproof Volumizing Mascara",
+      "rating": 2,
+      "cost": 69
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2335198-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "ILIA",
+      "name": "Limitless Lash Lengthening Clean Mascara",
+      "rating":2,
+      "cost": 57
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2606176-main-zoom.jpg?pb=allure-2022-clean-badge&imwidth=164",
+      "brand": "Tower 28 Beauty",
+      "name": "MakeWaves Lengthening + Volumizing Mascara",
+      "rating":4,
+      "cost": 65
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2594695-main-zoom.jpg?imwidth=164",
+      "brand": "MAKE UP FOR EVER",
+      "name": "The Professionall 24HR Double-Ended Lifting & Volumizing Mascara",
+      "rating": 5,
+      "cost": 250
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2417145-main-zoom.jpg?imwidth=164",
+      "brand": "Lancôme",
+      "name": "Lash Idôle Lash-Lifting & Volumizing Mascara",
+      "rating": 1,
+      "cost": 23
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1665082-main-zoom.jpg?imwidth=164",
+      "brand": "Benefit Cosmetics",
+      "name": "Roller Lash Curling & Lifting Mascara",
+      "rating": 4,
+      "cost": 78
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2649267-main-zoom.jpg?imwidth=164",
+      "brand": "Glossier",
+      "name": "Lash Slick Lift and Lengthening Mascara",
+      "rating": 3,
+      "cost": 74
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2031649-main-zoom.jpg?pb=2020-03-allure-best-2019&imwidth=164",
+      "brand": "Benefit Cosmetics",
+      "name": "BADgal BANG! Volumizing Mascara",
+      "rating": 5,
+      "cost": 300
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s137471-main-zoom.jpg?imwidth=164",
+      "brand": "Lancôme",
+      "name": "Dèfinicils High Definition Lengthening Mascara",
+      "rating":3,
+      "cost": 47
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2619534-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "GXVE BY GWEN STEFANI",
+      "name": "Can't Stop Staring Clean Lengthening & Lifting Mascara",
+      "rating": 2,
+      "cost":56
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1343938-main-zoom.jpg?imwidth=164",
+      "brand": "Benefit Cosmetics",
+      "name": "They're Real! Lengthening Mascara",
+      "rating": 4,
+      "cost": 45
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2417152-main-zoom.jpg?imwidth=164",
+      "brand": "Lancôme",
+      "name": "Mini Lash Idôle Lash-Lifting & Volumizing Mascara",
+      "rating":3,
+      "cost": 77
+    }
+  ],
+  "eyeLiner": [
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2373066-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "12 Hour Contour Pencil Eyeliner",
+      "rating":4,
+      "cost": 78
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1393693-main-zoom.jpg?imwidth=164",
+      "brand": "Urban Decay",
+      "name": "24/7 Glide-On Waterproof Eyeliner Pencil",
+      "rating": 2,
+      "cost": 25
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2365732-main-zoom.jpg?imwidth=164",
+      "brand": "MAKE UP FOR EVER",
+      "name": "Aqua Resist Color Pencil Eyeliner",
+      "rating": 3,
+      "cost": 30
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1642131-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Sephora Colorful® Waterproof Eyeshadow & Eyeliner Multi-Stick",
+      "rating": 4,
+      "cost": 65
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2380764-main-zoom.jpg?imwidth=164",
+      "brand": "ONE/SIZE by Patrick Starrr",
+      "name": "Point Made Waterproof Liquid Eyeliner Pen",
+      "rating": 4,
+      "cost": 67
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2072437-main-zoom.jpg?imwidth=164",
+      "brand": "MAKE UP FOR EVER",
+      "name": "Artist Color Pencil Brow, Eye & Lip Liner",
+      "rating":1,
+      "cost": 19
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1118033-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Retractable Waterproof Eyeliner",
+      "rating": 5,
+      "cost": 100
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1221084-main-zoom.jpg?imwidth=164",
+      "brand": "stila",
+      "name": "Stay All Day® Waterproof Liquid Eye Liner",
+      "rating": 3,
+      "cost": 68
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2552339-main-zoom.jpg?imwidth=164",
+      "brand": "MAKE UP FOR EVER",
+      "name": "Aqua Resist Color Ink 24HR Waterproof  Liquid Eyeliner",
+      "rating": 3,
+      "cost": 67
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2480051-main-zoom.jpg?imwidth=164",
+      "brand": "Lancôme",
+      "name": "DRAMA LIQUI-PENCIL™ Longwear Eyeliner",
+      "rating": 2,
+      "cost": 48
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1177567-main-zoom.jpg?imwidth=164",
+      "brand": "KVD Beauty",
+      "name": "Tattoo Liner Vegan Waterproof Liquid Eyeliner",
+      "rating": 2,
+      "cost": 87
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2632966-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "Kulfi",
+      "name": "Underlined Kajal Clean Waterproof Long-Wear Eyeliner",
+      "rating": 4,
+      "cost": 85
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2649168-main-zoom.jpg?imwidth=164",
+      "brand": "Glossier",
+      "name": "No 1. Pencil Creamy Long-Wearing Eyeliner",
+      "rating": 5,
+      "cost": 247
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2072437-main-zoom.jpg?imwidth=164",
+      "brand": "MAKE UP FOR EVER",
+      "name": "Artist Color Pencil Brow, Eye & Lip Liner",
+      "rating": 5,
+      "cost": 245
+    }
+  ],
+  "eyebrow": [
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2372530-main-zoom.jpg?imwidth=164",
+      "brand": "Anastasia Beverly Hills",
+      "name": "Brow Wiz® Ultra-Slim Precision Brow Pencil",
+      "rating": 2,
+      "cost": 67
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1935774-main-zoom.jpg?imwidth=164",
+      "brand": "Benefit Cosmetics",
+      "name": "24-HR Brow Setter Clear Brow Gel with Lamination Effect",
+      "rating": 4,
+      "cost":67
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2542272-main-zoom.jpg?imwidth=164",
+      "brand": "Valentino",
+      "name": "Brow Trio Eyebrow Liner",
+      "rating":3,
+      "cost": 57
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1578699-main-zoom.jpg?imwidth=164",
+      "brand": "Anastasia Beverly Hills",
+      "name": "DIPBROW® Waterproof, Smudge Proof Brow Pomade",
+      "rating": 3,
+      "cost": 54
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2080224-main-zoom.jpg?pb=2020-03-allure-best-2019&imwidth=164",
+      "brand": "Benefit Cosmetics",
+      "name": "Gimme Brow+ Tinted Volumizing Eyebrow Gel",
+      "rating": 3,
+      "cost": 47
+    },
+    { "imageUrl": "", "brand": "", "name": "", "rating": "", "cost": "" },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2243012-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Retractable Brow Pencil - Waterproof",
+      "rating": 2,
+      "cost": 46
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2649283-main-zoom.jpg?imwidth=164",
+      "brand": "Glossier",
+      "name": "Boy Brow Volumizing Eyebrow Gel-Pomade",
+      "rating": 4,
+      "cost": 85
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2382851-main-zoom.jpg?imwidth=164",
+      "brand": "Benefit Cosmetics",
+      "name": "Brow Microfilling Eyebrow Pen",
+      "rating": 2,
+      "cost": 46
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2243533-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Brow Shaper Pencil - Waterproof",
+      "rating": 3,
+      "cost": 46
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2086759-main-zoom.jpg?imwidth=164",
+      "brand": "Benefit Cosmetics",
+      "name": "Precisely, My Brow Pencil Waterproof Eyebrow Definer",
+      "rating":4,
+      "cost": 46
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2429629-main-zoom.jpg?pb=allure-best-2021-badge&imwidth=164",
+      "brand": "Kosas",
+      "name": "Air Brow Tinted Clean Volumizing Eyebrow Gel",
+      "rating": 5,
+      "cost": 278
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2384907-main-zoom.jpg?imwidth=164",
+      "brand": "Rare Beauty by Selena Gomez",
+      "name": "Brow Harmony Pencil & Gel",
+      "rating": 3,
+      "cost":65
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2532588-main-zoom.jpg?imwidth=164",
+      "brand": "The Ordinary",
+      "name": "Multi-Peptide Lash and Brow Serum",
+      "rating": 4,
+      "cost": 150
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2217396-main-zoom.jpg?imwidth=164",
+      "brand": "Benefit Cosmetics",
+      "name": "Great Brow Basics Pencil & Gel Set",
+      "rating": 3,
+      "cost": 99
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2311330-main-zoom.jpg?imwidth=164",
+      "brand": "Anastasia Beverly Hills",
+      "name": "Mini Strong Hold Clear Brow Gel",
+      "rating": 3,
+      "cost": 74
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2649127-main-zoom.jpg?imwidth=164",
+      "brand": "Glossier",
+      "name": "Brow Flick Microfine Detailing Eyebrow Pen",
+      "rating": 3,
+      "cost": 46
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2474096-main-zoom.jpg?imwidth=164",
+      "brand": "Rare Beauty by Selena Gomez",
+      "name": "Brow Harmony Shape & Fill Duo",
+      "rating":4,
+      "cost":83
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2182111-main-zoom.jpg?imwidth=164",
+      "brand": "Anastasia Beverly Hills",
+      "name": "DIPBROW® Gel",
+      "rating": 5,
+      "cost": 199
+    }
+  ],
+  "falseEyeLashes": [
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2549376-main-zoom.jpg?imwidth=164",
+      "brand": "House of Lashes",
+      "name": "House of Lashes Iconic False Eyelashes",
+      "rating": 4.5,
+      "cost": 76
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2279990-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Vegan False Eyelashes",
+      "rating": 3.5,
+      "cost": 59
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2398311-main-zoom.jpg?imwidth=164",
+      "brand": "Lilly Lashes",
+      "name": "Lilly Lashes 3D Faux Mink Lashes",
+      "rating": 4,
+      "cost": 76
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2373405-main-zoom.jpg?imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "House of Lashes x Sephora Collection False Lash",
+      "rating": 3,
+      "cost": 67
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2164010-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "One Two Lash Magnetic Lashes",
+      "rating": 4,
+      "cost": 96
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2646479-main-zoom.jpg?imwidth=164",
+      "brand": "Velour Lashes",
+      "name": "Effortless - No Trim - Natural Lash Collection",
+      "rating": 4,
+      "cost": 89
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2468957-main-zoom.jpg?imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Weightless False Eyelashes",
+      "rating":3,
+      "cost": 34
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2492940-main-zoom.jpg?imwidth=164",
+      "brand": "House of Lashes",
+      "name": "House of Lashes® Eyelash Adhesive",
+      "rating": 4,
+      "cost": 68
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2373538-main-zoom.jpg?imwidth=164",
+      "brand": "Lilly Lashes",
+      "name": "Lilly Lashes Lite Faux Mink Lashes",
+      "rating": 2,
+      "cost": 57
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2546331-main-zoom.jpg?imwidth=164",
+      "brand": "Lilly Lashes",
+      "name": "Everyday Faux Mink Lashes",
+      "rating": 4,
+      "cost": 78
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2474476-main-zoom.jpg?imwidth=164",
+      "brand": "Velour Lashes",
+      "name": "Magnetic Effortless Kit - No Trim No Measure Magnetic Lash Kit",
+      "rating": 4,
+      "cost": 77
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2634699-main-zoom.jpg?imwidth=164",
+      "brand": "Lilly Lashes",
+      "name": "3D Faux Mink Butterfl'eye Half Eyelashes",
+      "rating": 4,
+      "cost": 30
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2481034-main-zoom.jpg?imwidth=164",
+      "brand": "Anastasia Beverly Hills",
+      "name": "Norvina® False Lashes",
+      "rating": 2,
+      "cost": 49
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2414688-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "False Eyelash Applicator",
+      "rating": 1,
+      "cost": 12
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2373504-main-zoom.jpg?imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Lilly Lashes x Sephora Collection Faux 3D Lashes",
+      "rating": 2,
+      "cost": 22
+    }
+  ],
+  "eyeShadow": [
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2372225-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Sephora Colorful® Eyeshadow",
+      "rating": 5,
+      "cost": 255
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2418135-main-zoom.jpg?imwidth=164",
+      "brand": "Urban Decay",
+      "name": "24/7 Moondust Eyeshadow",
+      "rating": 5,
+      "cost": 499
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2542322-main-zoom.jpg?imwidth=164",
+      "brand": "Valentino",
+      "name": "Eye2Cheek Eyeshadow and Blush",
+      "rating": 4,
+      "cost": 379
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1642131-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Sephora Colorful® Waterproof Eyeshadow & Eyeliner Multi-Stick",
+      "rating": 3,
+      "cost": 45
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2577252-main-zoom.jpg?pb=allure-2022-clean-badge&imwidth=164",
+      "brand": "Bobbi Brown",
+      "name": "Long-Wear Cream Eyeshadow Stick",
+      "rating": 2,
+      "cost": 25
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2061695-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Sheer Liquid Eyeshadow",
+      "rating": 3,
+      "cost": 36
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2417905-main-zoom.jpg?pb=allure-best-2021-badge&imwidth=164",
+      "brand": "Urban Decay",
+      "name": "24/7 Eyeshadow",
+      "rating": 4,
+      "cost": 269
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2418713-main-zoom.jpg?imwidth=164",
+      "brand": "Rare Beauty by Selena Gomez",
+      "name": "Stay Vulnerable Liquid Eyeshadow",
+      "rating": 1,
+      "cost": 20
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2306835-main-zoom.jpg?imwidth=164",
+      "brand": "Laura Mercier",
+      "name": "Caviar Stick Eye Shadow",
+      "rating": 3,
+      "cost": 56
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2596526-main-zoom.jpg?imwidth=164",
+      "brand": "Charlotte Tilbury",
+      "name": "Eyes To Mesmerize Cream Eyeshadow",
+      "rating": 3,
+      "cost":56
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2644706-main-zoom.jpg?imwidth=164",
+      "brand": "Armani Beauty",
+      "name": "Eye Tint Long-Lasting Liquid Eyeshadow",
+      "rating": 3,
+      "cost": 57
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2606614-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Color Shifter Mini Eyeshadow Palette",
+      "rating":3,
+      "cost": 76
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2591568-main-zoom.jpg?pb=allure-best-2021-badge&imwidth=164",
+      "brand": "ILIA",
+      "name": "Liquid Powder Eye Shadow Tint",
+      "rating": 2,
+      "cost": 22
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2649978-main-zoom.jpg?imwidth=164",
+      "brand": "Glossier",
+      "name": "Lidstar Long-Wearing Shimmer Cream Eyeshadow",
+      "rating":4,
+      "cost": 76
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2585974-main-zoom.jpg?imwidth=164",
+      "brand": "Danessa Myricks Beauty",
+      "name": "Infinite Chrome Flakes Multichrome Gel for Eyes & Face",
+      "rating": 5,
+      "cost": 500
+    }
+  ],
+  "eyeLashSerum": [
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2404713-main-zoom.jpg?imwidth=164",
+      "brand": "Grande Cosmetics",
+      "name": "Jumbo GrandeLASH™ - MD Lash Enhancing Serum",
+      "rating": 3.5,
+      "cost": 89
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2601474-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=164",
+      "brand": "Kosas",
+      "name": "GrowPotion Fluffy Brow + Lash Boosting Serum",
+      "rating": 3,
+      "cost": 78
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2533941-main-zoom.jpg?imwidth=164",
+      "brand": "Augustinus Bader",
+      "name": "The Eyebrow & Lash Enhancing Serum",
+      "rating": 2,
+      "cost": 35
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2473262-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "Vegamour",
+      "name": "GRO Volumizing Lash Serum",
+      "rating":3,
+      "cost": 68
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1733880-main-zoom.jpg?imwidth=164",
+      "brand": "Shiseido",
+      "name": "Full Lash and Brow Serum",
+      "rating": 3,
+      "cost": 67
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2436962-main-zoom.jpg?imwidth=164",
+      "brand": "Velour Lashes",
+      "name": "Pretty Big Deal Tubing Mascara & Peptide Lash Serum",
+      "rating":3,
+      "cost": 78
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2217545-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "MILK MAKEUP",
+      "name": "KUSH Lash + Brow Enhancing Serum",
+      "rating": 5,
+      "cost": 599
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2550440-main-zoom.jpg?imwidth=164",
+      "brand": "Lilly Lashes",
+      "name": "Level Up Lash Conditioning Serum",
+      "rating": 3,
+      "cost": 99
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2544468-main-zoom.jpg?imwidth=164",
+      "brand": "Velour Lashes",
+      "name": "Long & Strong Lash Serum",
+      "rating": 3,
+      "cost": 39
+    }
+  ],
+  "eyePrimer": [
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2487114-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "MILK MAKEUP",
+      "name": "Hydro Grip Eyeshadow and Concealer Primer",
+      "rating":1,
+      "cost": 12
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1704402-main-zoom.jpg?imwidth=164",
+      "brand": "Urban Decay",
+      "name": "Eyeshadow Primer Potion",
+      "rating": 4,
+      "cost": 79
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1098854-main-zoom.jpg?imwidth=164",
+      "brand": "Laura Mercier",
+      "name": "Eye Basics Primer",
+      "rating":3,
+      "cost": 57
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2546372-main-zoom.jpg?imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Boost + Lock Eyeshadow Primer",
+      "rating": 5,
+      "cost": 499
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2448116-main-zoom.jpg?imwidth=164",
+      "brand": "Rare Beauty by Selena Gomez",
+      "name": "Weightless Eyeshadow Primer- Always An Optimist Collection",
+      "rating": 4.5,
+      "cost": 399
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s969352-main-zoom.jpg?imwidth=164",
+      "brand": "MAKE UP FOR EVER",
+      "name": "Aqua Seal",
+      "rating": 3.5,
+      "cost": 249
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1236843-main-zoom.jpg?imwidth=164",
+      "brand": "NARS",
+      "name": "Pro-Prime™ Smudge Proof Eyeshadow Base",
+      "rating": 2,
+      "cost": 58
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1704410-main-zoom.jpg?imwidth=164",
+      "brand": "Urban Decay",
+      "name": "Eyeshadow Primer Potion - Anti-Aging",
+      "rating":2.5,
+      "cost": 86
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2094241-main-zoom.jpg?imwidth=164",
+      "brand": "Fenty Beauty by Rihanna",
+      "name": "Pro Filt'r Amplifying Eye Primer",
+      "rating": 4,
+      "cost": 457
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2226280-main-zoom.jpg?imwidth=164",
+      "brand": "Anastasia Beverly Hills",
+      "name": "Mini Eye Primer",
+      "rating": 3,
+      "cost":67
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2519791-main-zoom.jpg?imwidth=164",
+      "brand": "Too Faced",
+      "name": "Shadow Insurance 24-Hour Eyeshadow Primer",
+      "rating":3,
+      "cost": 86
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2488807-main-zoom.jpg?imwidth=164",
+      "brand": "PAT McGRATH LABS",
+      "name": "IntensifEYES Artistry Wand",
+      "rating":4,
+      "cost": 75
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1978774-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "ILIA",
+      "name": "Natural Brightening Eye Primer",
+      "rating": 3,
+      "cost": 68
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s1622075-main-zoom.jpg?imwidth=164",
+      "brand": "Anastasia Beverly Hills",
+      "name": "Pro Pencil",
+      "rating": 2,
+      "cost": 39
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2389633-main-zoom.jpg?imwidth=164",
+      "brand": "MAKEUP BY MARIO",
+      "name": "Master Eye Prep & Set™",
+      "rating": 4,
+      "cost": 368
+    }
+  ],
+  "eyeSets": [
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2585974-main-zoom.jpg?imwidth=164",
+      "brand": "Danessa Myricks Beauty",
+      "name": "Infinite Chrome Flakes Multichrome Gel for Eyes & Face",
+      "rating": 4,
+      "cost": 58
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2579704-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Wishing You Blockbuster Multi-Use Makeup Palette",
+      "rating":5,
+      "cost": 686
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2492023-main-zoom.jpg?imwidth=164",
+      "brand": "HUDA BEAUTY",
+      "name": "Rose Quartz Eyeshadow Palette",
+      "rating": 4,
+      "cost":346
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2579712-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Mini Wishing You Blockbuster Palette",
+      "rating": 4,
+      "cost": 569
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2600864-main-zoom.jpg?imwidth=164",
+      "brand": "Too Faced",
+      "name": "Better Than Sex Volumizing & Lengthening Mascara",
+      "rating": 3,
+      "cost": 368
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2579811-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "Wishing You 12 Pan Eyeshadow Palette",
+      "rating": 1,
+      "cost": 26
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2249829-main-zoom.jpg?imwidth=164",
+      "brand": "Fenty Beauty by Rihanna",
+      "name": "Fly Baby Mini Eye Primer and Liner Set",
+      "rating": 3,
+      "cost": 49
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2311488-main-zoom.jpg?imwidth=164",
+      "brand": "Fenty Beauty by Rihanna",
+      "name": "Snap Shadows Mix & Match Eyeshadow Palette",
+      "rating":4,
+      "cost": 547
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2568152-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "GXVE BY GWEN STEFANI",
+      "name": "Eye See in Color Clean Multidimensional Eyeshadow Palette",
+      "rating": 2,
+      "cost": 29
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2041788-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
+      "brand": "NUDESTIX",
+      "name": "Nude Metallics For Eyes",
+      "rating": 1,
+      "cost": 15
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2412146-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
+      "brand": "SEPHORA COLLECTION",
+      "name": "B.Y.O.B. Build Your Own Brow Customizable Set",
+      "rating":5,
+      "cost": 599
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2642460-main-zoom.jpg?imwidth=164",
+      "brand": "Too Faced",
+      "name": "Pinker Times Ahead Eyeshadow Palette",
+      "rating": 3,
+      "cost": 56
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2395606-main-zoom.jpg?imwidth=164",
+      "brand": "Rare Beauty by Selena Gomez",
+      "name": "Magnetic Spirit Eyeshadow Palette",
+      "rating": 3,
+      "cost": 56
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2307965-main-zoom.jpg?imwidth=164",
+      "brand": "KVD Beauty",
+      "name": "Kitten Mini: Purrfect Cat Eyes Mini Mascara & Eyeliner Set",
+      "rating": 4,
+      "cost": 346
+    },
+    {
+      "imageUrl": "https://www.sephora.com/productimages/sku/s2614733-main-zoom.jpg?imwidth=164",
+      "brand": "Anastasia Beverly Hills",
+      "name": "Mini Glam To Go Eyeshadow Palette",
+      "rating": 5,
+      "cost": 549
+    }
+  ]
+}

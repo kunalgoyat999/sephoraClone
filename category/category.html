@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Category Page</title>
+  <link href="./category.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../Header/top-nav.css">
+  <link rel="stylesheet" href="../Footer/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://kit.fontawesome.com/bd6b389e1a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="navbar">
+
+  </div>
+  <div id="container">
+    <div id="category-leftdiv">
+      <h2 id="categoryName"></h2>
+      <div id="dropContainer">
+        <div id="container-head" class="containerhead">
+          <h4>Rating</h4>
+          <i class="fa-solid fa-caret-down" class="down"></i>
+        </div>
+        <div id="container-body" class="containerbody stars" value="rating">
+
+          <input type="radio" name="fav_language" value="4" class="ratingbtn" />
+          <label id="label1"> </label><br />
+          <input type="radio" name="fav_language" value="3" class="ratingbtn" />
+          <label id="label2"></label><br />
+          <input type="radio" name="fav_language" value="2" class="ratingbtn" />
+          <label id="label3"></label><br />
+          <input type="radio" name="fav_language" value="1" class="ratingbtn" />
+          <label id="label4"></label><br />
+        </div>
+      </div>
+      
+      <div id="dropContainer">
+        <div id="dropContainer">
+          <div id="container-head" class="containerhead">
+            <h4>Price Range</h4>
+            <i class="fa-solid fa-caret-down" class="down"></i>
+            <i class="fa-solid fa-caret-up" style="display: none;" class="up"></i>
+          </div>
+          <div id="container-body" class="containerbody price" value="price">
+            <input type="radio" name="fav_language" value="25" class="radbutton">
+            <label for="html">Under $25</label><br />
+            <input type="radio" name="fav_language" value="50" class="radbutton">
+            <label for="css">$25 to $50</label><br />
+            <input type="radio" name="fav_language" value="100" class="radbutton">
+            <label>$50 to $100</label><br />
+            <input type="radio" name="fav_language" value="101" class="radbutton">
+            <label>$100 and above</label><br />
+          </div>
+        </div>
+        
+      </div>
+      <div id="dropContainer">
+        <div id="dropContainer">
+          <div id="container-head" class="containerhead">
+            <h4>Brand</h4>
+            <i class="fa-solid fa-caret-down" class="down"></i>
+            <i class="fa-solid fa-caret-up" style="display: none;" class="up"></i>
+          </div>
+          <div id="container-body1" class="containerbody price" value="price">
+            
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div id="category-rightdiv">
+      <div id="topimg">
+        <img src="https://pubsaf.global.ssl.fastly.net/prmt/913673660f90524d59ad6e5b7f24f154">
+        <p>Sponsered</p>
+      </div>
+      <div id="top">
+        <p id="count">
+          <!-- No. of Results -->
+        </p>
+        <select id="sort">
+          <option>Sort By: <span id="relevance">Relevance</span></option>
+          <option value="lth">Low To High</option>
+          <option value="htl">High To Low</option>
+        </select>
+      </div>
+      <div id="bottom">
+        <!-- Products list -->
+      </div>
+    </div>
+    </div>
+    <div id="footer">
+
+    </div>
+</body>
+<script src="category.js" type="module"></script>
+
+</html>
