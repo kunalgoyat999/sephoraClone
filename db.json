@@ -446,21 +446,24 @@
       "brand": "Glossier",
       "name": "Brow Flick Microfine Detailing Eyebrow Pen",
       "rating": 3,
-      "cost": 46
+      "cost": 46,
+      "quantity":1
     },
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2474096-main-zoom.jpg?imwidth=164",
       "brand": "Rare Beauty by Selena Gomez",
       "name": "Brow Harmony Shape & Fill Duo",
       "rating":4,
-      "cost":83
+      "cost":83,
+      "quantity":1
     },
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2182111-main-zoom.jpg?imwidth=164",
       "brand": "Anastasia Beverly Hills",
       "name": "DIPBROW® Gel",
       "rating": 5,
-      "cost": 199
+      "cost": 199,
+      "quantity":1
     }
   ],
   "falseEyeLashes": [
