@@ -102,9 +102,114 @@ function filldetail() {
 
   let cardNumber = document.createElement("input");
   cardNumber.placeholder = "Card Number*";
+  cardNumber.maxLength = "12";
   cardNumber.setAttribute("id", "cardNumber");
 
-  maindiv.append(desplogoDiv, cardNumber);
+  let datediv = document.createElement("div");
+  datediv.setAttribute("id","date-div");
+
+  let month = document.createElement("input");
+  month.placeholder = "MM*";
+  month.maxLength = "2";
+  month.setAttribute("id","month-card");
+
+  let year = document.createElement("input");
+  year.setAttribute("id","year-card");
+  year.placeholder = "YY*"
+  year.maxLength = "2";
+
+  let cvv = document.createElement("input");
+  cvv.type = "password";
+  cvv.placeholder = "CVV";
+  cvv.setAttribute("id","cvv-card");
+  cvv.maxLength = "3";
+
+  datediv.append(month, year, cvv);
+
+  let namediv = document.createElement("div");
+  namediv.setAttribute("id","name-div")
+
+  let fname = document.createElement("input");
+  fname.placeholder = "First Name*";
+  fname.setAttribute("id","f-name");
+
+  let lname = document.createElement("input");
+  lname.placeholder = "Last Name*";
+  lname.setAttribute("id","l-name");
+
+  namediv.append(fname, lname);
+
+  maindiv.append(desplogoDiv, cardNumber, datediv, namediv);
 
   document.getElementById("credit-logo").append(maindiv);
+}
+
+
+var cardObj = {
+  cardNumber : "111111111111",
+  cvv : "111",
+}
+
+localStorage.setItem("card-detail",JSON.stringify(cardObj));
+
+var messagediv2 = document.getElementById("error2");
+var message2 = document.createElement("p");
+message2.setAttribute("class", "errormess");
+
+var savebtn2 = document.getElementById("savebtn2");
+savebtn2.addEventListener("click",cardData);
+
+function cardData(){
+
+
+  // filldetail();
+  cardNum = document.getElementById("cardNumber").value;
+  cvv = document.getElementById("cvv-card").value;
+  month = document.getElementById("month-card").value;
+  year = document.getElementById("year-card").value;
+  fname = document.getElementById("f-name").value;
+  lname = document.getElementById("l-name").value;
+
+  if (!fname || !lname || !cvv || !cardNum || !year || !month) {
+    message2.textContent = "Fill all input details";
+    return;
+  }else{
+    message2.textContent = "";
+  }
+
+  let obj = JSON.parse(localStorage.getItem("card-detail"));
+
+  if(cardNum !== obj.cardNum && cvv !==obj.cvv){
+    message2.textContent = "No Card Detail Found! (111111111111, 111)";
+    return;
+  }else{
+    message2.textContent = "Card Detail Found";
+    message2.style.color = "green";
+    able();
+  }
+
+}
+messagediv2.append(message2);
+
+
+// right-side
+
+var mrptotal = localStorage.getItem("mrp-total");
+
+document.getElementById("mrptotal").textContent = mrptotal;
+
+var additionaldis = localStorage.getItem("additional-discount");
+
+document.getElementById("adddiscount").textContent = additionaldis;
+
+var estimate = localStorage.getItem("estimated-amount");
+
+document.getElementById("totalamt").textContent = estimate;
+
+function able() {
+  let btn = document.getElementById("ship");
+  btn.addEventListener("click",function(){
+    location.href = "otp.html"
+  })
+  btn.style.backgroundColor = "#cf112c";
 }

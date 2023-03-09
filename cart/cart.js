@@ -241,7 +241,9 @@ function calcTotal() {
   let num = total.toFixed(2);
 
   document.getElementById("mrptotal").textContent = num;
+  localStorage.setItem("mrp-total",num);
   document.getElementById("totalamt").textContent = num;
+  localStorage.setItem("estimated-amount", num);
   // console.log(total);
 }
 
@@ -264,8 +266,12 @@ function checkcode() {
     var remain = (num * 30) / 100;
     document.getElementById("adddiscount").textContent = remain.toFixed(2);
 
+    var demo = remain.toFixed(2);
+    localStorage.setItem("additional-discount",demo);
+
     var NUM = Number(num - remain).toFixed(2);
     // document.getElementById("total-amt").textContent = NUM;
+    localStorage.setItem("estimated-amount", NUM);
     document.getElementById("totalamt").innerText = NUM;
 
     // localStorage.setItem("Amount", NUM);
@@ -393,3 +399,5 @@ function addtoCartList(item, btn) {
   localStorage.setItem("cart", JSON.stringify(cart_data));
   check(cart_data)
 }
+
+
