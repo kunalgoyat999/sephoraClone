@@ -139,9 +139,16 @@ width: 100%;
 }
 
 #soc {
-    margin-left: 40%;
+    margin-left: 38%;
     margin-top: 10px;
     cursor: pointer;
+    font-size: 25px;
+    
+    /* color: aliceblue; */
+}
+
+#soc i{
+    color: aliceblue;
 }
 
 .one>p {

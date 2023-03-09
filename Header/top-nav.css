@@ -121,6 +121,11 @@ div>input {
     padding-left: 15px;
 }
 
+#cart>div>a>i{
+    font-size: 25px;
+    margin-left: 13px;
+}
+
 #black_nav {
     display: flex;
     background-color: black;
@@ -128,6 +133,7 @@ div>input {
     height: 50px;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 #black_nav>div {
@@ -147,6 +153,12 @@ div>input {
     margin: 0;
     font-family: "helvetica neue", helvetica, arial, sans-serif;
 } */
+
+@media only screen and (max-width: 900px) {
+    #top_img > p{
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 768px) {
   #search {
