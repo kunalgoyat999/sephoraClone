@@ -121,8 +121,11 @@ function userList(e) {
 
         userArr.push(userObj);
         localStorage.setItem("userArr", JSON.stringify(userArr));
-        alert("Registered");
-        window.location.href = "login.html";
+        
+        console.log(currUser);
+        localStorage.setItem("currUser",JSON.stringify({firstName:firstName2,email:email2,isLogin:true}))
+        // alert("Registered");
+        // window.location.href = "login.html";
     }
 }
 

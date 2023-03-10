@@ -55,12 +55,190 @@ prevBtn[i].addEventListener("click",()=>{
 // chosen for you
 
 let mainContainer =document.querySelector("#chosen-for-you .product__slider__container")
-let chosenForYou =[{imageUrl:"https://www.sephora.com/productimages/sku/s2031375-main-zoom.jpg?pb=2020-03-allure-best-2019&imwidth=122",brand:"The Ordinary",name:"Hyaluronic Acid 2% + B5 Hydrating Serum"},{imageUrl:"https://www.sephora.com/productimages/sku/s2421337-main-zoom.jpg?imwidth=122",brand:"Paula's Choice",name:"C15 Vitamin C Super Booster"},{imageUrl:"https://www.sephora.com/productimages/sku/s1395011-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=122",brand:"SEPHORA COLLECTION",name:"Sephora Colorful® Waterproof Eyeshadow & Eyeliner Multi-Stick"},{imageUrl:"https://www.sephora.com/productimages/sku/s2637965-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122",brand:"Glow Recipe",name:"Strawberry BHA Pore-Smooth Blur Drops"},{imageUrl:"https://www.sephora.com/productimages/sku/s1393693-main-zoom.jpg?imwidth=122",brand:"Urban Decay",name:"24/7 Glide-On Waterproof Eyeliner Pencil"},{imageUrl:"https://www.sephora.com/productimages/sku/s2100220-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122",brand:"SEPHORA COLLECTION",name:"Ultra Glow Serum: Glow + Strengthen Vitamin C Serum"},{imageUrl:"https://www.sephora.com/productimages/sku/s2649978-main-zoom.jpg?imwidth=122",brand:"Glossier",name:"Lidstar Long-Wearing Shimmer Cream Eyeshadow"},{imageUrl:"https://www.sephora.com/productimages/sku/s2636736-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122",brand:"Glossier",name:"After Baume Moisture Barrier Recovery Cream"},{imageUrl:"https://www.sephora.com/productimages/sku/s2649143-main-zoom.jpg?imwidth=122",brand:"Glossier",name:"Pro Tip Long-Wearing Liquid Eyeliner Pen"},{imageUrl:"https://www.sephora.com/productimages/sku/s2648483-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122",brand:"OLEHENRIKSEN",name:"Banana Bright+ Vitamin CC Eye Sticks"},{imageUrl:"https://www.sephora.com/productimages/sku/s2592699-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122",brand:"SEPHORA COLLECTION",name:"Hydrating Serum"},]
+let chosenForYou =[
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2031375-main-zoom.jpg?pb=2020-03-allure-best-2019&imwidth=122',
+      brand: 'The Ordinary',
+      name: 'Hyaluronic Acid 2% + B5 Hydrating Serum',
+      rating: 10,
+      cost: 12,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2421337-main-zoom.jpg?imwidth=122',
+      brand: "Paula's Choice",
+      name: 'C15 Vitamin C Super Booster',
+      rating: 10,
+      cost: 47,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s1395011-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=122',
+      brand: 'SEPHORA COLLECTION',
+      name: 'Sephora Colorful® Waterproof Eyeshadow & Eyeliner Multi-Stick',
+      rating: 17,
+      cost: 19,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2637965-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122',
+      brand: 'Glow Recipe',
+      name: 'Strawberry BHA Pore-Smooth Blur Drops',
+      rating: 9,
+      cost: 27,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s1393693-main-zoom.jpg?imwidth=122',
+      brand: 'Urban Decay',
+      name: '24/7 Glide-On Waterproof Eyeliner Pencil',
+      rating: 9,
+      cost: 59,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2100220-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122',
+      brand: 'SEPHORA COLLECTION',
+      name: 'Ultra Glow Serum: Glow + Strengthen Vitamin C Serum',
+      rating: 15,
+      cost: 45,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2649978-main-zoom.jpg?imwidth=122',
+      brand: 'Glossier',
+      name: 'Lidstar Long-Wearing Shimmer Cream Eyeshadow',
+      rating: 12,
+      cost: 13,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2636736-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122',
+      brand: 'Glossier',
+      name: 'After Baume Moisture Barrier Recovery Cream',
+      rating: 10,
+      cost: 24,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2649143-main-zoom.jpg?imwidth=122',
+      brand: 'Glossier',
+      name: 'Pro Tip Long-Wearing Liquid Eyeliner Pen',
+      rating: 17,
+      cost: 31,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2648483-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122',
+      brand: 'OLEHENRIKSEN',
+      name: 'Banana Bright+ Vitamin CC Eye Sticks',
+      rating: 12,
+      cost: 21,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2592699-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122',
+      brand: 'SEPHORA COLLECTION',
+      name: 'Hydrating Serum',
+      rating: 19,
+      cost: 44,
+      quantity: 1
+    }
+  ];
 
 // just dropped
 let justDroppedContainer =document.querySelector("#just-dropped .product__slider__container")
 
-let justDropped =[{imageUrl:"https://www.sephora.com/productimages/sku/s2633105-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122",brand:"MARA",name:"Sea Silk Lip Balm"},{imageUrl:"https://www.sephora.com/productimages/sku/s2649390-main-zoom.jpg?imwidth=122",brand:"Glossier",name:"Cloud Paint Gel Cream Blush"},{imageUrl:"https://www.sephora.com/productimages/sku/s2673028-main-zoom.jpg?imwidth=122",brand:"Sol de Janeiro",name:"Brazilian Joia™ Strengthening + Smoothing Conditioner"},{imageUrl:"https://www.sephora.com/productimages/sku/s2633170-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122",brand:"MARA",name:"Mini Algae + Moringa® Universal Face Oil"},{imageUrl:"https://www.sephora.com/productimages/sku/s2649283-main-zoom.jpg?imwidth=122",brand:"Glossier",name:"Boy Brow Volumizing Eyebrow Gel-Pomade"},{imageUrl:"https://www.sephora.com/productimages/sku/s2649556-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122",brand:"Glossier",name:"Milky Jelly Gentle Gel Face Cleanser"},{imageUrl:"https://www.sephora.com/productimages/sku/s2649671-main-zoom.jpg?imwidth=122",brand:"Glossier",name:"Glassy High-Shine Lip Gloss"},{imageUrl:"https://www.sephora.com/productimages/sku/s2642254-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122",brand:"tarte",name:"lashes & splashes mascara duo"},{imageUrl:"https://www.sephora.com/productimages/sku/s2654234-main-zoom.jpg?imwidth=122",brand:"Moroccanoil",name:"Hydrating Shampoo & Conditioner Half-Liter Duo"},{imageUrl:"https://www.sephora.com/productimages/sku/s2665495-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122",brand:"Glow Recipe",name:"Plumping Power Duo"},{imageUrl:"https://www.sephora.com/productimages/sku/s2637122-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122",brand:"Tower 28 Beauty",name:"Sculptino™ Soft Matte Cream Contour + Bronzer"}]
+let justDropped =[
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2633105-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122',
+      brand: 'MARA',
+      name: 'Sea Silk Lip Balm',
+      rating: 14,
+      cost: 20,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2649390-main-zoom.jpg?imwidth=122',
+      brand: 'Glossier',
+      name: 'Cloud Paint Gel Cream Blush',
+      rating: 16,
+      cost: 35,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2673028-main-zoom.jpg?imwidth=122',
+      brand: 'Sol de Janeiro',
+      name: 'Brazilian Joia™ Strengthening + Smoothing Conditioner',
+      rating: 21,
+      cost: 25,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2633170-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122',
+      brand: 'MARA',
+      name: 'Mini Algae + Moringa® Universal Face Oil',
+      rating: 21,
+      cost: 21,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2649283-main-zoom.jpg?imwidth=122',
+      brand: 'Glossier',
+      name: 'Boy Brow Volumizing Eyebrow Gel-Pomade',
+      rating: 21,
+      cost: 35,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2649556-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122',
+      brand: 'Glossier',
+      name: 'Milky Jelly Gentle Gel Face Cleanser',
+      rating: 24,
+      cost: 11,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2649671-main-zoom.jpg?imwidth=122',
+      brand: 'Glossier',
+      name: 'Glassy High-Shine Lip Gloss',
+      rating: 18,
+      cost: 59,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2642254-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122',
+      brand: 'tarte',
+      name: 'lashes & splashes mascara duo',
+      rating: 9,
+      cost: 21,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2654234-main-zoom.jpg?imwidth=122',
+      brand: 'Moroccanoil',
+      name: 'Hydrating Shampoo & Conditioner Half-Liter Duo',
+      rating: 11,
+      cost: 21,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2665495-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122',
+      brand: 'Glow Recipe',
+      name: 'Plumping Power Duo',
+      rating: 20,
+      cost: 33,
+      quantity: 1
+    },
+    {
+      imageUrl: 'https://www.sephora.com/productimages/sku/s2637122-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122',
+      brand: 'Tower 28 Beauty',
+      name: 'Sculptino™ Soft Matte Cream Contour + Bronzer',
+      rating: 23,
+      cost: 26,
+      quantity: 1
+    }
+  ];
 
 
 
@@ -105,6 +283,11 @@ displayProductSlider(justDropped,justDroppedContainer,true);
             let quicklookBtn =document.createElement("button");
             quicklookBtn.setAttribute("class","quicklook-Btn");
             quicklookBtn.textContent ="Quicklook";
+
+            quicklookBtn.addEventListener("click",function(){
+                localStorage.setItem("productObj",JSON.stringify(e));
+                location.href = "./productdescription/description.html"
+              })
 
             btnContainer.append(quicklookBtn);
 
@@ -221,51 +404,159 @@ cartBtn.addEventListener("click",()=>{
 
 let cartProductArr =JSON.parse(localStorage.getItem("product-Arr")) || [];
 
+
+window.onload =()=>{
+    displayCartProducts(cartProductArr);
+    isUserLogin();
+
+}
+
+function isUserLogin(){
+    let isLogin =JSON.parse(localStorage.getItem("currUser")).isLogin
+    // console.log("loginUser==>",isLogin);
+    let accountContainer =document.querySelector(".account-btn-container");
+    let logoutContainer =document.querySelector(".logout-container");
+        console.log(accountContainer,logoutContainer);
+
+    if(isLogin){
+        
+
+        let userName =document.getElementById("userName-login");
+        let userNameMain =document.getElementById("loginUser-main");
+        let msgTxt =document.getElementById("loginUser-msg");
+        let userEmail =document.getElementById("email-loginUser");
+       
+
+        let currUserObj =JSON.parse(localStorage.getItem("currUser"))
+        console.log("loginUser==>",currUserObj);
+        
+        userName.textContent =`${currUserObj.firstName}. 🌙`;
+        userName.style.fontSize ="1.2rem";
+        userName.style.color ="#CF112C";
+        userName.style.textTransform ="capitalize"
+
+        userNameMain.textContent =currUserObj.firstName;
+        msgTxt.textContent ="Enjoy Free Shipping"
+        
+        userEmail.textContent =`Email : ${currUserObj.email}`
+        userEmail.style.fontSize ="0.9rem";
+
+        accountContainer.style.display ="none";
+        logoutContainer.style.display ="initial";
+
+        document.getElementById("logout-btn").addEventListener("click",()=>{
+            currUserObj.isLogin =false;
+            localStorage.setItem("currUser",JSON.stringify(currUserObj));
+            location.href ="index.html";
+        })
+    }
+    else{
+        accountContainer.style.display ="grid";
+        logoutContainer.style.display ="none";
+        
+
+    }
+
+}
+
+
+let cartContainer =document.getElementById("cartProductHolder");
+let cartItemsCount =document.getElementById("cart-total-items");
+let cartSum =document.getElementById("cart-total-price");
+
 function displayCartProducts(arr){
 
-    // <div class="popup-items-container mid-product-container">
-    //                             <div class="cart-product-img">
-    //                                 <img src="https://www.sephora.com/productimages/sku/s2497220-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=62" alt="">
-    //                             </div>
-    //                             <div class="cart-product-meta">
-    //                                 <span class="cart-product-name"><strong>SEPHORA COLLECTION</strong></span> 
-    //                                 <span class="cart-product-description">Total Coverage Blending Sponge Set</span>
-    //                             </div>
-    //                             <div class="price-remove">
-    //                                 <span class="cart-product-price">$25</span>
-    //                                 <span class="cart-product-remove">Remove</span>
-    //                             </div>
-    //                         </div>
+    cartContainer.textContent =""
+
+    if(arr.length==0){
+        let h3 =document.createElement("h3");
+        h3.textContent ="No items in Cart!"
+        
+        let divider =document.createElement("div");
+        divider.setAttribute("class","divider-header")
+        cartContainer.append(h3,divider);
+    }
+
+    cartItemsCount.textContent ="( "+arr.length +" items )";
+
+    document.getElementById("cart-item-count").textContent =arr.length
+
+    let totalValue =0;
+
+     arr.forEach((e,index)=>{
+
+        let productContainer =document.createElement("div");
+        productContainer.setAttribute("class","popup-items-container mid-product-container");
+        // productContainer.setAttribute("class","mid-product-container");
+
+        let productImg =document.createElement("div");
+        productImg.setAttribute("class","cart-product-img")
+         let img =document.createElement("img");
+         img.src =e.imageUrl;
+
+         productImg.append(img);
+
+         let productMeta =document.createElement("div");
+         productMeta.setAttribute("class","cart-product-meta")
+
+         let productName =document.createElement("span");
+         productName.setAttribute("class","cart-product-name")
+         productName.innerHTML =`<strong>${e.name}</strong>`
+         let productDesciption =document.createElement("span");
+         productDesciption.setAttribute("class","cart-product-description")
+         productDesciption.textContent =e.name;
+
+         productMeta.append(productName,productDesciption);
+         
+
+         let priceRemoveContainer =document.createElement("div");
+         priceRemoveContainer.setAttribute("class","price-remove")
+
+            let productPrice =document.createElement("span");
+            productPrice.setAttribute("class","cart-product-price")
+            productPrice.textContent ="$"+e.cost;
+
+            totalValue+=e.cost;
+
+            let productRemove =document.createElement("span");
+            productRemove.setAttribute("class","cart-product-remove")
+            productRemove.textContent ="Remove";
+
+            productRemove.addEventListener("click",()=>{
+
+                removeItem(index);
+
+            })
+
+            priceRemoveContainer.append(productPrice,productRemove);
+
+            let divider =document.createElement("div");
+            divider.setAttribute("class","divider-thin-header")
+            
+        productContainer.append(productImg,productMeta,priceRemoveContainer,divider);
+
+        cartContainer.append(productContainer);
 
 
-    // arr.forEach((e)=>{
 
-    //     let productContainer =document.createElement("div");
-    //     productContainer.setAttribute("class","popup-items-container");
-    //     productContainer.setAttribute("class","mid-product-container");
+     })
 
-    //     let productImg =document.createElement("div");
 
-    //     let Img =document.createElement("img");
+     cartSum.textContent ="$ "+totalValue;
 
 
 
 
+}
 
+// remove from cart
 
-
-
-    // })
-
-
-
-
-
-
-
-
-
-
+function removeItem(i){
+    console.log(i);
+    cartProductArr.splice(i,1);
+    localStorage.setItem("product-Arr",JSON.stringify(cartProductArr));
+    displayCartProducts(cartProductArr);
+    console.log(cartProductArr);
 }
 
 
@@ -309,6 +600,14 @@ var signupModal = document.getElementById("signupModal");
 // Get the button that opens the modal
 var signupBtn = document.getElementById("signupBtn");
 
+var signupBtn2 = document.getElementById("signupBtn2");
+
+
+signupBtn2.onclick = function () {
+    signupModal.style.visibility = "visible";
+    loginModal.style.visibility = "hidden";
+}
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("signupclose")[0];
 
@@ -324,11 +623,11 @@ span.onclick = function () {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == signupModal) {
-        signupModal.style.visibility = "hidden";
-    }
-}
+// window.onclick = function (event) {
+//     if (event.target == window) {
+//         signupModal.style.visibility = "hidden";
+//     }
+// }
 
 
 ////// LOGIN FUNCTIONALITY BELOW  //////////////////////////////////////////////////////////////////
@@ -349,11 +648,15 @@ function signIn(e) {
         for (var i = 0; i < regUser.length; i++) {
             if (regUser[i].email === email && regUser[i].password === password) {
                 alert("Let's get Shopping");
+                
+                localStorage.setItem("currUser",JSON.stringify({firstName:regUser[i].firstName,email:regUser[i].email,isLogin:true}))
                 window.location.href = "index.html";
                 return;
             }
             else if (email == "admin@gmail.com" && password == "admin") {
                 alert("SignIn Sucessfully !");
+                
+                localStorage.setItem("currUser",JSON.stringify({firstName:"admin",email:email,isLogin:true}))
                 window.location.href = "index.html";
                 return;
             }
@@ -394,8 +697,10 @@ function userList(e) {
 
         userArr.push(userObj);
         localStorage.setItem("userArr", JSON.stringify(userArr));
+        localStorage.setItem("currUser",JSON.stringify({firstName:firstName2,email:email2,isLogin:true}))
         alert("Registered");
-        window.location.href = "login.html";
+
+        window.location.href = "index.html";
     }
 }
 
