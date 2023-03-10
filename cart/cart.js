@@ -224,6 +224,7 @@ function handleQuantityNumber(ele, select, price2) {
   price2.textContent = `$${n}`;
   calcTotal();
   itemCount();
+  localStorage.setItem("product-Arr", JSON.stringify(cart_data));
   localStorage.setItem("promo-code", "masai30");
   document.getElementById("adddiscount").innerText = "0";
 }

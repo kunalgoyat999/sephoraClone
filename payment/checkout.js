@@ -220,6 +220,7 @@ showList.addEventListener("click", displayproductlist);
 
 let productArr = JSON.parse(localStorage.getItem("product-Arr")) || [];
 
+console.log(productArr);
 function displayproductlist() {
   showP.innerHTML="";
   productArr.map(function (el, index) {
