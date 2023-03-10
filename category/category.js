@@ -27,7 +27,8 @@ let label4 = document.getElementById("label4");
 label4.innerHTML = star1();
 
 // Get Data
-let category = "eyePallete";
+let category = localStorage.getItem("category") || "";
+// let category = "eyePrimer";
 // let url = "https://pickled-cheerful-somersault.glitch.me/${category}";
 let url = `http://localhost:3000/${category}`;
 

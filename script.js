@@ -4,19 +4,19 @@ let navbarContainer =document.getElementById("nav");
 
 // console.log("navbar===",navbar)
 
-navbarContainer.innerHTML = navbar();
+// navbarContainer.innerHTML = navbar;
 
 let footercontainer = document.getElementById("footer");
-footercontainer.innerHTML = footer();
+// footercontainer.innerHTML = footer();
 
 
 let carContainer =[ ...document.querySelectorAll(".slider__container")];
 let prevBtn =[...document.querySelectorAll(".prev")];
 let nextBtn =[...document.querySelectorAll(".next")];
 
-console.log(carContainer);
-console.log(prevBtn);
-console.log(nextBtn);
+// console.log(carContainer);
+// console.log(prevBtn);
+// console.log(nextBtn);
 
 
 carContainer.forEach((e,i)=>{
@@ -25,11 +25,25 @@ let containerWidth =containerDimension.width;
 
 console.log(containerWidth,containerDimension);
 
+let counter =1;
+
 nextBtn[i].addEventListener("click",()=>{
-    e.scrollLeft +=545*3 +32 ;
+    // e.scrollLeft +=545*3 +32 ;
+    if(counter==1 && containerWidth >1200){
+        e.scrollLeft +=545*3 + 32 ;
+    }else{
+        e.scrollLeft +=containerWidth + 24 ;
+    }
+    
 })
 prevBtn[i].addEventListener("click",()=>{
-    e.scrollLeft -=545*3 +32 ;
+    // e.scrollLeft -=545*3 +32 ;
+    if(counter==1 && containerWidth >1200){
+        e.scrollLeft -=545*3 + 32 ;
+    }else{
+        e.scrollLeft -=containerWidth + 8 ;
+    }
+    // e.scrollLeft -=containerWidth  + 8;
 })
 
 })
