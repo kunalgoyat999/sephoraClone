@@ -4,11 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="htmlcss bootstrap menu, navbar" />
+	<meta name="description" content=" Bootstrap 5" />  
+
     <title>Top_nav</title>
     <link rel="stylesheet" href="top-nav.css">
     <link rel="stylesheet" href="footer.html">
     <link rel="stylesheet" href="footer.css">
     <script src="https://kit.fontawesome.com/b18434914d.js" crossorigin="anonymous"></script>
+    
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		.dropdown-large{ padding:1rem; }
+
+		/* ============ desktop view ============ */
+		@media all and (min-width: 992px) {
+			.dropdown-large{min-width:500px;}
+		}	
+		/* ============ desktop view .end// ============ */
+	</style>
+
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(){
+	        /////// Prevent closing from click inside dropdown
+	        document.querySelectorAll('.dropdown-menu').forEach(function(element){
+	        	element.addEventListener('click', function (e) {
+	        		e.stopPropagation();
+	        	});
+	        })
+	    }); 
+		// DOMContentLoaded  end
+	</script>
+
 
 </head>
 
@@ -16,7 +47,7 @@
     <div id="top_img">
         <p><strong>Take 50% off++</strong> Oh snap! Get major savings on your favorite beauty. Plus, free shipping on all orders <br> with code <strong> FREESHIP. Shop Now ▸</strong></p>
         <img src="https://www.sephora.com/contentimages/homepage/081721/Homepage/DesktopMweb/2021-08-29-hp-top-banner-project-kickball-d-us-slice.jpeg?imwidth=612" alt="top_img">
-    </div>
+    </div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <div id="search">
         <div id="logo"><img src="https://www.sephora.com/img/ufe/logo.svg" alt=""></div>
         <div id="box"><input type="text" class="icon" placeholder="Search"></div>
@@ -38,7 +69,34 @@
         </div>
     </div>
     <div id="black_nav">
-        <div><a href="#"> New</a></div>
+        <div><a href="#" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> New</a>
+            <div class="dropdown-menu dropdown-large">
+                <div class="row g-10">
+                    <div class="col-15">
+                        <h6 class="title">Title first</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Submenu item </a></li>
+                            <li><a href="#">Submenu item </a></li>
+                            <li><a href="#">Submenu item </a></li>
+                            <li><a href="#">Submenu item </a></li>
+                            <li><a href="#">Submenu item </a></li>
+                            <li><a href="#">Submenu item </a></li>
+                        </ul>
+                    </div><!-- end col-3 -->
+                    <div class="col-6">
+                        <h6 class="title">Title second</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Submenu item </a></li>
+                            <li><a href="#">Submenu item </a></li>
+                            <li><a href="#">Submenu item </a></li>
+                            <li><a href="#">Submenu item </a></li>
+                            <li><a href="#">Submenu item </a></li>
+                        </ul>
+                    </div><!-- end col-3 -->
+                </div><!-- end row -->
+            </div> <!-- dropdown-large.// -->
+        </div>
+        
         <div> <a href="#">Brands</a> </div>
         <div><a href="#"> Makeup</a></div>
         <div><a href="#"> Skincare</a></div>
