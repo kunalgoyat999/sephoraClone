@@ -1,0 +1,37 @@
+html * {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#git {
+    width: 20%;
+    margin: auto;
+}
+img {
+    width: 100%;
+}
+#container>h1 {
+    color: green;
+}
+#container>p {
+    width: 70%;
+}
+#container>button {
+    border: none;
+    font-size: 15px;
+    /* background-color: white; */
+    margin-top: 20px;
+    height: 30px;
+    width: 20%;
+    background-color: green;
+    color: white;
+}
+#container>button:hover {
+    text-decoration: underline;
+}
