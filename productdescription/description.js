@@ -20,15 +20,7 @@ let leftContainer = document.getElementById("leftimgcontainer");
 
 let rightContainer = document.getElementById("rightdetailcontainer");
 
-var obj = {
-  imageUrl:
-    "https://www.sephora.com/productimages/sku/s2377398-main-zoom.jpg?imwidth=612",
-  brand: "SEPHORA COLLECTION",
-  name: "Translucent Loose Setting Powder",
-  rating: 4,
-  cost: 15,
-  quantity: 1,
-};
+var obj = JSON.parse(localStorage.getItem("productObj")) || {};
 
 displayProduct(obj);
 
@@ -79,7 +71,7 @@ function displayProduct(data) {
 
   let price = document.createElement("h2");
   price.setAttribute("id", "price");
-  price.textContent = `$${data.cost.toFixed(2)}`;
+  price.textContent = `$${data.cost}`;
 
   let remain = data.cost - (5 * data.cost) / 100;
 
@@ -99,3 +91,13 @@ select.addEventListener("change", function () {
   obj.quantity = Number(val) || 1;
   console.log(obj);
 });
+
+let newArr = JSON.parse(localStorage.getItem("product-Arr")) || [];
+
+
+let arrObj = document.getElementById("addtocart-btn");
+arrObj.addEventListener("click",function(){
+  document.getElementById("itemsuccess").innerText = "Product Added to Basket!";
+  newArr.push(obj);
+  localStorage.setItem("product-Arr",JSON.stringify(newArr));
+})

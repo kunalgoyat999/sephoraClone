@@ -212,6 +212,11 @@ function displayData(data) {
     }
 
     document.getElementById("container-body1").append(inputCheck, label, br);
+
+    prodBox.addEventListener("click",function(){
+      localStorage.setItem("productObj",JSON.stringify(ele));
+      location.href = "../productdescription/description.html"
+    })
   });
 }
 
