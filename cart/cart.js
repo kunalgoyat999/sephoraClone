@@ -506,7 +506,7 @@ function viewdescription(ele){
 // for product slider
 
 
-/ Login Modal below ////////////////////////////////////////////////////
+// / Login Modal below ////////////////////////////////////////////////////
 
 // Get the modal
 var loginModal = document.getElementById("loginModal");

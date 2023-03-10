@@ -995,7 +995,7 @@ background: silver;
   /* Hidden by default */
   /* position: fixed; */
   /* Stay in place */
-  z-index: 1000;
+  z-index: 10;
   /* Sit on top */
   margin: auto;
   /* margin-top: 50px; */

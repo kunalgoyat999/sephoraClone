@@ -357,6 +357,7 @@ button > span >span:first-child{
 /* dropdowns */
 
 .dropdown{
+    overflow-x: hidden;
     overflow-y: auto;
     max-height: 436px;
     padding-top: 24px;
@@ -403,6 +404,26 @@ button > span >span:first-child{
 
 .cart-product-meta{
     text-align: start;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+}
+
+.cart-product-name{
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+}
+
+.cart-product-description{
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    -webkit-line-clamp: 2;
 }
 
 .popup-items-container img{
