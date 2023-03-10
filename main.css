@@ -120,8 +120,8 @@
             padding-top: 0;
         }
 
-        #chosen-for-you{
-            margin: 48px auto;
+        #wrapper >section{
+            margin: 40px auto;
             /* border: 1px solid red; */
         }
 
@@ -133,12 +133,12 @@
 
         #featured-cat,#guidance-cat {
             display: flex;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             align-items: flex-start;
             gap: 24px;
             justify-content: space-between;
             margin: 48px auto;
-            
+            padding: 16px 0;
         }
 
         #featured-cat > div h2,
@@ -162,8 +162,8 @@
         #guidance-cat > ul
         {
             display: flex;
-            margin: -16px;
-            padding: 16px 0;
+            margin: 0;
+            
             column-gap:  8px;
         }
 
@@ -218,9 +218,9 @@
 
         .banner-container{
             display: grid;
-            grid-template-columns: repeat(3,410px);
-            justify-content: space-between;
-            
+            grid-template-columns: repeat(3,1fr);
+            /* justify-content: space-between; */
+            gap: 10px;
             
         }
 
@@ -298,7 +298,139 @@
             width: 198px;
         }
 
-        .product-link-container{
+        /* Bestoffer css */
+
+        #best-offers .offer__item{
+            width: 240px;
+            
+        }
+
+        #best-offers a{
+            padding: 0;
+        }
+
+        .offer__container{
+           padding: 5px;
+           margin: 14px;
+           display: grid;
+           grid-template-columns: repeat(6,1fr);
+           gap: 12px;
+        }
+
+        
+        .offer-link-container{
+            min-height: 450px;
+        }
+        
+
+        .offer-bottom-container{
+            padding: 12px 16px 16px;
+            flex-direction: column;
+            display: flex;
+            color: #000;
+            font-size: 14px;
+            flex: 1;
+            
+        }
+
+        
+
+        .offer-bottom-container h3{
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0;
+            margin-bottom: 4px;
+        }
+
+        .offer-bottom-container  p:nth-child(2){
+            margin: 0;
+            margin-bottom: 0.5em;
+        }
+
+        .offer-bottom-container  p:nth-child(3){
+            color: rgb(102, 102, 102);
+            font-size: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .offer-bottom-container  p:nth-child(4){
+            color: rgb(102, 102, 102);
+            font-size: 12px;
+            margin: 0;
+            margin-top: 0.5em;
+        }
+
+        .offer-bottom-container  p:nth-child(5){
+            color: rgb(102, 102, 102);
+            font-size: 12px;
+            margin: 0;
+            /* margin-top: 0.5em; */
+        }
+
+        .offer-btn-container{
+            padding-top: 16px;
+            margin-top: auto;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 48px;
+            display: flex;
+        }
+
+        .offer-shop-btn{
+            cursor: pointer;
+            font-size: 12px;
+            min-height: 32px;
+            min-width: 112px;
+            font-weight: 700;
+            background-color: transparent;
+            padding: 0.25em 0.875em;
+            border-radius: 99999px;
+            transition: color .2s ,border-color .2s;
+        }
+
+        .offer-shop-btn:hover{
+            color: #666;
+            border-color: #666;
+        }
+
+        .see-details-btn{
+            cursor: pointer;
+            color: #136BEA;
+            padding-top: 8px;
+            background-color: #fff;
+            padding-bottom: 8px;
+            margin-left: auto;
+            border: none;
+            text-align: right;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        .offer-tag{
+            vertical-align: middle;
+            border:none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 10px;
+            line-height: 1.3;
+            background-color: #cf112c;
+            display: inline-block;
+            font-weight: 700;
+            color: #fff;
+            padding-left: 0.6em;
+            padding-right: 0.6em;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+        }
+
+          /* Bestoffer css ends */
+
+        .product-link-container,
+        .offer-link-container
+        {
             box-sizing: border-box;
             padding: 16px;
             font-size: 14px;
@@ -316,7 +448,7 @@
                opacity: 1;
         }
 
-        .product-link-container:hover  {
+        .product-link-container:hover ,.offer-link-container:hover {
             transform: translateY(-4px);
         }
 
@@ -473,3 +605,168 @@
 
 
          /* product slider ends  */
+
+
+         /* media quries */
+
+         @media screen and (max-width: 1024px) {
+            .slider__container> div {
+                width: 314px;
+                
+            }
+
+            .richText >h2 {
+                font-size: 1.14em;
+                
+            }
+
+            .richText >p {
+                font-size: 0.9em;
+                
+            }
+
+
+            /* .banner-container {
+                
+                grid-template-columns: repeat(3,315px);
+              
+            } */
+
+            #marketing .richText >h2 {
+                font-size: 1em;
+            }
+
+
+            /* feature banner */
+
+            #featured-cat,#guidance-cat {
+                flex-direction: column;
+                align-items: normal;
+            }
+
+           
+
+            #featured-cat > ul,
+            #guidance-cat > ul
+            {
+                padding-left: 0;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 15px;
+                
+            }
+
+
+            #featured-cat > ul >li >a,
+            #guidance-cat > ul > li >a
+            {
+               width: 100%;
+               
+            }
+           
+
+            
+            
+         }
+
+         @media screen and (max-width: 768px) {
+
+            .slider__container> div {
+                width: calc(100% / 2);
+                
+            }
+
+            .richText >h2 {
+                font-size: 1.14em;
+                
+            }
+
+            .richText >p {
+                font-size: 0.9em;
+                
+            }
+
+            .product__slider__item {
+                width: 146px;
+            }
+
+            .cat-name-container >.product-brand {
+                font-size: 11px;
+            }
+
+            .cat-name-container >.product-name {
+                font-size: 12px;
+            }
+
+            section >.base-title h2 {
+                font-size: 16px;
+            }
+
+
+            .offer__container {
+                grid-template-columns: repeat(3,1fr);
+                
+            }
+
+            #best-offers .offer__item {
+                width: 230px;
+            }
+
+            .banner-container {
+                
+                grid-template-columns: repeat(1,1fr);
+                gap: 10px;
+            }
+
+
+            
+
+            #featured-cat > ul,
+            #guidance-cat > ul
+            {
+               grid-template-columns: repeat(3,1fr);
+               
+            }
+
+            #featured-cat > ul >li >a,
+            #guidance-cat > ul > li >a
+            {
+               width: 100%;
+               
+            }
+
+
+            
+            
+         }
+
+         @media screen and (max-width: 512px) {
+            .slider__container> div {
+                width: calc(100% / 1);
+                
+            }
+
+            .offer__container {
+                grid-template-columns: repeat(2,1fr);
+                
+            }
+
+            #best-offers .offer__item {
+                width: 220px;
+            }
+
+            .banner-container {
+                
+                grid-template-columns: repeat(1,1fr);
+                gap: 10px;
+            }
+
+
+            #featured-cat > ul,
+            #guidance-cat > ul
+            {
+               grid-template-columns: repeat(2,1fr);
+               
+            }
+
+         }
