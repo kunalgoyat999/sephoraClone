@@ -6,12 +6,15 @@
   display: flex;
   width: 68%;
   margin: auto;
+  /* justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-between; */
 }
 
 /* Left Container */
 #category-leftdiv {
-  width: 15.5%;
-  margin-right: 3%;
+  width: 16%;
+  margin-right: 5%;
 }
 
 #dropContainer #container-head {
@@ -46,6 +49,10 @@
   margin-bottom: 15%;
 }
 
+#container-head h4:hover {
+  text-decoration: underline;
+}
+
 #container-body1 input[type="radio"] {
   width: 10%;
   margin-top: -1px;
@@ -62,6 +69,10 @@
   margin-bottom: 15%;
 }
 
+#container-head h4:hover {
+  text-decoration: underline;
+}
+
 #container-body1 {
   display: none;
   font-size: 12px;
@@ -74,12 +85,13 @@
 
 /* Right Container */
 #category-rightdiv {
-  width: 81.5%;
+  width: 79%;
 }
 
 /* Top Image */
 #topimg {
   margin: 5% 0% 3% 0%;
+  /* width: 50%; */
 }
 
 #topimg p {
@@ -90,8 +102,8 @@
 
 /* Top Right Container */
 #category-rightdiv #top {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: flex-end; */
 }
 
 #category-rightdiv select {
@@ -115,6 +127,7 @@
 
 #sort {
   font-weight: bolder;
+  float: right;
 }
 /* Bottom Right Container */
 #category-rightdiv #bottom {
@@ -126,6 +139,7 @@
 #prod-box {
   width: 100%;
   padding: 6% 0%;
+  cursor: pointer;
 }
 
 #prod-box h5 {
@@ -135,6 +149,10 @@
 #prod-box p {
   font-size: 14px;
   margin: 6px 0px;
+}
+
+#prod-box p:hover {
+  text-decoration: underline;
 }
 #prod-box h4 {
   font-size: 16px;
@@ -170,4 +188,18 @@
 .overlay:hover {
   background-color: rgba(58, 58, 58, 0.5);
   opacity: 0.5;
+}
+
+
+@media screen and (max-width: 1300px){
+  #container{
+    width: 100%;
+    margin: auto;
+  }
+
+  #category-rightdiv #bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
 }

@@ -27,8 +27,8 @@ let label4 = document.getElementById("label4");
 label4.innerHTML = star1();
 
 // Get Data
-let category = "eyeLiner";
-// let url = "https://pickled-cheerful-somersault.glitch.me/eyePrimer";
+let category = "eyePallete";
+// let url = "https://pickled-cheerful-somersault.glitch.me/${category}";
 let url = `http://localhost:3000/${category}`;
 
 async function getData(url) {
@@ -50,6 +50,35 @@ async function init(url) {
   }
 }
 init(url);
+
+
+let creatBtn = document.getElementById("container-head");
+creatBtn.addEventListener("click", async function(){
+    let res = await postData();
+    // console.log("sdjkjefkedkj")
+    // location.href = "./main.html";
+})
+
+async function postData(){
+    let body = {
+        quan:1
+    }
+    try{
+      console.log(url)
+        let res = await fetch(url,{
+            method:"PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body),
+        });
+        // let data = await res.json();
+        
+    } catch(error){
+        console.log(error);
+    }
+}
+
 
 // Sort Functionality
 document.getElementById("sort").addEventListener("click", function () {
@@ -81,13 +110,12 @@ let ratbtn = document.querySelectorAll(".ratingbtn");
 ratbtn.forEach((ele) => {
   ele.addEventListener("click", function () {
     let val = ele.value;
-    let valNum = Number(val);
-    if (valNum == 1) {
-      init(`${url}/?rating_gte=0&rating_lte=0.9`);
-    } else if (valNum == 2) {
-      init(`${url}/?rating_gte=1&rating_lte=1.9`);
-    } else if (valNum == 3) {
-      init(`${url}/?rating_gte=2&rating_lte=3.9`);
+    if (val == 1) {
+      init(`${url}/?rating_gte=0&rating_lte=1`);
+    } else if (val == 2) {
+      init(`${url}/?rating_gte=1.1&rating_lte=2`);
+    } else if (val == 3) {
+      init(`${url}/?rating_gte=2.1&rating_lte=3`);
     } else {
       init(`${url}/?rating_gte=4`);
     }
@@ -130,18 +158,20 @@ function displayData(data) {
 
     let ratingdiv = document.createElement("div");
     let ratNum = Number(ele.rating);
-    if (ratNum < 1) {
-      ratingdiv.innerHTML = star1();
-    } else if (ratNum < 2 && ratNum >= 1) {
-      ratingdiv.innerHTML = star2();
-    } else if (ratNum < 3 && ratNum >= 2) {
-      ratingdiv.innerHTML = star3();
-    } else if (ratNum < 4 && ratNum >= 3) {
-      ratingdiv.innerHTML = star4();
-    } else {
+    if (ratNum > 4) {
       ratingdiv.innerHTML = star5();
+    } else if (ratNum == 4) {
+      ratingdiv.innerHTML = star4();
+    } else if (ratNum < 4 && ratNum >= 3) {
+      ratingdiv.innerHTML = star3();
+    } else if (ratNum < 3 && ratNum >= 2) {
+      ratingdiv.innerHTML = star2();
+    } else if (ratNum < 2 && ratNum >= 1) {
+      ratingdiv.innerHTML = star1();
+    } else {
+      ratingdiv.innerHTML = star1();
     }
-
+    
     let h4 = document.createElement("h4");
     h4.textContent = "$ " + ele.cost;
 
@@ -169,8 +199,6 @@ function displayData(data) {
       inputCheck.addEventListener("click", function () {
         init(`${url}/?brand=${label.textContent}`);
       });
-
-      console.log(labelarr);
     }
     if (inputCheck === undefined || label === undefined || br === undefined) {
       inputCheck = document.createElement("p");
@@ -186,6 +214,8 @@ function displayData(data) {
     document.getElementById("container-body1").append(inputCheck, label, br);
   });
 }
+
+
 
 let contHead = document.querySelectorAll(".containerhead");
 contHead.forEach((ele, index) => {

@@ -139,9 +139,16 @@ width: 100%;
 }
 
 #soc {
-    margin-left: 40%;
+    margin-left: 38%;
     margin-top: 10px;
     cursor: pointer;
+    font-size: 25px;
+    
+    /* color: aliceblue; */
+}
+
+#soc i{
+    color: aliceblue;
 }
 
 .one>p {
@@ -151,4 +158,44 @@ width: 100%;
 
 .one>h4 {
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    #body {
+        flex-wrap: wrap;
+    }
+
+    .btm {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .btm div {
+        width: 50%;
+        text-align: center;
+    }
+
+    .btm div:first-child {
+        margin-bottom: 10px;
+    }
+
+    #big {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #big div {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    #news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #news input {
+        margin-bottom: 10px;
+    }
 }
