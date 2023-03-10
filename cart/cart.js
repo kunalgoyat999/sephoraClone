@@ -1,20 +1,27 @@
 import { navbar, footer } from "../Component/navbar.js";
 
 let navContainer = document.getElementById("nav");
-navContainer.innerHTML = navbar();
+// navContainer.innerHTML = navbar();
 
 // let footerContainer = document.getElementById("footer");
 // footerContainer.innerHTML = footer();
 
-let cart_data = JSON.parse(localStorage.getItem("cart")) || [];
+let cart_data = JSON.parse(localStorage.getItem("product-Arr")) || [];
+
+// calcTotal();
 
 var cartdata = document.getElementById("cartItem");
 
+let getItem = document.getElementById("cartit");
+
 function itemCount() {
   var item = cart_data.reduce(function (acc, curr) {
+    console.log(curr);
     return acc + Number(curr.quantity);
   }, 0);
-  document.getElementById("cartitem").textContent = item;
+  console.log(item);
+  getItem.textContent = item;
+  // console.log(item);
 }
 
 itemCount();
@@ -66,14 +73,14 @@ function check(cart_data) {
     addproduct(cart_data);
   }
 }
-console.log(cart_data);
+// console.log(cart_data);
 
 check(cart_data);
 
 function addproduct(data) {
   cartdata.innerHTML = "";
   data.map(function (ele, index) {
-    console.log(ele);
+    // console.log(ele);
     showProduct(ele, index);
     calcTotal();
   });
@@ -99,11 +106,13 @@ function showProduct(el, index) {
 
   let companyname = document.createElement("h3");
   companyname.setAttribute("class", "brandname");
-  companyname.textContent = "SEPHORA COLLECTION";
+  companyname.textContent = el.brand;
 
   let price = document.createElement("h3");
   price.setAttribute("id", "price");
-  price.textContent = `$${el.cost}`;
+  price.textContent = `$${el.cost.toFixed(2)}`;
+
+  console.log(el.cost);
 
   companynameprice.append(companyname, price);
 
@@ -112,14 +121,14 @@ function showProduct(el, index) {
 
   let desp = document.createElement("p");
   desp.setAttribute("class", "p1");
-  desp.textContent = "Clean Charcoal Nose Strip";
+  desp.textContent = el.name;
 
   let id = document.createElement("p");
   id.textContent = "ITEM 2341081";
 
   let size = document.createElement("p");
   size.setAttribute("id", "p");
-  size.textContent = "Size: 1 Mask";
+  size.textContent = `Rating : ${el.rating}/5`;
 
   despdiv.append(desp, id, size);
 
@@ -149,7 +158,7 @@ function showProduct(el, index) {
       document.getElementById("totalamt").textContent = num;
       localStorage.setItem("estimated-amount", num);
       price.textContent = `$${num.toFixed(2)}`;
-      document.getElementById("cartitem").textContent = el.quantity;
+      // document.getElementById("cartit").textContent = el.quantity;
     }
     select.append(opt);
   }
@@ -200,6 +209,7 @@ function deleteFun(index) {
   itemCount();
   check(cart_data);
   localStorage.setItem("promo-code", "masai30");
+  localStorage.setItem("product-Arr",JSON.stringify(cart_data));
   document.getElementById("adddiscount").innerText = "0";
 
   // document.getElementById("lblCartCount").textContent = cart_data.length;
@@ -223,9 +233,9 @@ function calcTotal() {
 
   let num = total.toFixed(2);
 
-  document.getElementById("mrptotal").textContent = num;
+  document.getElementById("mrptotal").textContent = Number(num);
   localStorage.setItem("mrp-total", num);
-  document.getElementById("totalamt").textContent = num;
+  document.getElementById("totalamt").textContent = Number(num);
   localStorage.setItem("estimated-amount", num);
   // console.log(total);
 }
@@ -268,37 +278,31 @@ function checkcode() {
 
 var products = [
   {
-    id: "ITEM 2497212",
     quantity: 1,
     name: "Total Coverage Original Sponge",
-    cost: 12.00,
-    Category: "Personal & Home Essentials",
+    cost: 12,
     brand: "SEPHORA COLLECTION",
     imageUrl:
       "https://www.sephora.com/productimages/sku/s2497212-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97",
-    popularity: 3,
+    rating: 3,
   },
   {
-    id: "ITEM 2464048",
     quantity: 1,
     name: "Big By Definition Defining & Volumizing Mascara",
-    cost: 10.00,
-    Category: "Personal & Home Essentials",
-    brand: "SEPHORA COLLECTION",
+    cost: 10,
+    brand: "KAJA",
     imageUrl:
       "https://www.sephora.com/productimages/sku/s2464048-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97",
-    popularity: 2,
+    rating: 2,
   },
   {
-    id: "ITEM 1370766",
     quantity: 1,
     name: "Long Lasting Eyeliner High Precision Brush",
-    cost: 9.00,
-    Category: "Personal & Home Essentials",
-    brand: "SEPHORA COLLECTION",
+    cost: 9,
+    brand: "LAKME",
     imageUrl:
       "https://www.sephora.com/productimages/sku/s1370766-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97",
-    popularity: 1,
+    rating: 1,
   },
 ];
 
@@ -330,7 +334,7 @@ function showUnderRange(el, index) {
 
   let companyname = document.createElement("h3");
   companyname.setAttribute("class", "brandname");
-  companyname.textContent = "SEPHORA COLLECTION";
+  companyname.textContent = el.brand;
 
   let price = document.createElement("h3");
   price.setAttribute("id", "price");
@@ -343,14 +347,14 @@ function showUnderRange(el, index) {
 
   let desp = document.createElement("p");
   desp.setAttribute("class", "p1");
-  desp.textContent = "Clean Charcoal Nose Strip";
+  desp.textContent = el.name;
 
   let id = document.createElement("p");
   id.textContent = "ITEM 2341081";
 
   let size = document.createElement("p");
   size.setAttribute("id", "p");
-  size.textContent = "Size: 1 Mask";
+  size.textContent = `Rating : ${el.rating}/5`;
 
   despdiv.append(desp, id, size);
 
@@ -379,9 +383,13 @@ function showUnderRange(el, index) {
 function addtoCartList(item, btn) {
   btn.textContent = "Added";
   cart_data.push(item);
-  localStorage.setItem("cart", JSON.stringify(cart_data));
+  localStorage.setItem("product-Arr", JSON.stringify(cart_data));
+  // document.getElementById("cartitem").textContent = 
   check(cart_data);
+  itemCount();
 }
+
+// cartitem
 
 // slider
 
@@ -396,30 +404,40 @@ let chosenForYou = [
       "https://www.sephora.com/productimages/sku/s2031375-main-zoom.jpg?pb=2020-03-allure-best-2019&imwidth=122",
     brand: "The Ordinary",
     name: "Hyaluronic Acid 2% + B5 Hydrating Serum",
+    cost: 20,
+    quantity: 1,
   },
   {
     imageUrl:
       "https://www.sephora.com/productimages/sku/s2421337-main-zoom.jpg?imwidth=122",
     brand: "Paula's Choice",
     name: "C15 Vitamin C Super Booster",
+    cost: 15 ,
+    quantity: 1,
   },
   {
     imageUrl:
       "https://www.sephora.com/productimages/sku/s1395011-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=122",
     brand: "SEPHORA COLLECTION",
     name: "Sephora Colorful® Waterproof Eyeshadow & Eyeliner Multi-Stick",
+    cost: 35,
+    quantity: 1,
   },
   {
     imageUrl:
       "https://www.sephora.com/productimages/sku/s2637965-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122",
     brand: "Glow Recipe",
     name: "Strawberry BHA Pore-Smooth Blur Drops",
+    cost: 25,
+    quantity: 1,
   },
   {
     imageUrl:
       "https://www.sephora.com/productimages/sku/s2648483-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122",
     brand: "OLEHENRIKSEN",
     name: "Banana Bright+ Vitamin CC Eye Sticks",
+    cost: 19,
+    quantity: 1,
   },
 ];
 
@@ -481,9 +499,20 @@ function displayProductSlider(arr, parentNode) {
     li.append(a);
 
     parentNode.append(li);
+
+    li.addEventListener("click",function() {
+      viewdescription(e);
+    })
   });
 
   parentNode.append(areaHidden);
+}
+
+function viewdescription(ele){
+    // calcTotal();
+    localStorage.setItem("productObj",JSON.stringify(ele));
+    console.log(ele);
+    location.href = "../productdescription/description.html";
 }
 
 // for product slider

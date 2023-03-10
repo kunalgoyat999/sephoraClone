@@ -337,6 +337,11 @@ button > span >span:first-child{
     font-weight: 700;
 }
 
+#cart>div>a>i{
+    font-size: 25px;
+    margin-left: 13px;
+}
+
 
 /* dropdowns */
 
