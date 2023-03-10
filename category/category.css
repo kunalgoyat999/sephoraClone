@@ -1,0 +1,173 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#container {
+  display: flex;
+  width: 68%;
+  margin: auto;
+}
+
+/* Left Container */
+#category-leftdiv {
+  width: 15.5%;
+  margin-right: 3%;
+}
+
+#dropContainer #container-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#container-body {
+  display: none;
+  margin-bottom: 0px;
+}
+
+#container-body:hover {
+  display: none;
+}
+
+#container-body input[type="radio"] {
+  width: 10%;
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+#container-body input[type="radio"]:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#container-body label {
+  display: inline-block;
+  margin-bottom: 15%;
+}
+
+#container-body1 input[type="radio"] {
+  width: 10%;
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+#container-body1 input[type="radio"]:hover {
+  color: black;
+  cursor: pointer;
+}
+
+#container-body1 label {
+  display: inline-block;
+  margin-bottom: 15%;
+}
+
+#container-body1 {
+  display: none;
+  font-size: 12px;
+}
+
+.price label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Right Container */
+#category-rightdiv {
+  width: 81.5%;
+}
+
+/* Top Image */
+#topimg {
+  margin: 5% 0% 3% 0%;
+}
+
+#topimg p {
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+/* Top Right Container */
+#category-rightdiv #top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#category-rightdiv select {
+  border: none;
+  background: transparent;
+}
+
+#category-rightdiv select option {
+  border: none;
+}
+
+#heart-overlay {
+  margin-left: 100%;
+  text-align: right;
+}
+
+#count {
+  color: gray;
+  font-size: 14px;
+}
+
+#sort {
+  font-weight: bolder;
+}
+/* Bottom Right Container */
+#category-rightdiv #bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+#prod-box {
+  width: 100%;
+  padding: 6% 0%;
+}
+
+#prod-box h5 {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+#prod-box p {
+  font-size: 14px;
+  margin: 6px 0px;
+}
+#prod-box h4 {
+  font-size: 16px;
+  margin: 10px 0px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 83%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay:hover {
+  background-color: rgba(58, 58, 58, 0.5);
+  opacity: 0.5;
+}

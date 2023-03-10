@@ -47,16 +47,16 @@ body {
 #search {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 8%;
-    margin-right: 8%;
-    padding-left: 25px;
-    height: auto;
+    justify-content: center;
 }
 
 #logo {
     margin-top: 25px;
     height: 50px;
     width: 100px;
+}
+#box {
+    margin-top: 0px;
 }
 
 div>input {
@@ -69,7 +69,7 @@ div>input {
 }
 
 .icon {
-    margin-top: 20px;
+    margin-top: 0px;
     padding-left: 35px;
     background: url("https://cdn-icons-png.flaticon.com/512/54/54481.png") no-repeat left;
     padding: auto;
@@ -123,13 +123,11 @@ div>input {
 
 #black_nav {
     display: flex;
-    flex-wrap: wrap;
     background-color: black;
     color: white;
-    padding-left: 8%;
     height: 50px;
-    text-align: center;
     align-items: center;
+    justify-content: center;
 }
 
 #black_nav>div {
