@@ -21,6 +21,8 @@ function itemCount() {
   }, 0);
   console.log(item);
   getItem.textContent = item;
+
+  localStorage.setItem("total-number-items", item);
   // console.log(item);
 }
 
@@ -423,22 +425,7 @@ let chosenForYou = [
     cost: 35,
     quantity: 1,
   },
-  {
-    imageUrl:
-      "https://www.sephora.com/productimages/sku/s2637965-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122",
-    brand: "Glow Recipe",
-    name: "Strawberry BHA Pore-Smooth Blur Drops",
-    cost: 25,
-    quantity: 1,
-  },
-  {
-    imageUrl:
-      "https://www.sephora.com/productimages/sku/s2648483-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122",
-    brand: "OLEHENRIKSEN",
-    name: "Banana Bright+ Vitamin CC Eye Sticks",
-    cost: 19,
-    quantity: 1,
-  },
+  
 ];
 
 displayProductSlider(chosenForYou, mainContainer);
