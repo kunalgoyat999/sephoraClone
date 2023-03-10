@@ -8,12 +8,6 @@ import {
   star5,
 } from "../Component/navbar.js";
 
-let navbarContainer = document.getElementById("navbar");
-navbarContainer.innerHTML = navbar();
-
-let footercontainer = document.getElementById("footer");
-footercontainer.innerHTML = footer();
-
 let label1 = document.getElementById("label1");
 label1.innerHTML = star4();
 

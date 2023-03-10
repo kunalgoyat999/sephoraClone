@@ -19,7 +19,5 @@ async function getData() {
   }
   
   async function main() {
-
     let data = await getData();
-    // displayData(data);
   }
