@@ -3,6 +3,17 @@ body {
     font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
+#topBanner-header{
+    background-color: #FF5F9E;
+  }
+  
+  .offer-text-container-header{
+    padding: 0.5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+  }
 
 #header{
         /* border: 1px solid red; */

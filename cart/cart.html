@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="../main.css">
   </head>
   <body>
-    <nav id="nav">
-
+    <div id="nav">
       <div id="topBanner-header">
         <div class="offer-text-container-header">
           <p>
@@ -31,7 +30,7 @@
             </a>
             <div id="search-container">
                 <div class="search-input">
-                    <input type="text" id="search-txt" placeholder="Search">
+                    <input type="text" id="search-txt" oninput="debounce(main, 500)" placeholder="Search">
                     <span id="search-icon">
                         <svg width="16px" heigth="16px" viewBox="0 0 24 24" data-at="search_icon" class="css-15a1208 e65zztl0" aria-hidden="true" data-comp="Icon StyledComponent " style=""><path d="M9 0a9 9 0 019 9c0 2.215-.8 4.243-2.127 5.81l7.906 7.909h.002a.752.752 0 010 1.062.752.752 0 01-1.062 0l-7.907-7.909A8.964 8.964 0 019 18a9 9 0 01-9-9 9 9 0 019-9zm0 1.5A7.499 7.499 0 001.5 9c0 4.143 3.357 7.5 7.5 7.5s7.5-3.357 7.5-7.5S13.143 1.5 9 1.5z"></path></svg>
                     </span>
@@ -165,8 +164,8 @@
                                     </div>
                                     <div class="divider-header"></div>
                                     <div class="account-btn-container">
-                                        <span class="btn">SignIn</span>
-                                        <span class="btn create-account">Create Account</span>
+                                        <span id="loginBtn" class="btn">SignIn</span>
+                                        <span id="signupBtn" class="btn create-account">Create Account</span>
                                     </div>
                                     
                                     <div class="divider-thin-header"></div>
@@ -232,7 +231,7 @@
                                 <span>$50</span>
                             </div>
                             <div class="popup-items-container cart-checkout-container">
-                                <div><span class="btn checkout-btn">View Basket & Checkout</span></div>
+                                <div><span  class="btn checkout-btn">View Basket & Checkout</span></div>
                             </div>
                             <div class="divider-thin-header"></div>
                             
@@ -260,7 +259,113 @@
         </div>
     </div>
 
+        
     </nav>
+
+    <div id="loginModal">
+      <!--      <div class="header"> 
+           <h2>Modal Popup</h2>
+           <label for="click" class="fas fa-times"></label>
+         </div>
+         <label for="click" class="fas fa-check"></label>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, cum!</p>
+         <div class="line"></div>-->
+
+      <div id="loginheader">
+          <h3>Sign In</h3>
+          <!-- <label for="click" class="close-btn">&times;</label> -->
+          <span class="loginclose">&times;</span>
+      </div>
+
+
+      <p>Sign in or create an account to enjoy <span id="freeShipping">FREE standard shipping</span> on all
+          orders.</p>
+      <div id="logindetails">
+          <input type="text" placeholder="Email Address*" id="email"><br>
+          <br>
+          <input type="text" placeholder="Password*" id="password">
+
+      </div>
+
+      <div id="logincheckbox">
+          <div>
+              <input type="checkbox" id="keepSigned" name="keepSigned">
+              <label for="keepSigned">Keep me signed in</label>
+          </div>
+          <div id="forgotPword">
+              <!-- <p>Forgot Password?</p> -->
+              <!-- <label for="forgotPword">forgot Password</label> -->
+              <a href="" style="text-decoration: none">Forgot password?</a>
+          </div>
+      </div>
+
+      <p id="loginterms">By clicking “Sign In”, you (1) agree to the current version of our <span id="bold"><a
+                  href="">TERMS OF USE</a></span>
+          and (2) have
+          read
+          Sephora's <a href="">Privacy Policy</a></p>
+      <button id="signinBtn">Sign In</button>
+
+      <hr>
+
+      <div id="loginfooter">
+          <p>New to Sephora?</p>
+          <!-- <button id="createBtn" onclick="">Create Account</button> -->
+          <button id="signupBtn" onclick="">Create Account</button>
+          <!-- <input type="checkbox" id="createBtn">
+      <label for="click" class="click-me">Create Account</label> -->
+
+      </div>
+
+  </div>
+  <!-- <button id="signupBtn">Modal</button> -->
+
+  <!-- The Modal -->
+  <div id="signupModal" class="signupModal">
+
+      <!-- Modal content -->
+      <div id="signupheader">
+          <h3>Create an Account</h3>
+          <span class="signupclose">&times;</span>
+          <!-- <label for="click" class="signupclose">&times;</label> -->
+      </div>
+      <div id="signupmiddle">
+          <img src="https://www.sephora.com/img/ufe/bi/logo-beauty-insider.svg">
+          <p>Join the Beauty Insider loyalty program. Earn points, get <span id="bold">FREE standard shipping</span> ,
+              redeem rewards, and
+              more.</p>
+          <div id="signupdetails">
+              <div id="signupname">
+                  <input type="text" id="firstName2" placeholder="First Name">
+                  <input type="text" id="lastName2" placeholder="Last Name">
+              </div>
+              <input type="text" id="email2" placeholder="Email Address">
+              <input type="text" id="password2" placeholder="Password (6 to 12 characters)">
+              <input type="text" id="phone2" placeholder="Phone Number (optional)">
+              <input type="number" id="zipcode2" placeholder="Zip Code (to hear about stores near you)">
+          </div>
+
+          <!-- <p>Enter your birthdate to receive a free gift every year.</p> -->
+
+          <!-- <div>
+              <select id="month">month</select>
+              <select name="day" id="date">Day</select>
+          </div> -->
+
+
+          <input type="checkbox" id="keepSigned" name="keepSigned">
+          <label for="keepSigned">Keep me signed in</label>
+      </div>
+      <p id="signupterms">By clicking “Join Now” you acknowledge that you are a U.S. or Canada resident and (1) have
+          read Sephora’s<a href=""> Privacy Policy </a>and <a href="">Notice of Financial Incentive</a> , (2), agree
+          to <span id="bold"><a href="">TERMS OF USE, BEAUTY INSIDER TERMS</a></span> , and to automatically receive
+          Beauty Insider offers and notifications via email.</p>
+
+      <button id="joinBtn">Join Now</button><br><br>
+      <hr>
+      <p id="signupterms">Sephora uses Google ReCaptcha and by registering, users are subject to Google’s <a
+              href="">privacy policy</a> & <a href="">terms</a>.</p>
+  </div>
     <div id="cartdiv">
       <div><h2>My Basket</h2></div>
       <div id="ordercarddiv">
