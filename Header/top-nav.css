@@ -270,7 +270,7 @@ button > span >span:first-child{
 #signIn-popup,#community-popup,#store-popup{
     visibility: hidden;
     opacity: 0;
-    z-index: 20;
+    z-index: 12;
     /* border: 1px solid red; */
     position: absolute;
     width: 375px;
@@ -285,7 +285,7 @@ button > span >span:first-child{
     opacity: 0;
     position: absolute;
     top: 100%;
-    z-index: 1;
+    z-index: 12;
     width: 375px;
     transition: all 0.2s ease 0s;
     left: auto;
