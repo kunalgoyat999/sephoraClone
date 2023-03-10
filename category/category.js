@@ -51,35 +51,6 @@ async function init(url) {
 }
 init(url);
 
-
-let creatBtn = document.getElementById("container-head");
-creatBtn.addEventListener("click", async function(){
-    let res = await postData();
-    // console.log("sdjkjefkedkj")
-    // location.href = "./main.html";
-})
-
-async function postData(){
-    let body = {
-        quan:1
-    }
-    try{
-      console.log(url)
-        let res = await fetch(url,{
-            method:"PATCH",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(body),
-        });
-        // let data = await res.json();
-        
-    } catch(error){
-        console.log(error);
-    }
-}
-
-
 // Sort Functionality
 document.getElementById("sort").addEventListener("click", function () {
   let value = document.getElementById("sort").value;
@@ -214,8 +185,6 @@ function displayData(data) {
     document.getElementById("container-body1").append(inputCheck, label, br);
   });
 }
-
-
 
 let contHead = document.querySelectorAll(".containerhead");
 contHead.forEach((ele, index) => {
