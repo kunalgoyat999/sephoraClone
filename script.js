@@ -707,4 +707,14 @@ function userList(e) {
 
 // search
 
+let navCategoryArr = document.querySelectorAll(".nav-category-items");
+
+navCategoryArr.forEach((e)=>{
+    e.addEventListener("click", (event)=>{
+        // event.preventDefault();
+         let catName =  event.target.textContent
+         localStorage.setItem("category",catName);
+    })
+})
+
 
