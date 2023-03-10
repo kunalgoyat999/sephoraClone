@@ -3,12 +3,12 @@
     return 
     
    `
-   
-    
-    <div id="header">
-
+   <div id="top_img">
+        <p><strong>Take 50% off++</strong> Oh snap! Get major savings on your favorite beauty. Plus, free shipping on all orders <br> with code <strong> FREESHIP. Shop Now ▸</strong></p>
+        <img src="https://www.sephora.com/contentimages/homepage/081721/Homepage/DesktopMweb/2021-08-29-hp-top-banner-project-kickball-d-us-slice.jpeg?imwidth=612" alt="top_img">
+    </div>
+   <div id="header">
         <nav id="navbar">
-
             <a href="index.html">
                 <svg viewBox="0 0 125 17" data-at="sephora_logo_ref" class="logo"><path fill-rule="evenodd" d="M8.94 1.645s-.05.142-.747 2.032c-1.992-1.586-5.33-1.47-5.33.97 0 2.861 6.972 2.502 6.755 7.61C9.445 16.36 4.395 17.302.5 15.326c.34-.723.694-1.42.936-1.99 2.945 1.741 5.481.943 5.898-.458C8.473 9.044.53 10.228.53 4.793c0-2.286 2.647-5.84 8.41-3.148ZM16.465 1.33h9.124s-.027.822-.01 1.991H18.75v4.082h4.844c-.017.814-.008 1.453-.008 1.873H18.75v5.088h6.83a104.28 104.28 0 0 0 0 1.954h-9.106L16.465 1.33ZM38.195 8.675c-.55 0-.958-.006-1.516-.009 0-2.796.005-5.41.005-5.41s.666-.003 1.295-.003c.602 0 4.106-.273 4.22 2.523.11 2.757-2.648 2.9-4.004 2.9Zm.136-7.316c-.81-.02-2.501-.029-3.945-.029l.005 14.988h2.296s-.007-2.861-.008-5.682c.569-.01 1.75-.041 2.705-.068 1.323-.04 4.8-.701 4.776-4.811-.027-4.62-5.025-4.38-5.83-4.398ZM97.183 8.268c-.536 0-.923-.01-1.466-.014.002-2.632.008-5.058.008-5.058s.628-.009 1.236-.009c.58 0 3.685-.175 3.948 2.267.312 2.885-3.092 2.814-3.726 2.814Zm5.053 8.05h2.854l-4.737-6.725c1.275-.469 2.753-1.557 2.566-4.043-.334-4.454-4.686-4.124-5.618-4.167-.785-.037-2.475-.059-3.94-.052v14.987h2.364s-.007-3.354-.009-6.318c.784.003 1.064-.011 2.246-.042l4.274 6.36ZM61.063 6.976V1.33h2.321v14.336h-2.322V8.851l-7.738.01v6.805h-2.321V1.33h2.32v5.646h7.74ZM79.167.68c-4.823 0-7.963 3.501-7.963 7.82 0 4.319 3.14 7.82 7.963 7.82s7.962-3.501 7.962-7.82c0-4.319-3.14-7.82-7.962-7.82Zm0 2.128c-3.536 0-5.544 2.548-5.544 5.691 0 3.144 1.988 5.692 5.544 5.692 3.555 0 5.543-2.548 5.543-5.692 0-3.143-2.008-5.691-5.543-5.691Zm36.209 7.99 4.935-.03-2.507-7.306h-.033l-2.395 7.336Zm1.084-9.688h2.745l5.435 14.855-2.43-.006s-.537-1.499-1.253-3.484l-6.13.038s-.246.764-.977 3.447h-2.343l4.953-14.85Z"></path></svg>
             </a>
@@ -34,7 +34,7 @@
                                     <div>
                                         <span class="btn">Choose Your Store</span>
                                     </div>
-                                    <div class="divider"></div>
+                                    <div class="divider-header"></div>
                                     <div style="display: flex; align-items: center;">
                                         <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -43,7 +43,7 @@
                                           
                                         <h3 style="margin-left: 8px;"> Find a Sephora</h3>
                                     </div>
-                                    <div class="divider"></div>
+                                    <div class="divider-header"></div>
                                     <div class="popup-items-container">
                                         <div>
                                             <img src="https://www.sephora.com/contentimages/meganav/icons/happening_services.jpg" alt="">
@@ -53,7 +53,7 @@
                                             <span>Personalized makeup, skincare, and brow services</span>
                                         </div>
                                     </div>
-                                    <div class="divider-thin"></div>
+                                    <div class="divider-thin-header"></div>
                                     <div class="popup-items-container">
                                         <div>
                                             <img src="https://www.sephora.com/contentimages/meganav/icons/happening_events_2.jpg" alt="">
@@ -63,7 +63,7 @@
                                             <span>Exciting launches, parties, and more!</span>
                                         </div>
                                     </div>
-                                    <div class="divider-thin"></div>
+                                    <div class="divider-thin-header"></div>
                                     <div class="popup-items-container">
                                         <div>
                                             <img src="https://www.sephora.com/contentimages/meganav/icons/happening_new.jpg" alt="">
@@ -74,9 +74,7 @@
                                         </div>
                                     </div>
                                     
-
                                 </div>
-
                             </div>
                         </div>
                     </button>
@@ -100,7 +98,7 @@
                                             <span>Ask questions, join challenges, and get recommendations from people like you</span>
                                         </div>
                                     </div>
-                                    <div class="divider-thin"></div>
+                                    <div class="divider-thin-header"></div>
                                     <div class="popup-items-container">
                                         <div>
                                             <img src="https://www.sephora.com/contentimages/meganav/icons/community_groups.jpg" alt="">
@@ -110,7 +108,7 @@
                                             <span>Discover topics tailored to your beauty interests</span>
                                         </div>
                                     </div>
-                                    <div class="divider-thin"></div>
+                                    <div class="divider-thin-header"></div>
                                     <div class="popup-items-container">
                                         <div>
                                             <img src="https://www.sephora.com/contentimages/meganav/icons/community_gallery.jpg" alt="">
@@ -121,17 +119,14 @@
                                         </div>
                                     </div>
                                     
-
                                 </div>
-
                             </div>
                         </div>
                     </button>
-
                 </div>
                 <div class="btn-container nav-item">
                     <button id="signIn-btn">
-                        <img src="https://www.sephora.com/img/ufe/icons/me32.svg" alt="">
+                        <img class="profile-img-header" src="https://www.sephora.com/img/ufe/icons/me32.svg" alt="">
                         <span>
                               <span>Sign In</span> 
                             <span style="font-size: 11px;">for free shipping</span>
@@ -151,20 +146,18 @@
                                         </div>
                                         
                                     </div>
-                                    <div class="divider"></div>
+                                    <div class="divider-header"></div>
                                     <div class="account-btn-container">
                                         <span class="btn">SignIn</span>
                                         <span class="btn create-account">Create Account</span>
                                     </div>
                                     
-                                    <div class="divider-thin"></div>
+                                    <div class="divider-thin-header"></div>
                                     <div class="popup-items-container logout-container">
                                         <div><span class="btn">Logout</span></div>
                                     </div>
                                     
-
                                 </div>
-
                             </div>
                         </div>
                     </button>
@@ -174,13 +167,11 @@
                     <svg width="28" height="28" fill="none" class="css-13o7eu2"><path d="m21.87 21.733.837.224-.224-.837-1.158-4.327A10.466 10.466 0 0 0 22.479 12c0-5.798-4.696-10.5-10.49-10.5C6.196 1.5 1.5 6.202 1.5 12c0 5.799 4.696 10.5 10.49 10.5 2.195 0 4.233-.676 5.918-1.83l3.962 1.063z" stroke="currentColor"></path></svg>
                 </span>
                 </button>
-
                  <button id="love-btn" >
                 <span>
                     <svg width="28" height="28" viewBox="0 0 24 24" data-at="love_icon_large" aria-hidden="true" class="css-psp8z9 e65zztl0" data-comp="Icon StyledComponent "><path d="M22 3.1c2.7 2.2 2.6 7.2.1 9.7-2.2 2.8-7.4 8.1-9.3 9.6-.5.4-1.1.4-1.6 0-1.8-1.5-7-6.8-9.2-9.6-2.6-2.6-2.7-7.6 0-9.7C4.6.5 9.7.7 12 4.2 14.3.8 19.3.5 22 3.1zm-.7.8c-2.4-2.4-7.2-2-8.9 1.5-.1.3-.4.4-.7.2-.1 0-.2-.1-.2-.2-1.6-3.5-6.5-4-8.9-1.5C.4 5.6.5 10 2.7 12.2c2.2 2.7 7.3 8 9.1 9.4.1.1.2.1.3 0 1.8-1.4 6.9-6.7 9.1-9.5 2.3-2.1 2.4-6.5.1-8.2z"></path></svg>
                 </span>
                 </button>
-
                  <button id="cart-btn" >
                 <span>
                     <svg width="28" height="28"   aria-label="Go To Basket"><path d="M23.498 10c.326 0 .566.28.487.57l-3.078 11.32c-.177.652-.816 1.11-1.55 1.11H4.643c-.733 0-1.371-.458-1.55-1.11L.015 10.57c-.079-.29.16-.57.487-.57h22.996zm-3.112 9.999H3.613l.453 1.668a.588.588 0 0 0 .576.414h14.716c.271 0 .509-.17.575-.414L20.386 20zm.815-3H2.797l.544 2h17.317l.543-2zm.816-3H1.981l.544 2h18.948l.544-2zm.839-3.08H1.144L1.71 13h20.579l.567-2.08zm-9.037-9.205l5.612 5.2a.5.5 0 1 1-.68.734l-5.612-5.2a1.674 1.674 0 0 0-2.278 0l-5.612 5.2a.5.5 0 1 1-.68-.734l5.612-5.2a2.674 2.674 0 0 1 3.638 0z"></path></svg>
@@ -204,7 +195,7 @@
                                     <span class="cart-product-remove">Remove</span>
                                 </div>
                             </div>
-                            <div class="divider-thin"></div>
+                            <div class="divider-thin-header"></div>
                             <div class="popup-items-container mid-product-container">
                                 <div class="cart-product-img">
                                     <img src="https://www.sephora.com/productimages/sku/s2497220-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=62" alt="">
@@ -218,7 +209,7 @@
                                     <span class="cart-product-remove">Remove</span>
                                 </div>
                             </div>
-                            <div class="divider-thin"></div>
+                            <div class="divider-thin-header"></div>
                             <div class="popup-items-container subtotal-container">
                                 <span>Subtotal<span>(2 item)</span></span>
                                 <span>$50</span>
@@ -226,21 +217,15 @@
                             <div class="popup-items-container cart-checkout-container">
                                 <div><span class="btn checkout-btn">View Basket & Checkout</span></div>
                             </div>
-                            <div class="divider-thin"></div>
+                            <div class="divider-thin-header"></div>
                             
                             
-
                         </div>
-
                     </div>
                 </div>
-
-
                 </button>
             </div>
-
             
-
         </nav>
         <div id="responsive-signin">
             <div>
@@ -256,9 +241,7 @@
                 <button id="resp-signin-btn">SignIn</button>
             </div>
         </div>
-
     </div>
-    
    
    `
 
