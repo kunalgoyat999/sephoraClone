@@ -14,11 +14,11 @@ function navbar() {
         <div id="signin"><a href="#"> <img src="https://www.sephora.com/img/ufe/icons/me-active.svg" alt=""><p>Sign In</p></a></div>
         
         <div id="cart">
-            <div> <i style="font-size: 24px;" class="fa-sharp fa-solid fa-comments"></i>   <a href="#"></a></div>
+            <div> <i style="font-size: 24px;" class="fa-sharp fa-solid fa-comments"></i>   <a href=#></a></div>
             <!-- <img style="height: 40px; width: 40px;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/google/56/left-speech-bubble_1f5e8.png" alt="chat"> -->
             <!-- <div><i class="fa-thin fa-comments-question"></i></div> -->
             <div><a href="#"><img src="https://cdn-icons-png.flaticon.com/32/1216/1216575.png" alt="heart"></a></div>
-            <div><a href="#"><img  src="https://cdn-icons-png.flaticon.com/32/481/481383.png" alt="basket"></a></div>
+            <div><a href="./cart/cart.html"><img  src="https://cdn-icons-png.flaticon.com/32/481/481383.png" alt="basket"></a></div>
         </div>
 
     </div>

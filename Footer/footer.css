@@ -27,7 +27,7 @@
     font-size: 22px;
 }
 
-.line {
+#body .line {
     background-color: grey;
     width: 80%;
     height: 0.5px;
@@ -75,7 +75,7 @@
     text-align: center;
 }
 
-#btn {
+#news > #btn {
     margin-top: 10px;
     /* margin-left: 60px; */
     font-weight: bold;

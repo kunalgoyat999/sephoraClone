@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout | Sephora</title>
     <link rel="stylesheet" href="checkout.css" />
+    <!-- <link rel="stylesheet" href="../cart/cart.css"> -->
   </head>
   <body>
     <header id="header-section">
@@ -45,24 +46,74 @@
         <p class="p1">FREE - Standard Ground</p>
         <p class="p2">Delivery By Mon, Mar 14</p>
         <hr />
-        <div id="payment">
-          <h1>Payment Method</h1>
-          <div id="logo-secure">
-            <i class="fa-solid fa-lock"></i>
-            <p>Secure</p>
+        <div id="error2">
+          <div id="payment1">
+            <h1>Payment Method</h1>
+            <div id="logo-secure">
+              <i class="fa-solid fa-lock"></i>
+              <p>Secure</p>
+            </div>
           </div>
         </div>
         <div id="credit-logo">
-            <i class="fa-regular fa-plus" id="plus"></i>
+          <i class="fa-regular fa-plus" id="plus"></i>
           <i class="fa-regular fa-credit-card" id="card-i"></i>
           <h3 onclick="filldetail()">Add new credit or debit card</h3>
         </div>
         <button id="savebtn2">Save and Continue</button>
-        <hr>
+        <hr />
         <h1 id="review">Review and Place Order</h1>
-        <p id="p3">Please review your order information before placing your order.</p>
+        <p id="p3">
+          Please review your order information before placing your order.
+        </p>
       </div>
-      <div id="rightdiv"></div>
+      <div id="rightdiv">
+        <div id="payment">
+          <div>
+            <h3 class="font">Merchandise Subtotal</h3>
+            <h3>$<span id="mrptotal">0</span></h3>
+          </div>
+          <div>
+            <h3 class="font">Shipping & Handling</h3>
+            <h3>FREE</h3>
+          </div>
+          <div>
+            <h3 class="font">Estimated Tax & Other Fees</h3>
+            <h3>TBD</h3>
+          </div>
+          <div>
+            <h3 class="font">Additional Discount</h3>
+            <h3>- $<span id="adddiscount">0</span></h3>
+          </div>
+          <hr />
+          <div id="red">
+            <h3>Estimated Total</h3>
+            <h3>$<span id="totalamt">0</span></h3>
+          </div>
+          <h5>or 4 payments of $3.17 with <b>Klarna</b></h5>
+        </div>
+        <hr />
+        <div id="cerditcard">
+          <h3>The Sephora Credit Card Program</h3>
+          <div id="icon">
+            <div id="i"><i class="fa-solid fa-credit-card"></i></div>
+            <div id="h4">
+              <h4>
+                Save 25% on this order when you open and use either Sephora
+                Credit Card today*
+              </h4>
+            </div>
+          </div>
+          <h5>*Subject to credit approval. Exclusions apply.</h5>
+          <div id="btn"><button>SEE DETAILS</button></div>
+        </div>
+        <hr />
+        <button id="ship">Place Order</button>
+      </div>
+    </div>
+    <div id="foot">
+      <h3>© 2023 Sephora USA, Inc. All rights reserved.Terms of Use | Privacy Policy</h3>
+      <h3>1-877-737-4672 | TTY: 1-888-866-9845 | customerservice@sephora.com</h3>
     </div>
   </body>
   <script src="checkout.js"></script>

@@ -62,7 +62,7 @@ body {
   margin-top: -6px;
   margin-bottom: -8px;
 }
-#error .errormess {
+.errormess {
   font-size: 13px;
   color: red;
 }
@@ -120,14 +120,14 @@ body {
 .p2 {
   margin-bottom: 15px;
 }
-#leftdiv > #payment {
+#leftdiv #payment1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
   margin-top: -10px;
 }
-#payment > h1 {
+#payment1 > h1 {
   font-size: 25px;
   margin-top: -4px;
 }
@@ -166,11 +166,17 @@ body {
   border-radius: 30px;
   margin-top: 20px;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+#savebtn2:hover {
+  background-color: rgb(100, 99, 99);
+  border: none;
 }
 
 #main--div {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 #credit-logo #desp-logo {
@@ -195,6 +201,37 @@ body {
   width: 100%;
 }
 
+#main--div input {
+  height: 40px;
+  border: 1px solid rgb(200, 197, 197);
+  padding-left: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+#main--div #cardNumber {
+  width: 46%;
+}
+
+
+#date-div {
+  display: flex;
+  gap: 16px ;
+}
+#date-div>input {
+  width: 20.5%;
+}
+
+#name-div {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+
+#name-div>input {
+  width: 47%;
+}
+
+
 #review {
   font-size: 25px;
   margin-top: -5px;
@@ -207,8 +244,156 @@ body {
 #rightdiv {
   width: 32%;
   display: flex;
-  height: 80vh;
+  /* height: 80vh; */
   flex-direction: column;
-  border: 1px solid;
+  /* border: 2px solid; */
+  /* border-radius: 5px; */
+  border: 1px solid rgb(200, 197, 197);
+  height: 70vh;
   gap: 15px;
+  margin-top: 15px;
+  padding: 0 15px;
+}
+
+#payment {
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+#payment > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 12px;
+  margin-bottom: -20px;
+}
+#payment h5 {
+  margin-bottom: -10px;
+}
+.font {
+  font-weight: 100;
+  font-size: 14px;
+}
+#red {
+  margin-top: -10px;
+}
+#red > h3 {
+  /* color: #cf112c ; */
+  font-size: 17px;
+}
+#ship {
+  width: 100%;
+  /* margin: auto; */
+  height: 45px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: rgb(172, 170, 170);
+  color: white;
+  font-size: 14px;
+  padding: 10px 0;
+  /* margin-bottom: 5px; */
+  font-weight: 600;
+}
+#ship:hover {
+  background-color:rgb(172, 170, 170);
+}
+
+#rightdiv hr {
+  margin-top: 20px;
+  border: 1px solid rgb(245, 241, 241);
+  width: 100%;
+}
+#payment > h5 {
+  font-size: 12px;
+  color: grey;
+  font-weight: 300;
+  margin-top: 10px;
+}
+#cerditcard {
+  /* border: 1px solid rgb(200, 197, 197); */
+  border-radius: 5px;
+  /* padding: 0 15px; */
+  /* padding-left: 22px; */
+  margin-top: -10px;
+  margin-bottom: -10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#cerditcard > h3 {
+  font-size: 17px;
+}
+#icon {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  padding-top: -10px;
+  margin-top: -6px;
+}
+#icon > #i {
+  width: 7%;
+  font-size: 25px;
+  padding-left: 5px;
+}
+#icon > #h4 {
+  width: 90%;
+  font-size: 16px;
+}
+#icon > #h4 > h4 {
+  font-weight: 100;
+}
+#icon > #btn {
+  /* padding-left: 20px; */
+  width: 100%;
+  /* margin: auto; */
+  display: flex;
+  justify-content: center;
+}
+#btn > button {
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  height: 35px;
+  width: 100%;
+  /* padding: 5px; */
+  font-weight: 600;
+  font-size: 15px;
+  /* margin: auto; */
+}
+#btn > button:hover {
+  border: 2px solid grey;
+  color: grey;
+}
+#cerditcard > h5 {
+  color: rgb(102, 101, 101);
+  font-size: 12px;
+  font-weight: 100;
+  margin: 14px 0;
+}
+
+#foot {
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  padding: 8px 0;
+}
+
+#foot>h3 {
+  font-weight: 100;
+  margin-bottom: -5px;
 }

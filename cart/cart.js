@@ -3,6 +3,9 @@ import { navbar, footer } from "../Component/navbar.js";
 let navContainer = document.getElementById("nav");
 navContainer.innerHTML = navbar();
 
+// let footerContainer = document.getElementById("footer");
+// footerContainer.innerHTML = footer();
+
 let cart_data = JSON.parse(localStorage.getItem("cart")) || [];
 
 var cartdata = document.getElementById("cartItem");
@@ -34,7 +37,6 @@ function able() {
   button.disabled = false;
   button.style.backgroundColor = "rgb(207,17,44)";
   button.style.color = "white";
-  
 
   let button2 = document.getElementById("paypal");
   button2.disabled = false;
@@ -53,7 +55,10 @@ function check(cart_data) {
     let btn = document.createElement("button");
     btn.setAttribute("class", "gotoproduct");
     btn.textContent = "Shop New Arrivals";
-    btn.setAttribute("onclick", "window.location.href = '../category/category.html'");
+    btn.setAttribute(
+      "onclick",
+      "window.location.href = '../category/category.html'"
+    );
 
     cartdata.append(h3, btn);
   } else {
@@ -61,12 +66,14 @@ function check(cart_data) {
     addproduct(cart_data);
   }
 }
+console.log(cart_data);
 
 check(cart_data);
 
 function addproduct(data) {
   cartdata.innerHTML = "";
   data.map(function (ele, index) {
+    console.log(ele);
     showProduct(ele, index);
     calcTotal();
   });
@@ -80,7 +87,7 @@ function showProduct(el, index) {
   imagediv.setAttribute("class", "image-div");
 
   let image = document.createElement("img");
-  image.src = el.image;
+  image.src = el.imageUrl;
 
   imagediv.append(image);
 
@@ -96,7 +103,7 @@ function showProduct(el, index) {
 
   let price = document.createElement("h3");
   price.setAttribute("id", "price");
-  price.textContent = `$${el.price}`;
+  price.textContent = `$${el.cost}`;
 
   companynameprice.append(companyname, price);
 
@@ -130,46 +137,22 @@ function showProduct(el, index) {
     handleQuantityNumber(el, select.value, price);
   });
 
-  let opt1 = document.createElement("option");
-  opt1.textContent = "1";
-  opt1.value = "1";
-
-  let opt2 = document.createElement("option");
-  opt2.textContent = "2";
-  opt2.value = "2";
-
-  let opt3 = document.createElement("option");
-  opt3.textContent = "3";
-  opt3.value = "3";
-
-  let opt4 = document.createElement("option");
-  opt4.textContent = "4";
-  opt4.value = "4";
-
-  let opt5 = document.createElement("option");
-  opt5.textContent = "5";
-  opt5.value = "5";
-
-  let opt6 = document.createElement("option");
-  opt6.textContent = "6";
-  opt6.value = "6";
-
-  let opt7 = document.createElement("option");
-  opt7.textContent = "7";
-  opt7.value = "7";
-
-  let opt8 = document.createElement("option");
-  opt8.textContent = "8";
-  opt8.value = "8";
-
-  let opt9 = document.createElement("option");
-  opt9.textContent = "9";
-  opt9.value = "9";
-
-  let opt10 = document.createElement("option");
-  opt10.textContent = "10";
-  opt10.value = "10";
-  select.append(opt1, opt2, opt3, opt4, opt5, opt6, opt7, opt8, opt9, opt10);
+  for (var i = 1; i <= 10; i++) {
+    let opt = document.createElement("option");
+    opt.textContent = i;
+    opt.value = i;
+    if (i === el.quantity) {
+      opt.selected = "selected";
+      let num = el.quantity*el.cost;
+      document.getElementById("mrptotal").textContent = num;
+      localStorage.setItem("mrp-total", num);
+      document.getElementById("totalamt").textContent = num;
+      localStorage.setItem("estimated-amount", num);
+      price.textContent = `$${num.toFixed(2)}`;
+      document.getElementById("cartitem").textContent = el.quantity;
+    }
+    select.append(opt);
+  }
 
   quandiv.append(select);
 
@@ -224,7 +207,7 @@ function deleteFun(index) {
 
 function handleQuantityNumber(ele, select, price2) {
   ele.quantity = Number(select);
-  let num = ele.quantity * ele.price;
+  let num = ele.quantity * ele.cost;
   let n = num.toFixed(2);
   price2.textContent = `$${n}`;
   calcTotal();
@@ -235,13 +218,15 @@ function handleQuantityNumber(ele, select, price2) {
 
 function calcTotal() {
   let total = cart_data.reduce(function (acc, curr) {
-    return acc + Number(curr.price * curr.quantity);
+    return acc + Number(curr.cost * curr.quantity);
   }, 0);
 
   let num = total.toFixed(2);
 
   document.getElementById("mrptotal").textContent = num;
+  localStorage.setItem("mrp-total", num);
   document.getElementById("totalamt").textContent = num;
+  localStorage.setItem("estimated-amount", num);
   // console.log(total);
 }
 
@@ -264,8 +249,12 @@ function checkcode() {
     var remain = (num * 30) / 100;
     document.getElementById("adddiscount").textContent = remain.toFixed(2);
 
+    var demo = remain.toFixed(2);
+    localStorage.setItem("additional-discount", demo);
+
     var NUM = Number(num - remain).toFixed(2);
     // document.getElementById("total-amt").textContent = NUM;
+    localStorage.setItem("estimated-amount", NUM);
     document.getElementById("totalamt").innerText = NUM;
 
     // localStorage.setItem("Amount", NUM);
@@ -282,10 +271,10 @@ var products = [
     id: "ITEM 2497212",
     quantity: 1,
     name: "Total Coverage Original Sponge",
-    price: "12.00",
+    cost: 12.00,
     Category: "Personal & Home Essentials",
     brand: "SEPHORA COLLECTION",
-    image:
+    imageUrl:
       "https://www.sephora.com/productimages/sku/s2497212-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97",
     popularity: 3,
   },
@@ -293,10 +282,10 @@ var products = [
     id: "ITEM 2464048",
     quantity: 1,
     name: "Big By Definition Defining & Volumizing Mascara",
-    price: "10.00",
+    cost: 10.00,
     Category: "Personal & Home Essentials",
     brand: "SEPHORA COLLECTION",
-    image:
+    imageUrl:
       "https://www.sephora.com/productimages/sku/s2464048-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97",
     popularity: 2,
   },
@@ -304,10 +293,10 @@ var products = [
     id: "ITEM 1370766",
     quantity: 1,
     name: "Long Lasting Eyeliner High Precision Brush",
-    price: "9.00",
+    cost: 9.00,
     Category: "Personal & Home Essentials",
     brand: "SEPHORA COLLECTION",
-    image:
+    imageUrl:
       "https://www.sephora.com/productimages/sku/s1370766-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=97",
     popularity: 1,
   },
@@ -329,7 +318,7 @@ function showUnderRange(el, index) {
   imagediv.setAttribute("class", "image-div");
 
   let image = document.createElement("img");
-  image.src = el.image;
+  image.src = el.imageUrl;
 
   imagediv.append(image);
 
@@ -345,7 +334,7 @@ function showUnderRange(el, index) {
 
   let price = document.createElement("h3");
   price.setAttribute("id", "price");
-  price.textContent = `$${el.price}`;
+  price.textContent = `$${el.cost}`;
 
   companynameprice.append(companyname, price);
 
@@ -391,5 +380,110 @@ function addtoCartList(item, btn) {
   btn.textContent = "Added";
   cart_data.push(item);
   localStorage.setItem("cart", JSON.stringify(cart_data));
-  check(cart_data)
+  check(cart_data);
 }
+
+// slider
+
+// let prevBtn = [...document.querySelectorAll(".prev")];
+// let nextBtn = [...document.querySelectorAll(".next")];
+
+let mainContainer = document.querySelector(".product__slider__container");
+
+let chosenForYou = [
+  {
+    imageUrl:
+      "https://www.sephora.com/productimages/sku/s2031375-main-zoom.jpg?pb=2020-03-allure-best-2019&imwidth=122",
+    brand: "The Ordinary",
+    name: "Hyaluronic Acid 2% + B5 Hydrating Serum",
+  },
+  {
+    imageUrl:
+      "https://www.sephora.com/productimages/sku/s2421337-main-zoom.jpg?imwidth=122",
+    brand: "Paula's Choice",
+    name: "C15 Vitamin C Super Booster",
+  },
+  {
+    imageUrl:
+      "https://www.sephora.com/productimages/sku/s1395011-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=122",
+    brand: "SEPHORA COLLECTION",
+    name: "Sephora Colorful® Waterproof Eyeshadow & Eyeliner Multi-Stick",
+  },
+  {
+    imageUrl:
+      "https://www.sephora.com/productimages/sku/s2637965-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=122",
+    brand: "Glow Recipe",
+    name: "Strawberry BHA Pore-Smooth Blur Drops",
+  },
+  {
+    imageUrl:
+      "https://www.sephora.com/productimages/sku/s2648483-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=122",
+    brand: "OLEHENRIKSEN",
+    name: "Banana Bright+ Vitamin CC Eye Sticks",
+  },
+];
+
+displayProductSlider(chosenForYou, mainContainer);
+
+function displayProductSlider(arr, parentNode) {
+  let areaHidden = document.createElement("li");
+  areaHidden.className = "area-hidden";
+
+  arr.forEach((e, i) => {
+    let li = document.createElement("li");
+    li.setAttribute("class", "product__slider__item");
+
+    let a = document.createElement("a");
+    a.setAttribute("class", "product-link-container");
+
+    let topContainer = document.createElement("div");
+    topContainer.setAttribute("class", "product-top-container");
+
+    let imgContainer = document.createElement("div");
+    imgContainer.setAttribute("class", "product-img-container");
+
+    let productImg = document.createElement("img");
+    productImg.src = e.imageUrl;
+
+    imgContainer.append(productImg);
+
+    let btnContainer = document.createElement("div");
+    btnContainer.setAttribute("class", "quicklook-btn-container");
+
+    let quicklookBtn = document.createElement("button");
+    quicklookBtn.setAttribute("class", "quicklook-Btn");
+    quicklookBtn.textContent = "Quicklook";
+
+    btnContainer.append(quicklookBtn);
+
+    topContainer.append(imgContainer, btnContainer);
+
+    let bottomContainer = document.createElement("div");
+    bottomContainer.setAttribute("class", "product-bottom-container");
+
+    let categoryNameContainer = document.createElement("div");
+    categoryNameContainer.setAttribute("class", "cat-name-container");
+
+    let brandName = document.createElement("span");
+    brandName.setAttribute("class", "product-brand");
+    brandName.textContent = e.brand;
+
+    let productName = document.createElement("span");
+    productName.setAttribute("class", "product-name");
+    productName.textContent = e.name;
+
+    categoryNameContainer.append(brandName, productName);
+
+    bottomContainer.append(categoryNameContainer);
+
+    a.append(topContainer, bottomContainer);
+
+    li.append(a);
+
+    parentNode.append(li);
+  });
+
+  parentNode.append(areaHidden);
+}
+
+// for product slider

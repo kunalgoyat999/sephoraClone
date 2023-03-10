@@ -1,0 +1,143 @@
+html * {
+    font-family: Helvetica, Arial, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#product-container {
+    display: flex;
+    flex-direction: row;
+    /* gap: 5%; */
+    width: 80%;
+    height: 100vh;
+    /* border: 1px solid; */
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -150px;
+}
+#leftimgcontainer {
+    width: 50%;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    height: 65%;
+    margin-top: 50px;
+}
+#leftimgcontainer>#prodimg {
+    width: 80%;
+}
+#rightdetailcontainer {
+    width: 50%;
+    /* border: 1px solid; */
+    padding: 15px;
+}
+#rightdetailcontainer #ratinglike {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: baseline;
+    gap:10px;
+}
+#carddetail #price-para {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: baseline;
+}
+#carddetail #brand-name {
+    margin-bottom: -10px;
+}
+#ratinglike {
+    margin-top: -20px;
+    font-size: 12px;
+}
+#ratinglike h5 {
+    font-size: 12px;
+}
+#price-para {
+    margin-top: -30px;
+}
+#price-para p {
+    font-size: 13px;
+}
+#price-para b {
+    color: red;
+}
+
+#further > p{
+    font-size: 13px;
+    margin-top: -5px;
+}
+#further>.para--1 {
+    color: gray;
+    font-size: 15px;
+}
+#further #size-btn {
+    width: 22%;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+#rightdetailcontainer a {
+    color: blue;
+}
+#rightdetailcontainer a:hover {
+    text-decoration: underline;
+}
+#get-it-ship {
+    width: 95%;
+    padding: 0 10px;
+    /* border: 1px solid; */
+    border-radius: 5px;
+    margin: 30px 0;
+    background-color: #f6f6f8;
+}
+#rightdetailcontainer #firsthead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+#radio-box1, #radio-box2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+}
+
+#radio-box1>input {
+    width: 18px;
+}
+#radio-box2>input{
+    width: 18px;
+}
+
+#quan-cart {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+#quan-cart>#selectquan {
+    height: 45px;
+    width: 50px;
+    border-right: 1px solid white;
+    border-radius: 25px 0 0 25px;
+    background-color: #cf112c;
+    color: white;
+    font-size: 16px;
+    padding-left: 10px;
+}
+#quan-cart>#addtocart-btn {
+    height: 45px;
+    width: 200px;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    background-color: #cf112c;
+    color: white;
+    font-size: 16px;
+}

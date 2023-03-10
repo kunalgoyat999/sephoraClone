@@ -2,9 +2,9 @@ html * {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-#nav{
-  margin: 0 -8px;
-  margin-top: -8px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -32,16 +32,17 @@ html * {
   flex-direction: column;
   gap: 15px;
 }
-#cerditcard {
+#orderleftdiv #cerditcard {
   border: 1px solid rgb(200, 197, 197);
   border-radius: 5px;
   padding: 0 15px;
   padding-left: 22px;
+  background-color: white;
 }
-#cerditcard > h3 {
+#orderleftdiv #cerditcard > h3 {
   font-size: 14px;
 }
-#icon {
+#orderleftdiv #icon {
   display: flex;
   flex-direction: row;
   gap: 5px;
@@ -52,22 +53,22 @@ html * {
   padding-top: -10px;
   margin-top: -6px;
 }
-#icon > #i {
+#orderleftdiv #icon > #i {
   width: 7%;
   font-size: 20px;
   padding-left: 5px;
 }
-#icon > #h4 {
+#orderleftdiv #icon > #h4 {
   width: 70%;
   font-size: 15px;
 }
-#icon > #h4 > h4 {
+#orderleftdiv #icon > #h4 > h4 {
   font-weight: 100;
 }
-#icon > #btn {
+#orderleftdiv #icon > #btn {
   padding-left: 20px;
 }
-#icon > #btn > button {
+#orderleftdiv #icon > #btn > button {
   color: black;
   border: 2px solid black;
   border-radius: 20px;
@@ -78,11 +79,11 @@ html * {
   font-weight: 600;
   font-size: 12px;
 }
-#icon > #btn > button:hover {
+#orderleftdiv #icon > #btn > button:hover {
   border: 2px solid grey;
   color: grey;
 }
-#cerditcard > h5 {
+#orderleftdiv #cerditcard > h5 {
   color: rgb(102, 101, 101);
   font-size: 12px;
   font-weight: 100;
@@ -114,6 +115,7 @@ html * {
     margin: 0;
     padding: 0;
     align-items: center;
+    background-color: white;
    
 }
 .icon > .i {
@@ -359,10 +361,13 @@ html * {
   border: 2px solid grey;
   color: grey ;
 }
-#bestsellar {
+#chosen-for-you>.product__slider {
   display: flex;
-  flex-direction: column;
-  margin-top: 35px;
+  flex-direction: row;
+  margin-left: -200px;
+}
+#chosen-for-you>.base-title>h2 {
+  font-size: 25px;
 }
 #bestsellar > #header3 > h1 {
   font-weight: 300;
