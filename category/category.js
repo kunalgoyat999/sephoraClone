@@ -15,8 +15,8 @@ label4.innerHTML = star1();
 // Get Data
 let category = localStorage.getItem("category") || "";
 // let category = "eyePrimer";
-// let url = "https://pickled-cheerful-somersault.glitch.me/${category}";
-let url = `http://localhost:3000/${category}`;
+let url = `https://morning-inquisitive-dime.glitch.me/${category}`;
+// let url = `http://localhost:3000/${category}`;
 
 async function getData(url) {
   try {
@@ -203,7 +203,7 @@ contHead.forEach((ele, index) => {
 //   }
 // });
 
-/ Login Modal below /; ///////////////////////////////////////////////////
+// Login Modal below /; ///////////////////////////////////////////////////
 
 // Get the modal
 var loginModal = document.getElementById("loginModal");
