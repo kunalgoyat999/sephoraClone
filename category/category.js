@@ -1,6 +1,4 @@
 import {
-  navbar,
-  footer,
   star4,
   star3,
   star2,

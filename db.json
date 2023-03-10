@@ -1,5 +1,5 @@
 {
-  "eyePallete": [
+  "EyePallete": [
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2594398-main-zoom.jpg?imwidth=164",
       "brand": "Kaja",
@@ -153,7 +153,7 @@
       "quantity":1
     }
   ],
-  "mascara": [
+  "Mascara": [
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2474138-main-zoom.jpg?imwidth=164",
       "brand": "Rare Beauty by Selena Gomez",
@@ -267,7 +267,7 @@
       "quantity":1
     }
   ],
-  "eyeLiner": [
+  "EyeLiner": [
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2373066-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
       "brand": "SEPHORA COLLECTION",
@@ -381,7 +381,7 @@
       "quantity":1
     }
   ],
-  "eyebrow": [
+  "EyeBrow": [
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2372530-main-zoom.jpg?imwidth=164",
       "brand": "Anastasia Beverly Hills",
@@ -527,7 +527,7 @@
       "quantity":1
     }
   ],
-  "falseEyeLashes": [
+  "EyeLashes": [
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2549376-main-zoom.jpg?imwidth=164",
       "brand": "House of Lashes",
@@ -649,7 +649,7 @@
       "quantity":1
     }
   ],
-  "eyeShadow": [
+  "EyeShadow": [
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2372225-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=164",
       "brand": "SEPHORA COLLECTION",
@@ -771,7 +771,7 @@
       "quantity":1
     }
   ],
-  "eyeLashSerum": [
+  "EyeLashSerum": [
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2404713-main-zoom.jpg?imwidth=164",
       "brand": "Grande Cosmetics",
@@ -845,7 +845,7 @@
       "quantity":1
     }
   ],
-  "eyePrimer": [
+  "EyePrimer": [
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2487114-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=164",
       "brand": "MILK MAKEUP",
@@ -967,7 +967,7 @@
       "quantity":1
     }
   ],
-  "eyeSets": [
+  "EyeSets": [
     {
       "imageUrl": "https://www.sephora.com/productimages/sku/s2585974-main-zoom.jpg?imwidth=164",
       "brand": "Danessa Myricks Beauty",
