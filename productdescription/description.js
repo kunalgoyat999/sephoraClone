@@ -372,3 +372,15 @@ function removeItem(i) {
   displayCartProducts(cartProductArr);
   console.log(cartProductArr);
 }
+
+// Black Navbar
+let navCategoryArr = document.querySelectorAll(".nav-category-items");
+
+navCategoryArr.forEach((e)=>{
+    e.addEventListener("click", (event)=>{
+        // event.preventDefault();
+         let catName =  event.target.textContent
+         localStorage.setItem("category",catName);
+    })
+})
+
