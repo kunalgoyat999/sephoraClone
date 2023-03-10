@@ -176,10 +176,11 @@ function cardData() {
 
   let obj = JSON.parse(localStorage.getItem("card-detail"));
 
-  if (cardNum !== obj.cardNum && cvv !== obj.cvv) {
+  if (cardNum !== obj.cardNumber || cvv !== obj.cvv) {
+    message2.style.color = "red";
     message2.textContent = "No Card Detail Found! (111111111111, 111)";
     return;
-  } else {
+  } else if(cardNum === obj.cardNumber || cvv === obj.cvv) {
     message2.textContent = "Card Detail Found";
     message2.style.color = "green";
     able();
