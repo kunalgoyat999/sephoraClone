@@ -210,6 +210,7 @@ function deleteFun(index) {
   calcTotal();
   itemCount();
   check(cart_data);
+  displayCartProducts(cart_data);
   localStorage.setItem("promo-code", "masai30");
   localStorage.setItem("product-Arr", JSON.stringify(cart_data));
   document.getElementById("adddiscount").innerText = "0";
@@ -389,6 +390,7 @@ function addtoCartList(item, btn) {
   localStorage.setItem("product-Arr", JSON.stringify(cart_data));
   // document.getElementById("cartitem").textContent =
   check(cart_data);
+  displayCartProducts(cart_data);
   itemCount();
 }
 
@@ -634,10 +636,10 @@ cartBtn.addEventListener("click", () => {
   location.href = "../cart/cart.html";
 });
 
-let cartProductArr = JSON.parse(localStorage.getItem("product-Arr")) || [];
+// let cartProductArr = JSON.parse(localStorage.getItem("product-Arr")) || [];
 
 window.onload = () => {
-  displayCartProducts(cartProductArr);
+  displayCartProducts(cart_data);
   isUserLogin();
 };
 
@@ -745,7 +747,9 @@ function displayCartProducts(arr) {
     productRemove.textContent = "Remove";
 
     productRemove.addEventListener("click", () => {
-      removeItem(index);
+      // removeItem(index);
+        deleteFun(index);
+        
     });
 
     priceRemoveContainer.append(productPrice, productRemove);
@@ -786,4 +790,22 @@ navCategoryArr.forEach((e)=>{
          localStorage.setItem("category",catName);
     })
 })
+
+let navbarContainer =document.getElementById("nav");
+let topBanner =document.getElementById("topBanner-header");
+
+
+// sticky navbar
+
+let top = topBanner.offsetHeight;
+function stickynavbar() {
+  if (window.scrollY >= top) {    
+    navbarContainer.classList.add('sticky');
+    document.getElementById("topBanner-header").style.display ="none";
+  } else {
+    navbarContainer.classList.remove('sticky');  
+    document.getElementById("topBanner-header").style.display ="block";  
+  }
+}
+window.addEventListener('scroll', stickynavbar);
 

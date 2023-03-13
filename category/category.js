@@ -1,5 +1,23 @@
 import { star4, star3, star2, star1, star5 } from "../Component/navbar.js";
 
+let navbarContainer =document.getElementById("nav");
+let topBanner =document.getElementById("topBanner-header");
+
+
+// sticky navbar
+
+let top = topBanner.offsetHeight;
+function stickynavbar() {
+  if (window.scrollY >= top) {    
+    navbarContainer.classList.add('sticky');
+    document.getElementById("topBanner-header").style.display ="none";
+  } else {
+    navbarContainer.classList.remove('sticky');  
+    document.getElementById("topBanner-header").style.display ="block";  
+  }
+}
+window.addEventListener('scroll', stickynavbar);
+
 let label1 = document.getElementById("label1");
 label1.innerHTML = star4();
 
