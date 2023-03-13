@@ -16,6 +16,24 @@ import { heart } from "./util.js";
 // let footerContainer = document.getElementById("footer");
 // footerContainer.innerHTML = footer();
 
+let navbarContainer =document.getElementById("nav");
+let topBanner =document.getElementById("topBanner-header");
+
+
+// sticky navbar
+
+let top = topBanner.offsetHeight;
+function stickynavbar() {
+  if (window.scrollY >= top) {    
+    navbarContainer.classList.add('sticky');
+    document.getElementById("topBanner-header").style.display ="none";
+  } else {
+    navbarContainer.classList.remove('sticky');  
+    document.getElementById("topBanner-header").style.display ="block";  
+  }
+}
+window.addEventListener('scroll', stickynavbar);
+
 let leftContainer = document.getElementById("leftimgcontainer");
 
 let rightContainer = document.getElementById("rightdetailcontainer");
