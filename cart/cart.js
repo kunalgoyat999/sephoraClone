@@ -210,6 +210,7 @@ function deleteFun(index) {
   calcTotal();
   itemCount();
   check(cart_data);
+  displayCartProducts(cart_data);
   localStorage.setItem("promo-code", "masai30");
   localStorage.setItem("product-Arr", JSON.stringify(cart_data));
   document.getElementById("adddiscount").innerText = "0";
@@ -389,6 +390,7 @@ function addtoCartList(item, btn) {
   localStorage.setItem("product-Arr", JSON.stringify(cart_data));
   // document.getElementById("cartitem").textContent =
   check(cart_data);
+  displayCartProducts(cart_data);
   itemCount();
 }
 
@@ -634,10 +636,10 @@ cartBtn.addEventListener("click", () => {
   location.href = "../cart/cart.html";
 });
 
-let cartProductArr = JSON.parse(localStorage.getItem("product-Arr")) || [];
+// let cartProductArr = JSON.parse(localStorage.getItem("product-Arr")) || [];
 
 window.onload = () => {
-  displayCartProducts(cartProductArr);
+  displayCartProducts(cart_data);
   isUserLogin();
 };
 
@@ -745,7 +747,9 @@ function displayCartProducts(arr) {
     productRemove.textContent = "Remove";
 
     productRemove.addEventListener("click", () => {
-      removeItem(index);
+      // removeItem(index);
+        deleteFun(index);
+        
     });
 
     priceRemoveContainer.append(productPrice, productRemove);
@@ -768,10 +772,12 @@ function displayCartProducts(arr) {
 
 // remove from cart
 
-function removeItem(i) {
-  console.log(i);
-  cartProductArr.splice(i, 1);
-  localStorage.setItem("product-Arr", JSON.stringify(cartProductArr));
-  displayCartProducts(cartProductArr);
-  console.log(cartProductArr);
-}
+// function removeItem(i) {
+//   console.log(i);
+//   deleteFun(i)
+//   // cart_data.splice(i, 1);
+//   localStorage.setItem("product-Arr", JSON.stringify(cart_data));
+//   displayCartProducts(cart_data);
+//   check(cart_data);
+//   // console.log(cartProductArr);
+// }

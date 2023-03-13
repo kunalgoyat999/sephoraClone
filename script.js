@@ -1,6 +1,22 @@
 import {navbar, footer} from "./Component/navbar.js";
 
 let navbarContainer =document.getElementById("nav");
+let topBanner =document.getElementById("topBanner-header");
+
+
+// sticky navbar
+
+let top = topBanner.offsetHeight;
+function stickynavbar() {
+  if (window.scrollY >= top) {    
+    navbarContainer.classList.add('sticky');
+    document.getElementById("topBanner-header").style.display ="none";
+  } else {
+    navbarContainer.classList.remove('sticky');  
+    document.getElementById("topBanner-header").style.display ="block";  
+  }
+}
+window.addEventListener('scroll', stickynavbar);
 
 // console.log("navbar===",navbar)
 

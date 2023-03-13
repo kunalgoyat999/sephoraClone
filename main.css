@@ -858,8 +858,8 @@ section >.base-title h2{
 
 #loginModal {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
 }
 
@@ -1042,8 +1042,8 @@ background: silver;
 
 .signupModal {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
   visibility: hidden;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.4);

@@ -99,6 +99,7 @@ arrObj.addEventListener("click", function () {
   document.getElementById("itemsuccess").innerText = "Product Added to Basket!";
   newArr.push(obj);
   localStorage.setItem("product-Arr", JSON.stringify(newArr));
+  displayCartProducts(newArr);
 });
 
 // / Login Modal below ////////////////////////////////////////////////////
