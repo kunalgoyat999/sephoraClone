@@ -10,7 +10,7 @@ Sephora is a French multinational retailer of personal care and beauty products 
 Website is hosted on Netlify
 
 ```bash
-  https://silver-malabi-0836d7.netlify.app/
+  https://creative-dieffenbachia-eb1778.netlify.app/
 ```
 
 Server is Running on **Glitch**
