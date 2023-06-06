@@ -18,10 +18,22 @@ body {
 #header{
         /* border: 1px solid red; */
         max-width: 1280px;
-        
+        position: relative;
         padding: 0 16px;
        margin: 0 auto;
 }
+
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    background-color: #f7f7f7;
+    padding: 7px 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  }
 
 #navbar{
     margin: 16px 0;
@@ -270,7 +282,7 @@ button > span >span:first-child{
 #signIn-popup,#community-popup,#store-popup{
     visibility: hidden;
     opacity: 0;
-    z-index: 20;
+    z-index: 12;
     /* border: 1px solid red; */
     position: absolute;
     width: 375px;
@@ -285,7 +297,7 @@ button > span >span:first-child{
     opacity: 0;
     position: absolute;
     top: 100%;
-    z-index: 1;
+    z-index: 12;
     width: 375px;
     transition: all 0.2s ease 0s;
     left: auto;

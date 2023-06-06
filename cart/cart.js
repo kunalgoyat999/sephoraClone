@@ -154,7 +154,7 @@ function showProduct(el, index) {
     opt.value = i;
     if (i === el.quantity) {
       opt.selected = "selected";
-      let num = el.quantity*el.cost;
+      let num = el.quantity * el.cost;
       document.getElementById("mrptotal").textContent = num;
       localStorage.setItem("mrp-total", num);
       document.getElementById("totalamt").textContent = num;
@@ -210,8 +210,9 @@ function deleteFun(index) {
   calcTotal();
   itemCount();
   check(cart_data);
+  displayCartProducts(cart_data);
   localStorage.setItem("promo-code", "masai30");
-  localStorage.setItem("product-Arr",JSON.stringify(cart_data));
+  localStorage.setItem("product-Arr", JSON.stringify(cart_data));
   document.getElementById("adddiscount").innerText = "0";
 
   // document.getElementById("lblCartCount").textContent = cart_data.length;
@@ -387,8 +388,9 @@ function addtoCartList(item, btn) {
   btn.textContent = "Added";
   cart_data.push(item);
   localStorage.setItem("product-Arr", JSON.stringify(cart_data));
-  // document.getElementById("cartitem").textContent = 
+  // document.getElementById("cartitem").textContent =
   check(cart_data);
+  displayCartProducts(cart_data);
   itemCount();
 }
 
@@ -415,7 +417,7 @@ let chosenForYou = [
       "https://www.sephora.com/productimages/sku/s2421337-main-zoom.jpg?imwidth=122",
     brand: "Paula's Choice",
     name: "C15 Vitamin C Super Booster",
-    cost: 15 ,
+    cost: 15,
     quantity: 1,
   },
   {
@@ -426,7 +428,6 @@ let chosenForYou = [
     cost: 35,
     quantity: 1,
   },
-  
 ];
 
 displayProductSlider(chosenForYou, mainContainer);
@@ -488,23 +489,22 @@ function displayProductSlider(arr, parentNode) {
 
     parentNode.append(li);
 
-    li.addEventListener("click",function() {
+    li.addEventListener("click", function () {
       viewdescription(e);
-    })
+    });
   });
 
   parentNode.append(areaHidden);
 }
 
-function viewdescription(ele){
-    // calcTotal();
-    localStorage.setItem("productObj",JSON.stringify(ele));
-    console.log(ele);
-    location.href = "../productdescription/description.html";
+function viewdescription(ele) {
+  // calcTotal();
+  localStorage.setItem("productObj", JSON.stringify(ele));
+  console.log(ele);
+  location.href = "../productdescription/description.html";
 }
 
 // for product slider
-
 
 // / Login Modal below ////////////////////////////////////////////////////
 
@@ -519,22 +519,20 @@ var loginspan = document.getElementsByClassName("loginclose")[0];
 
 // When the user clicks on the button, open the modal
 loginBtn.onclick = function () {
-    loginModal.style.visibility = "visible";
-}
+  loginModal.style.visibility = "visible";
+};
 
 // When the user clicks on <span> (x), close the modal
 loginspan.onclick = function () {
-    loginModal.style.visibility = "hidden";
-}
+  loginModal.style.visibility = "hidden";
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (event.target == loginModal) {
-        loginModal.style.visibility = "hidden";
-    }
-}
-
-
+  if (event.target == loginModal) {
+    loginModal.style.visibility = "hidden";
+  }
+};
 
 // Signup Modal Below  ///////////////////////////////////////////
 
@@ -549,56 +547,51 @@ var span = document.getElementsByClassName("signupclose")[0];
 
 // When the user clicks on the button, open the modal
 signupBtn.onclick = function () {
-    signupModal.style.visibility = "visible";
-    loginModal.style.visibility = "hidden";
-}
+  signupModal.style.visibility = "visible";
+  loginModal.style.visibility = "hidden";
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-    signupModal.style.visibility = "hidden";
-}
+  signupModal.style.visibility = "hidden";
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (event.target == signupModal) {
-        signupModal.style.visibility = "hidden";
-    }
-}
-
+  if (event.target == signupModal) {
+    signupModal.style.visibility = "hidden";
+  }
+};
 
 ////// LOGIN FUNCTIONALITY BELOW  //////////////////////////////////////////////////////////////////
-
 
 document.getElementById("signinBtn").addEventListener("click", signIn);
 
 var regUser = JSON.parse(localStorage.getItem("userArr")) || [];
 function signIn(e) {
-    e.preventDefault();
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+  e.preventDefault();
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
 
-    if (!email || !password) {
-        alert("Please fill all the details");
+  if (!email || !password) {
+    alert("Please fill all the details");
+  } else {
+    for (var i = 0; i < regUser.length; i++) {
+      if (regUser[i].email === email && regUser[i].password === password) {
+        alert("Let's get Shopping");
+        window.location.href = "index.html";
+        return;
+      } else if (email == "admin@gmail.com" && password == "admin") {
+        alert("SignIn Sucessfully !");
+        window.location.href = "index.html";
+        return;
+      }
     }
-    else {
-        for (var i = 0; i < regUser.length; i++) {
-            if (regUser[i].email === email && regUser[i].password === password) {
-                alert("Let's get Shopping");
-                window.location.href = "index.html";
-                return;
-            }
-            else if (email == "admin@gmail.com" && password == "admin") {
-                alert("SignIn Sucessfully !");
-                window.location.href = "index.html";
-                return;
-            }
-        }
-        alert("ERROR! Please check your E-Mail Id or Password again.");
-    }
+    alert("ERROR! Please check your E-Mail Id or Password again.");
+  }
 }
 
 //  document.getElementById("dark").addEventListener("click", darkmode)
-
 
 //////////  SIGNUP FUNCTIONALITY BELOW  /////////////////////////////////////////////
 
@@ -607,30 +600,212 @@ document.getElementById("joinBtn").addEventListener("click", userList);
 var userArr = JSON.parse(localStorage.getItem("userArr")) || [];
 
 function userList(e) {
-    e.preventDefault();
-    console.log("clicked");
+  e.preventDefault();
+  console.log("clicked");
 
-    var firstName2 = document.getElementById("firstName2").value;
-    var lastName2 = document.getElementById("lastName2").value;
-    var email2 = document.getElementById("email2").value;
-    var password2 = document.getElementById("password2").value;
-    var zipcode2 = document.getElementById("zipcode2").value;
-    if (!firstName2 || !lastName2 || !email2 || !password2 || !zipcode2) {
-        alert("Please fill all your details");
-    }
-    else {
-        var userObj = {
-            firstName: firstName2,
-            lastName: lastName2,
-            email: email2,
-            password: password2,
-            zipcode: zipcode2,
-        };
+  var firstName2 = document.getElementById("firstName2").value;
+  var lastName2 = document.getElementById("lastName2").value;
+  var email2 = document.getElementById("email2").value;
+  var password2 = document.getElementById("password2").value;
+  var zipcode2 = document.getElementById("zipcode2").value;
+  if (!firstName2 || !lastName2 || !email2 || !password2 || !zipcode2) {
+    alert("Please fill all your details");
+  } else {
+    var userObj = {
+      firstName: firstName2,
+      lastName: lastName2,
+      email: email2,
+      password: password2,
+      zipcode: zipcode2,
+    };
 
-        userArr.push(userObj);
-        localStorage.setItem("userArr", JSON.stringify(userArr));
-        alert("Registered");
-        window.location.href = "login.html";
-    }
+    userArr.push(userObj);
+    localStorage.setItem("userArr", JSON.stringify(userArr));
+    alert("Registered");
+    window.location.href = "login.html";
+  }
 }
+
+// Cart js
+
+let cartBtn = document.querySelector(".checkout-btn");
+
+console.log(cartBtn);
+
+cartBtn.addEventListener("click", () => {
+  location.href = "../cart/cart.html";
+});
+
+// let cartProductArr = JSON.parse(localStorage.getItem("product-Arr")) || [];
+
+window.onload = () => {
+  displayCartProducts(cart_data);
+  isUserLogin();
+};
+
+function isUserLogin() {
+  let isLogin = JSON.parse(localStorage.getItem("currUser")).isLogin;
+  // console.log("loginUser==>",isLogin);
+  let accountContainer = document.querySelector(".account-btn-container");
+  let logoutContainer = document.querySelector(".logout-container");
+  console.log(accountContainer, logoutContainer);
+
+  if (isLogin) {
+    let userName = document.getElementById("userName-login");
+    let userNameMain = document.getElementById("loginUser-main");
+    let msgTxt = document.getElementById("loginUser-msg");
+    let userEmail = document.getElementById("email-loginUser");
+
+    let currUserObj = JSON.parse(localStorage.getItem("currUser"));
+    console.log("loginUser==>", currUserObj);
+
+    userName.textContent = `${currUserObj.firstName}. 🌙`;
+    userName.style.fontSize = "1.2rem";
+    userName.style.color = "#CF112C";
+    userName.style.textTransform = "capitalize";
+
+    userNameMain.textContent = currUserObj.firstName;
+    msgTxt.textContent = "Enjoy Free Shipping";
+
+    userEmail.textContent = `Email : ${currUserObj.email}`;
+    userEmail.style.fontSize = "0.9rem";
+
+    accountContainer.style.display = "none";
+    logoutContainer.style.display = "initial";
+
+    document.getElementById("logout-btn").addEventListener("click", () => {
+      currUserObj.isLogin = false;
+      localStorage.setItem("currUser", JSON.stringify(currUserObj));
+      location.href = "../index.html";
+    });
+  } else {
+    accountContainer.style.display = "grid";
+    logoutContainer.style.display = "none";
+  }
+}
+
+let cartContainer = document.getElementById("cartProductHolder");
+let cartItemsCount = document.getElementById("cart-total-items");
+let cartSum = document.getElementById("cart-total-price");
+
+function displayCartProducts(arr) {
+  cartContainer.textContent = "";
+
+  if (arr.length == 0) {
+    let h3 = document.createElement("h3");
+    h3.textContent = "No items in Cart!";
+
+    let divider = document.createElement("div");
+    divider.setAttribute("class", "divider-header");
+    cartContainer.append(h3, divider);
+  }
+
+  cartItemsCount.textContent = "( " + arr.length + " items )";
+
+  document.getElementById("cart-item-count").textContent = arr.length;
+
+  let totalValue = 0;
+
+  arr.forEach((e, index) => {
+    let productContainer = document.createElement("div");
+    productContainer.setAttribute(
+      "class",
+      "popup-items-container mid-product-container"
+    );
+    // productContainer.setAttribute("class","mid-product-container");
+
+    let productImg = document.createElement("div");
+    productImg.setAttribute("class", "cart-product-img");
+    let img = document.createElement("img");
+    img.src = e.imageUrl;
+
+    productImg.append(img);
+
+    let productMeta = document.createElement("div");
+    productMeta.setAttribute("class", "cart-product-meta");
+
+    let productName = document.createElement("span");
+    productName.setAttribute("class", "cart-product-name");
+    productName.innerHTML = `<strong>${e.name}</strong>`;
+    let productDesciption = document.createElement("span");
+    productDesciption.setAttribute("class", "cart-product-description");
+    productDesciption.textContent = e.name;
+
+    productMeta.append(productName, productDesciption);
+
+    let priceRemoveContainer = document.createElement("div");
+    priceRemoveContainer.setAttribute("class", "price-remove");
+
+    let productPrice = document.createElement("span");
+    productPrice.setAttribute("class", "cart-product-price");
+    productPrice.textContent = "$" + e.cost;
+
+    totalValue += e.cost;
+
+    let productRemove = document.createElement("span");
+    productRemove.setAttribute("class", "cart-product-remove");
+    productRemove.textContent = "Remove";
+
+    productRemove.addEventListener("click", () => {
+      // removeItem(index);
+        deleteFun(index);
+        
+    });
+
+    priceRemoveContainer.append(productPrice, productRemove);
+
+    let divider = document.createElement("div");
+    divider.setAttribute("class", "divider-thin-header");
+
+    productContainer.append(
+      productImg,
+      productMeta,
+      priceRemoveContainer,
+      divider
+    );
+
+    cartContainer.append(productContainer);
+  });
+
+  cartSum.textContent = "$ " + totalValue;
+}
+
+// remove from cart
+
+function removeItem(i) {
+  console.log(i);
+  cartProductArr.splice(i, 1);
+  localStorage.setItem("product-Arr", JSON.stringify(cartProductArr));
+  displayCartProducts(cartProductArr);
+  console.log(cartProductArr);
+}
+
+// Black Navbar
+let navCategoryArr = document.querySelectorAll(".nav-category-items");
+
+navCategoryArr.forEach((e)=>{
+    e.addEventListener("click", (event)=>{
+        // event.preventDefault();
+         let catName =  event.target.textContent
+         localStorage.setItem("category",catName);
+    })
+})
+
+let navbarContainer =document.getElementById("nav");
+let topBanner =document.getElementById("topBanner-header");
+
+
+// sticky navbar
+
+let top = topBanner.offsetHeight;
+function stickynavbar() {
+  if (window.scrollY >= top) {    
+    navbarContainer.classList.add('sticky');
+    document.getElementById("topBanner-header").style.display ="none";
+  } else {
+    navbarContainer.classList.remove('sticky');  
+    document.getElementById("topBanner-header").style.display ="block";  
+  }
+}
+window.addEventListener('scroll', stickynavbar);
 

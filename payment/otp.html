@@ -97,6 +97,7 @@
       alert("Incorrect OTP, Correct OTP: 12345");
     } else {
       var btn = document.getElementById("btn");
+      localStorage.setItem("product-Arr",JSON.stringify([]));
       btn.setAttribute("onclick", "window.location.href = 'thankyou.html'");
     }
   }
